@@ -1,0 +1,21 @@
+## ToDo
+
+- Update to CSS Grids
+
+## Lazy Load reference for later
+
+if (document.querySelectorAll('.container').length) {
+  import(/* webpackChunkName: 'button' */ './Components/Button').then(module => {
+    const Button = module.default;
+    var button = new Button('google.com');
+    button.render('.container');
+  });
+}
+//
+if (document.querySelectorAll('h1').length) {
+  import(/* webpackChunkName: 'header' */ './Components/Header').then(module => {
+    const Header = module.default;
+    var header = new Header();
+    header.render('h1');
+  });
+}
