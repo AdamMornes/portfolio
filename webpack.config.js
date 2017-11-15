@@ -5,8 +5,15 @@ var UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 var production = process.env.NODE_ENV === 'production';
 
 var plugins = [
+  // Provide JQuery and Popper dependencies for Bootstrap 3
+  new webpack.ProvidePlugin({
+    $: 'jquery',
+    jQuery: 'jquery',
+    'window.jQuery': 'jquery',
+    Popper: ['popper.js', 'default'],
+  }),
   new ExtractPlugin({
-    filename: '/styles/app-bundle.css',
+    filename: '/styles/styles.css',
     allChunks: false,
   }),
   new webpack.optimize.CommonsChunkPlugin({
@@ -76,7 +83,7 @@ module.exports = {
   entry: './src',
   output: {
     path: __dirname + '/dist',
-    filename: production ? '[name].js' : 'styles.js',
+    filename: production ? '[name].js' : 'scripts.js',
     chunkFilename: '[name].js',
     publicPath: '../',
   },
@@ -122,6 +129,10 @@ module.exports = {
             },
           },
         ],
+      },
+      {
+        test: /\.(ttf|woff2|woff|eot)/,
+        use: 'file-loader',
       },
     ]
   }
