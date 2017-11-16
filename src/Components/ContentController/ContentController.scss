@@ -1,0 +1,14 @@
+@import "../../sass/variables";
+
+#Content{
+
+  @media(min-width: $screen-md){
+    height: 100%;
+    width: 100%;
+
+    .content-wrapper {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
