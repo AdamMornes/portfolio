@@ -1,1 +1,192 @@
 @import "../../sass/variables";
+
+/* Eventually be expandable footer that displays a contact form */
+
+#Footer {
+  background: #fff;
+  color: #000;
+  padding-bottom: 25px;
+  a {
+    color: #000;
+  }
+
+  /*=== [ Positioning for Diag line effects. ] ===*/
+  > .container {
+    position: relative;
+  }
+
+  /*=== [ Diagnal Line Effects ] ===*/
+  .left-diag-wrapper, .right-diag-wrapper {
+    position: absolute;
+    top: 0;
+    display: block;
+    height: 200px;
+    padding-left: 0;
+    padding-right: 0;
+    overflow: hidden;
+  }
+
+  .footer-diag {
+    position: absolute;
+    display: block;
+    width: 1px;
+    height: 500px;
+    background: #000;
+    transform: rotate(12deg);
+  }
+
+  .left-diag-wrapper {
+    left: 0;
+    .footer-diag {
+      top: -100px;
+      right: 50px;
+    }
+  }
+
+  .right-diag-wrapper {
+    right: 0;
+    .footer-diag {
+      top: -100px;
+      left: 30px;
+    }
+  }
+
+  .phone-icon, .smedia, .email-icon {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  /*=== [ Mobile Icons ] ===*/
+  .mobile-icons {
+    .list-inline {
+      li {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+    }
+  }
+
+  /*=== [ Contact Info ] ===*/
+  .contact-info {
+    margin-bottom: 25px;
+  }
+
+  /*=== [ Form Collapse/Expand ] ===*/
+  .footer-top {
+    padding-top: 30px;
+    .footertop-block {
+      display: inline;
+      a {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        display: block;
+        height: 45px;
+        width: 60px;
+        background: #fff;
+        cursor: pointer;
+        line-height: 55px;
+        margin-top: -20px;
+        margin: -20px auto 0;
+        border-top: 1px solid #000;
+        border-left: 1px solid #000;
+        border-right: 1px solid #000;
+        transition: all .1s linear;
+        .fa {
+          font-size: 28px;
+          color: #000;
+          transition: all .35s ease;
+        }
+        &:hover {
+          text-decoration: none;
+          .fa {
+            text-decoration: none;
+          }
+        }
+      }
+
+      .form-text {
+        cursor: pointer;
+        font-size: 22px;
+        color: #333;
+        .top-divider {
+          margin-top: 8px;
+          border-color: #e5e5e5;
+        }
+      }
+
+      &.contact-toggle {
+        .fa-angle-double-up {
+          transform: rotate(180deg);
+        }
+      }
+      &:hover {
+        a {
+          height: 50px;
+          margin-top: -25px;
+        }
+      }
+    }
+  }
+
+  /*=== [ Contact Form ] ===*/
+  .contactform-wrapper {
+    margin-bottom: 30px;
+    .contact-form {
+      hr {
+        border-color: #e5e5e5;
+      }
+    }
+  }
+
+  /*=== [ Social Media ] ===*/
+  .smedia {
+    background: transparent;
+    z-index: 1;
+    li {
+      padding: 0;
+      margin: 0 -5px 0 0;
+      a {
+        padding: 0;
+        .fa {
+          color: #fff;
+          height: 60px;
+          width: 60px;
+          line-height: 60px;
+          transition: all .1s linear;
+        }
+        .fa-facebook {
+          background: #3b5998;
+        }
+        .fa-linkedin {
+          background: #007bb6;
+        }
+
+        &:hover {
+          .fa {
+            position: relative;
+            z-index: 2;
+            -webkit-box-shadow: 0 0 8px 2px rgba(0,0,0,.6);
+            box-shadow: 0 0 8px 2px rgba(0,0,0,.6);
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: $screen-sm) {
+    .contact-info {
+      h2 {
+        margin-top: 5px;
+      }
+    }
+    .right-diag-wrapper, .left-diag-wrapper {
+      height: 150px;
+    }
+    .footer-diag {
+      transform: rotate(18deg);
+    }
+  }
+}
