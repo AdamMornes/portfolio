@@ -1,1 +1,368 @@
 @import "../../sass/variables";
+
+$header-bg-color  : #fff !default;
+
+$header-height-sm-base    : 60px !default;
+$header-height-sm-scroll  : 50px !default;
+
+$header-height-md-base    : 91px !default;
+$header-height-md-scroll  : 60px !default;
+
+#Header {
+  height: 60px;
+  transition: all .2s linear;
+  .navbar {
+    background: $header-bg-color;
+    border-bottom: 0;
+    margin-bottom: 0;
+    min-height: 60px;
+    box-shadow: 0 0 12px 4px rgba(0,0,0,0.2);
+    transition: all .2s linear;
+    .prime-nav {
+      font-family: $font-heading;
+      background: transparent;
+
+      .navbar-header {
+        .navbar-toggle {
+          padding: 22px 5px;
+          margin: 0;
+          transition: all .2s linear;
+
+          .icon-bar {
+            background: #000;
+          }
+        }
+      }
+      #primeNav {
+        .navbar-nav {
+          > li {
+            > a {
+              position: relative;
+              color: #000;
+              font-size: 25px;
+              padding: 20px 30px;
+              cursor: pointer;
+              &:hover, &:focus {
+                background: transparent;
+              }
+
+              &:after {
+                content: " ";
+                position: absolute;
+                top: 44px;
+                left: 0;
+                right: 0;
+                display: block;
+                height: 2px;
+                width: 0;
+                background: #000;
+                text-align: center;
+                margin: 0 auto;
+                transition: all .3s ease-out;
+              }
+            }
+
+            &:hover {
+              > a:after {
+                width: 80px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    #primeNavMobile{
+      padding: 0 15px;
+      font-family: $font-heading;
+      .navbar-nav {
+        border-top: 1px solid #ccc;
+        padding-top: 5px;
+        > li {
+          padding: 8px 0 8px 3px;
+          > a {
+            font-size: 18px;
+            padding: 0;
+            color: #000;
+            &:hover, &:focus {
+              background: transparent;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media(min-width: $screen-sm) {
+    height: auto;
+    .navbar {
+      background-color: transparent;
+      box-shadow: none;
+      .logo {
+        padding-right: 0;
+        padding-left: 0;
+        transition: all .2s linear;
+        .diag-wrapper {
+          position: relative;
+          display: block;
+          height: 285px;
+          width: 100%;
+          overflow: hidden;
+          transition: all .2s linear;
+          .left-diag {
+            position: absolute;
+            top: -127px;
+            right: 65px;
+            display: block;
+            height: 530px;
+            width: 1200px;
+            background: $header-bg-color;
+            transform: rotate(-36deg);
+            transition: all .2s linear;
+          }
+          .left-line-wrapper {
+            position: absolute;
+            top: 10px;
+            right: 0;
+            display: block;
+            height: 500px;
+            width: 97%;
+            overflow: hidden;
+            transition: all .2s linear;
+            .left-diag-line {
+              position: absolute;
+              top: -234px;
+              right: 426px;
+              display: block;
+              height: 1000px;
+              width: 1px;
+              background: #000;
+              transform: rotate(54deg);
+            }
+          }
+          .right-diag-wrapper {
+            position: absolute;
+            top: 0;
+            right: 0;
+            display: block;
+            height: $header-height-sm-base;
+            width: 150px;
+            overflow: hidden;
+            transition: all .2s linear;
+            .right-diag {
+              position: absolute;
+              top: 40px;
+              right: -109px;
+              display: block;
+              height: 90px;
+              width: 300px;
+              background: $header-bg-color;
+              transform: rotate(-36deg);
+              transition: all .2s linear;
+            }
+            .right-diag-line-wrapper {
+              position: absolute;;
+              top: 12px;
+              right: 0;
+              display: block;
+              height: 40px;
+              width: 100%;
+              overflow: hidden;
+              transition: all .2s linear;
+              .right-diag-line {
+                position: absolute;
+                top: -52px;
+                right: 34px;
+                display: block;
+                height: 155px;
+                width: 1px;
+                background: #000;
+                transform: rotate(54deg);
+              }
+            }
+          }
+        }
+      }
+
+      .prime-nav {
+        background: $header-bg-color;
+        height: $header-height-sm-base;
+        transition: all .2s linear;
+        #primeNav {
+          .navbar-nav {
+            > li {
+              > a {
+                transition: all .2s linear;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: $screen-md) {
+    .navbar {
+      .logo {
+        .diag-wrapper {
+          height: 275px;
+          .right-diag-wrapper {
+            height: $header-height-md-base;
+            .right-diag-line-wrapper {
+              height: 70px;
+              .right-diag-line {
+                top: -52px;
+              }
+            }
+          }
+        }
+      }
+
+      .prime-nav {
+        height: $header-height-md-base;
+        #primeNav {
+          .navbar-nav {
+            > li {
+              > a {
+                font-size: 30px;
+                padding: 35px 50px;
+                &:after {
+                  top: 60px;
+                }
+              }
+
+              &:hover {
+                > a:after {
+                  width: 100px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: $screen-lg) {
+    .navbar {
+      .logo {
+        .diag-wrapper {
+          height: 470px;
+        }
+      }
+    }
+  }
+
+  /*-- 4K Diagnal Hack --*/
+  @media (min-width: 2000px) {
+    .navbar {
+      .logo {
+        .diag-wrapper {
+          height: 910px;
+          .right-diag {
+            right: 32px;
+            height: 800px;
+            width: 2100px;
+          }
+        }
+      }
+    }
+  }
+}
+
+#Header.header-reduction {
+  height: 42px;
+  .navbar {
+    min-height: 42px;
+    .prime-nav {
+      .navbar-header {
+        .navbar-toggle {
+          padding: 12px 5px;
+        }
+      }
+
+      #primeNav {
+        .navbar-nav {
+          > li {
+            > a:after {
+              top: 38px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: $screen-sm) {
+    height: auto;
+    background-color: transparent;
+    .navbar {
+      .logo {
+        width: 25%;
+        .diag-wrapper {
+          height: $header-height-sm-scroll;
+          .left-line-wrapper {
+            height: 32px;
+          }
+
+          .right-diag-wrapper {
+            height: $header-height-sm-scroll;
+            .right-diag-line-wrapper {
+              height: 32px;
+            }
+          }
+        }
+      }
+      .prime-nav {
+        height: $header-height-sm-scroll;
+        width: 75%;
+        #primeNav {
+          .navbar-nav {
+            > li {
+              > a {
+                padding: 15px 30px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: $screen-md) {
+    .navbar {
+      .logo {
+        width: 16.6667%;
+        .diag-wrapper {
+          height: $header-height-md-scroll;
+          .left-line-wrapper {
+            height: 42px;
+          }
+
+          .right-diag-wrapper {
+            height: $header-height-md-scroll;
+            .right-diag-line-wrapper {
+              height: 42px;
+            }
+          }
+        }
+      }
+      .prime-nav {
+        height: $header-height-md-scroll;
+        width: 83.3333%;
+        #primeNav {
+          .navbar-nav {
+            > li {
+              > a {
+                padding: 20px 50px;
+                &:after {
+                  top: 45px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
