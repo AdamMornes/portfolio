@@ -26,8 +26,6 @@ var plugins = [
 if (production) {
   plugins = plugins.concat([
 
-
-
     // Set loaders to debug mode via plugin
     // Debug option removed and this plugin is used as an alternative
     new webpack.LoaderOptionsPlugin({
@@ -85,7 +83,7 @@ module.exports = {
     path: __dirname + '/dist',
     filename: production ? '[name].js' : 'scripts.js',
     chunkFilename: '[name].js',
-    publicPath: '../',
+    publicPath: '/dist/',
   },
   devServer:{
     hot: true,
@@ -125,14 +123,10 @@ module.exports = {
             loader: 'url-loader',
             options: {
               limit: 10000,
-              name: '[path][name].[ext]',
+              name: '[path][name][ext]',
             },
           },
         ],
-      },
-      {
-        test: /\.(ttf|woff2|woff|eot)/,
-        use: 'file-loader',
       },
     ]
   }
