@@ -94,7 +94,14 @@ $header-height-md-scroll  : 60px !default;
   }
 
   @media(min-width: $screen-sm) {
-    height: auto;
+    height: 100%;
+    .header-wrapper {
+      min-height: 550px;
+      background-image: url('../../../images/hero-shot.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
     .navbar {
       background-color: transparent;
       box-shadow: none;
@@ -202,6 +209,10 @@ $header-height-md-scroll  : 60px !default;
   }
 
   @media (min-width: $screen-md) {
+    height: 100%;
+    .header-wrapper {
+      min-height: 100%;
+    }
     .navbar {
       .logo {
         .diag-wrapper {
