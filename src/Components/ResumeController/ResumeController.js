@@ -20,7 +20,7 @@ class ResumeController extends Component {
       })
     } else {
       this.setState({
-        component: <Button content='</ViewResume />' className='resume-btn' toggle={this.toggleResume}/>
+        component: <Button content='<ViewResume />' className='resume-btn' toggle={this.toggleResume}/>
       })
     }
   }
@@ -32,7 +32,7 @@ class ResumeController extends Component {
       })
     } else {
       this.setState({
-        component: <Button content='</ViewResume />' className='resume-btn' toggle={this.toggleResume}/>
+        component: <Button content='<ViewResume />' className='resume-btn' toggle={this.toggleResume}/>
       })
     }
     const currentState = this.state.active;
