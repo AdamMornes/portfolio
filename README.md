@@ -1,5 +1,9 @@
 ## ToDo
 
+# Short Term
+- Optimize imagery pulled in Component views
+
+#Long Term
 - Update to CSS Grids
 
 ## Lazy Load reference for later

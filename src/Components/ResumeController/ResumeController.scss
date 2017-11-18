@@ -3,58 +3,18 @@
 .resume-area {
   background: $brand-primary;
 
-  .resume-ctrl {
-    color: #000;
-
-    .fa {
-      padding: 10px 0;
-    }
+  h2 {
+    margin: 0;
   }
 
-  .resume-wrapper {
-    background: #fff;
-    padding: 15px;
-    font-size: 14px;
-  }
-
-  .line-break {
-    display: inline-block;
-  }
-
-  .exp-details {
-    text-align: center;
-
-    &.place {
-      p {
-          margin: 0;
-      }
-    }
-  }
-
-  .circle-divider {
-    font-size: 24px;
-  }
-
-  @media(min-width: $screen-sm) {
-    padding: 45px;
+  @media (min-width: $screen-sm) {
+    padding-top: 45px;
+    padding-bottom: 45px;
     background: $brand-primary;
-
-    .exp-details {
-      text-align: left;
-
-      &.place {
-        p {
-          margin: 0 0 11px;
-        }
-      }
-    }
   }
 
-  @media(min-width: $screen-lg) {
-    padding: 45px;
-
-    .resume-wrapper {
-      padding: 75px;
-    }
+  @media (min-width: $screen-md) {
+    padding-top: 100px;
+    padding-bottom: 100px;
   }
 }

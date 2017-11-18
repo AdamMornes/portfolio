@@ -7,9 +7,7 @@ class Button extends Component {
 
   render() {
     return (
-      <div className={this.props.className}>
-        <button className='btn' onClick={this.props.toggle}>{this.props.content}</button>
-      </div>
+        <button className={'btn btn-custom ' + this.props.className} title={this.props.title} onClick={this.props.action}>{this.props.content}</button>
     )
   }
 }

@@ -1,11 +1,31 @@
 import React, { Component } from 'react';
+import Zenscroll from'zenscroll';
+
+Zenscroll.setup(500, 60);
 
 class Header extends Component {
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleNavResize);
+  }
+
+  handleNavResize() {
+    var scroll = $(window).scrollTop();
+
+    if (scroll >= 1) {
+      $('#Header').addClass('header-reduction');
+      $('#mainNav').addClass('navbar-fixed-top');
+    } else {
+      $('#Header').removeClass('header-reduction');
+      $('#mainNav').removeClass('navbar-fixed-top');
+    }
+  }
+
   render() {
     return (
       <div className="header-wrapper">
 
-        <nav className="navbar navbar-fixed-top" role="navigation" id="mainNav">
+        <nav className="navbar" role="navigation" id="mainNav">
 
           <div className="container-fluid">
             <div className="row">
@@ -52,7 +72,7 @@ class Header extends Component {
 
                   <div className="navbar-collapse collapse" id="primeNav">
                     <ul className="nav navbar-nav navbar-right">
-                      <li><a href="">About</a></li>
+                      <li><a href="#">About</a></li>
                       <li><a href="#Work">Work</a></li>
                       <li><a href="#Footer">Contact</a></li>
                     </ul>
@@ -63,7 +83,7 @@ class Header extends Component {
               <div className="navbar-collapse collapse" id="primeNavMobile">
                 <div className="col-xs-12 visible-xs">
                   <ul className="nav navbar-nav navbar-right">
-                    <li><a>About</a></li>
+                    <li><a href="#">About</a></li>
                     <li><a href="#Work">Work</a></li>
                     <li><a href="#Footer">Contact</a></li>
                   </ul>

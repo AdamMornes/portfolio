@@ -1,0 +1,46 @@
+@import "../../sass/variables";
+
+.resume-wrapper {
+  background: #fff;
+  font-size: 14px;
+
+  .resume-content {
+    padding: 15px;
+  }
+
+  .line-break {
+    display: inline-block;
+  }
+
+  .exp-details {
+    text-align: center;
+
+    &.place {
+      p {
+          margin: 0;
+      }
+    }
+  }
+
+  .circle-divider {
+    font-size: 24px;
+  }
+
+  @media(min-width: $screen-sm) {
+    .exp-details {
+      text-align: left;
+
+      &.place {
+        p {
+          margin: 0 0 11px;
+        }
+      }
+    }
+  }
+
+  @media(min-width: $screen-lg) {
+    .resume-content {
+      padding: 75px;
+    }
+  }
+}

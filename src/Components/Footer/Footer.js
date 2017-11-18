@@ -7,18 +7,6 @@ class Footer extends Component {
 
         <div className="row text-center">
 
-          <div className="col-xs-12 footer-top text-center">
-
-            <div className="footertop-block" data-target="#contactForm" data-toggle="collapse">
-              <a>
-                <span className="fa fa-envelope-o"></span>
-              </a>
-
-              <span className="col-xs-12 col-sm-6 col-sm-offset-3 form-text">Send Me a Message! <hr className="top-divider"/></span>
-            </div>
-
-          </div>
-
           <div className="col-xs-3 col-sm-2 left-diag-wrapper">
             <div className="footer-diag"></div>
           </div>

@@ -123,7 +123,7 @@ module.exports = {
             loader: 'url-loader',
             options: {
               limit: 10000,
-              name: '[path][name][ext]',
+              name: '[path][name].[ext]',
             },
           },
         ],
@@ -136,13 +136,25 @@ module.exports = {
             options: {
               limit: 10000,
               mimetype: 'application/font-woff',
+              name: 'fonts/[name].[ext]'
             },
           },
         ],
       },
       {
         test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-        loader: 'file-loader',
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: 'fonts/[name].[ext]',
+            },
+          },
+        ],
+      },
+      {
+        test: /\.json$/,
+        loader: 'json-loader',
       },
     ],
   },

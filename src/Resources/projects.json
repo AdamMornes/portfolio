@@ -1,0 +1,33 @@
+{
+  "projects": [
+    {
+      "name": "Atomic Style Library",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at accumsan ante, id eleifend nulla.",
+      "imgPath": [
+        "images/projects/atomicstyles/as_homescreen.jpg",
+        "images/projects/atomicstyles/as_typography.jpg",
+        "images/projects/atomicstyles/as_color.jpg",
+        "images/projects/atomicstyles/as_layout.jpg",
+        "images/projects/atomicstyles/as_flex.jpg"
+      ]
+    },
+    {
+      "name": "Site Info Bookmarklet",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at accumsan ante, id eleifend nulla.",
+      "imgPath": [
+        "images/projects/siteinfo/si_responsive.jpg",
+        "images/projects/siteinfo/si_endeavor.jpg"
+      ]
+    },
+    {
+      "name": "Splash Page Theme",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at accumsan ante, id eleifend nulla.",
+      "imgPath": [
+        "images/projects/splashpage/sp_desktoptop.jpg",
+        "images/projects/splashpage/sp_desktopbottom.jpg",
+        "images/projects/splashpage/sp_mobilecollapsed.jpg",
+        "images/projects/splashpage/sp_mobileexpanded.jpg"
+      ]
+    }
+  ]
+}

@@ -20,7 +20,7 @@ class ResumeController extends Component {
       })
     } else {
       this.setState({
-        component: <Button content='<ViewResume />' className='resume-btn' toggle={this.toggleResume}/>
+        component: <h2 className="text-center"><Button className={'btn-resume'} title="View Resume" action={this.toggleResume} content={'<ViewResume />'}/></h2>
       })
     }
   }
@@ -32,7 +32,7 @@ class ResumeController extends Component {
       })
     } else {
       this.setState({
-        component: <Button content='<ViewResume />' className='resume-btn' toggle={this.toggleResume}/>
+        component: <h2 className="text-center"><Button title="View Resume" className={'btn-resume'} action={this.toggleResume} content={'<ViewResume />'}/></h2>
       })
     }
     const currentState = this.state.active;
@@ -44,7 +44,7 @@ class ResumeController extends Component {
   render() {
 
     return (
-      <div className="resume-area">
+      <section className="resume-area">
         <div className="container">
           <div className="row">
 
@@ -52,7 +52,7 @@ class ResumeController extends Component {
 
           </div>
         </div>
-      </div>
+      </section>
     )
   }
 }
