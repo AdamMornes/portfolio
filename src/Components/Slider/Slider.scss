@@ -1,0 +1,31 @@
+@import "../../sass/variables";
+
+.slick-slider {
+  .slick-track {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .slick-slide {
+    margin: 0 10px;
+  }
+
+  .slick-prev {
+    &:before {
+      content: '\f104';
+    }
+  }
+
+  .slick-next {
+    &:before {
+      content: '\f105';
+    }
+  }
+
+  .slick-next, .slick-prev {
+    &:before {
+      font-family: "fontawesome";
+      color: #000;
+      font-size: 40px;
+    }
+  }
+}

@@ -1,31 +1,29 @@
 import React, { Component } from 'react';
-import ProjectBox from '../ProjectBox/ProjectBox';
 
 class Slider extends Component {
   constructor(props) {
     super(props);
   }
 
-  componentDidMount() {
-    const slidesToShow = 3;
-    const classname = this.props.className;
-    $('.' + classname).slick({
-      dots: this.props.dots,
-      slidesToShow: this.props.slidesToShow,
-      responsive: [
-        {
-          breakpoint: 768,
-          settings: {
-            slidesToShow: 1
-          }
-        }
-      ]
-    });
-  }
-
   render() {
+    const classname = this.props.className;
+    if (!$('.' + classname).hasClass('slick-initialized')) {
+      $('.' + classname).slick({
+        dots: this.props.dots,
+        slidesToShow: this.props.slidesToShow,
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 1
+            }
+          }
+        ]
+      });
+    }
+
     return (
-      <div className={this.props.className}>
+      <div className={classname}>
         {this.props.slides}
       </div>
     )
