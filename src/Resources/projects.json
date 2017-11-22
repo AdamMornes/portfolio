@@ -1,6 +1,23 @@
 {
   "projects": [
     {
+      "name": "Splash Page Theme",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at accumsan ante, id eleifend nulla.",
+      "imgPath": [
+        "images/projects/splashpage/sp_desktoptop.jpg",
+        "images/projects/splashpage/sp_desktopbottom.jpg",
+        "images/projects/splashpage/sp_mobilecollapsed.jpg",
+        "images/projects/splashpage/sp_mobileexpanded.jpg"
+      ],
+      "demo": [
+        {
+          "available": true,
+          "inline": false,
+          "resource": "http://splash1.demo.ari-build.com/"
+        }
+      ]
+    },
+    {
       "name": "Atomic Style Library",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at accumsan ante, id eleifend nulla.",
       "imgPath": [
@@ -9,6 +26,13 @@
         "images/projects/atomicstyles/as_color.jpg",
         "images/projects/atomicstyles/as_layout.jpg",
         "images/projects/atomicstyles/as_flex.jpg"
+      ],
+      "demo": [
+        {
+          "available": false,
+          "inline": false,
+          "resource": "http://splash1.demo.ari-build.com/"
+        }
       ]
     },
     {
@@ -17,16 +41,13 @@
       "imgPath": [
         "images/projects/siteinfo/si_responsive.jpg",
         "images/projects/siteinfo/si_endeavor.jpg"
-      ]
-    },
-    {
-      "name": "Splash Page Theme",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at accumsan ante, id eleifend nulla.",
-      "imgPath": [
-        "images/projects/splashpage/sp_desktoptop.jpg",
-        "images/projects/splashpage/sp_desktopbottom.jpg",
-        "images/projects/splashpage/sp_mobilecollapsed.jpg",
-        "images/projects/splashpage/sp_mobileexpanded.jpg"
+      ],
+      "demo": [
+        {
+          "available": false,
+          "inline": false,
+          "resource": ""
+        }
       ]
     }
   ]

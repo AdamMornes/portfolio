@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Projects from '../../Resources/projects.json';
 import ProjectBox from '../ProjectBox/ProjectBox';
+import Slider from '../Slider/Slider';
 
 class ProjectSlider extends Component {
 
@@ -8,24 +9,17 @@ class ProjectSlider extends Component {
     super(props);
 
     this.state = {
-      projectsArr: Projects.projects
+      projectsArr: Projects.projects,
+      dots: true,
+      className: 'projects-slider'
     }
   }
 
   componentDidMount() {
     const slidesToShow = 3;
-    $('.projects-slider').slick({
-      dots: true,
-      slidesToShow: this.state.projectsArr.length <= slidesToShow ? this.state.projectsArr.length : slidesToShow,
-      responsive: [
-        {
-          breakpoint: 768,
-          settings: {
-            slidesToShow: 1
-          }
-        }
-      ]
-    });
+    this.setState({
+        slidesToShow: this.state.projectsArr.length <= slidesToShow ? this.state.projectsArr.length : slidesToShow
+    })
   }
 
   render() {
@@ -38,8 +32,8 @@ class ProjectSlider extends Component {
       })
     }
     return (
-      <div className="projects-slider">
-        {slides}
+      <div className="projects-wrapper">
+        <Slider dots={this.state.dots} className={this.state.className} slides={slides} />
       </div>
     )
   }

@@ -57,7 +57,7 @@ class Footer extends Component {
           <div className="col-xs-3 col-sm-2 right-diag-wrapper">
             <div className="footer-diag"></div>
           </div>
-
+          <hr className="col-xs-8 col-xs-offset-2 hidden-xs" />
           <div className="col-xs-12 copyright-info h6">
             Copyright &copy; 2017 Adam Mornes
           </div>

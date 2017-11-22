@@ -15,7 +15,7 @@
     font-family: $font-heading;
     margin-top: 15px;
     margin-bottom: 20px;
-    font-size: 24px;
+    font-size: 20px;
   }
 
   .preview-wrapper {
@@ -36,7 +36,32 @@
     margin: 0 10px;
   }
 
+  .slick-prev {
+    &:before {
+      content: '\f104';
+    }
+  }
+
+  .slick-next {
+    &:before {
+      content: '\f105';
+    }
+  }
+
+  .slick-next, .slick-prev {
+    &:before {
+      font-family: "fontawesome";
+      color: #000;
+      font-size: 40px;
+    }
+  }
+
   @media (min-width: $screen-sm) {
     margin: 0;
+
+
+    .project-heading {
+      font-size: 24px;
+    }
   }
 }
