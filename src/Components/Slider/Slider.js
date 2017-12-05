@@ -1,30 +1,54 @@
 import React, { Component } from 'react';
-import ReactSlider from 'react-slick';
+import 'slick-carousel';
 
 class Slider extends Component {
   constructor(props) {
     super(props);
   }
 
-  render() {
+  componentWillUnmount() {
+    if ($('.' + this.props.className).hasClass('slick-initialized')) {
+      $('.' + this.props.className).slick('unslick');
+    }
+  }
 
-    var settings = {
+  componentDidMount() {
+    const classname = this.props.className;
+    if (!$('.' + classname).hasClass('slick-initialized') && this.props.slidesToShow !== undefined) {
+      $('.' + classname).slick({
         dots: this.props.dots,
         slidesToShow: this.props.slidesToShow,
         responsive: [
           {
             breakpoint: 768,
-            slidesToShow: 1,
+            settings: {
+              slidesToShow: 1
+            }
           }
         ]
-
+      });
     }
+  }
 
+  render() {
+    const classname = this.props.className;
+    if (!$('.' + classname).hasClass('slick-initialized') && this.props.slidesToShow !== undefined) {
+      $('.' + classname).slick({
+        dots: this.props.dots,
+        slidesToShow: this.props.slidesToShow,
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 1
+            }
+          }
+        ]
+      });
+    }
     return (
-      <div className={this.props.className}>
-        <ReactSlider {...settings}>
+      <div className={classname}>
           {this.props.slides}
-        </ReactSlider>
       </div>
     )
   }

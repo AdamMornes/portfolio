@@ -1,6 +1,5 @@
 import $ from 'jquery';
 import 'bootstrap';
-import 'slick-carousel';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Header from './Components/Header/Header';

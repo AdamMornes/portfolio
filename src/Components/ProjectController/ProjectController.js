@@ -27,7 +27,6 @@ class ProjectSlider extends Component {
   }
 
   toggleDetails(i) {
-    console.log(i);
     if (this.state.details === null) {
       const project = this.state.projectsArr[i];
       const detailsInit = <ProjectDetails project={project} toggle={this.toggleDetails}/>;
