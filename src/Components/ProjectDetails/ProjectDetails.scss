@@ -1,0 +1,49 @@
+@import "../../sass/variables";
+
+.project-details {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background: rgba(#000,0.4);
+  z-index: 1031;
+
+  .project-details-wrapper {
+    background: #fff;
+    padding: 15px;
+  }
+
+  .project-slider-wrapper {
+
+    .slick-slide {
+      margin: 0;
+
+    }
+
+    .slick-track {
+      padding: 0;
+    }
+
+    .project-slider {
+      box-shadow: 0 0 5px 1px rgba(#000,0.2);
+      border: 1px solid #cccbcb;
+      padding: 3px;
+    }
+
+    .sample {
+      width: 100%;
+      border: 1px solid #e4e4e4;
+    }
+  }
+
+  .btn-details-close {
+    float: right;
+  }
+
+  .clear {
+    clear: both;
+  }
+}

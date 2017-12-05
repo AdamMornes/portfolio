@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactSlider from 'react-slick';
 
 class Slider extends Component {
   constructor(props) {
@@ -6,25 +7,24 @@ class Slider extends Component {
   }
 
   render() {
-    const classname = this.props.className;
-    if (!$('.' + classname).hasClass('slick-initialized')) {
-      $('.' + classname).slick({
+
+    var settings = {
         dots: this.props.dots,
         slidesToShow: this.props.slidesToShow,
         responsive: [
           {
             breakpoint: 768,
-            settings: {
-              slidesToShow: 1
-            }
+            slidesToShow: 1,
           }
         ]
-      });
+
     }
 
     return (
-      <div className={classname}>
-        {this.props.slides}
+      <div className={this.props.className}>
+        <ReactSlider {...settings}>
+          {this.props.slides}
+        </ReactSlider>
       </div>
     )
   }

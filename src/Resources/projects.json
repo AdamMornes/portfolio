@@ -19,7 +19,7 @@
     },
     {
       "name": "Atomic Style Library",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at accumsan ante, id eleifend nulla.",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in consectetur libero, et sagittis orci.",
       "imgPath": [
         "images/projects/atomicstyles/as_homescreen.jpg",
         "images/projects/atomicstyles/as_typography.jpg",
@@ -31,13 +31,28 @@
         {
           "available": false,
           "inline": false,
-          "resource": "http://splash1.demo.ari-build.com/"
+          "resource": ""
         }
       ]
     },
     {
       "name": "Site Info Bookmarklet",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at accumsan ante, id eleifend nulla.",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ante dolor, sollicitudin quis dolor maximus.",
+      "imgPath": [
+        "images/projects/siteinfo/si_responsive.jpg",
+        "images/projects/siteinfo/si_endeavor.jpg"
+      ],
+      "demo": [
+        {
+          "available": false,
+          "inline": false,
+          "resource": ""
+        }
+      ]
+    },
+    {
+      "name": "Site Info Bookmarklet",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ante dolor, sollicitudin quis dolor maximus.",
       "imgPath": [
         "images/projects/siteinfo/si_responsive.jpg",
         "images/projects/siteinfo/si_endeavor.jpg"

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ProjectSlider from '../ProjectSlider/ProjectSlider';
+import ProjectSlider from '../ProjectController/ProjectController';
 
 class WorkController extends Component {
   render() {
