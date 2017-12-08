@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
+import ReactSlick from 'react-slick';
 import Projects from '../../Resources/projects.json';
 import ProjectBox from '../ProjectBox/ProjectBox';
 import ProjectDetails from '../ProjectDetails/ProjectDetails';
-import Slider from '../Slider/Slider';
+import SliderArrows from '../SliderArrows/SliderArrows';
 
 class ProjectSlider extends Component {
 
@@ -13,16 +14,45 @@ class ProjectSlider extends Component {
       projectsArr: Projects.projects,
       dots: true,
       className: 'projects-slider',
-      details: null
+      details: null,
+      sliderSettings: {},
+      responsiveSliderSettings: [
+        {
+          breakpoint: 768,
+          settings: {
+            arrows: true,
+            centerMode: false,
+            dots: true,
+            draggable: true,
+            infinite: true,
+            slidesToShow: 1
+          }
+        }
+      ]
     }
 
     this.toggleDetails = this.toggleDetails.bind(this);
   }
 
   componentDidMount() {
-    const slidesToShow = 3;
+    const maxSlides = 3;
+    var scroll = this.state.projectsArr.length <= maxSlides
     this.setState({
-        slidesToShow: this.state.projectsArr.length <= slidesToShow ? this.state.projectsArr.length : slidesToShow
+        sliderSettings: {
+          adaptiveHeight: false,
+          arrows: !scroll,
+          className: 'projects-slider',
+          nextArrow: <SliderArrows direction={'next'}/>,
+          prevArrow: <SliderArrows direction={'prev'}/>,
+          centerMode: !scroll,
+          centerPadding: 0,
+          dots: !scroll,
+          draggable: !scroll,
+          infinite: !scroll,
+          initialSlide: 1,
+          slidesToShow: scroll ? this.state.projectsArr.length : maxSlides,
+          slidesToScroll: 1
+        }
     })
   }
 
@@ -52,7 +82,9 @@ class ProjectSlider extends Component {
     }
     return (
       <div className="projects-wrapper">
-        <Slider className={this.state.className} slidesToShow={this.state.slidesToShow} dots={this.state.dots} slides={slides}/>
+        <ReactSlick {...this.state.sliderSettings} responsive={this.state.responsiveSliderSettings}>
+          {slides}
+        </ReactSlick>
         {this.state.details}
       </div>
     )

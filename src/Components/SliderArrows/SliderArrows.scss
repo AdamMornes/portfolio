@@ -1,0 +1,21 @@
+@import "../../sass/variables";
+
+.slick-arrow.custom-arrow {
+  &:before {
+    font-family: "fontawesome";
+    color: #000;
+    font-size: 40px;
+  }
+
+  &.custom-prev {
+    &:before {
+      content: "\f104";
+    }
+  }
+
+  &.custom-next {
+    &:before {
+      content: "\f105";
+    }
+  }
+}
