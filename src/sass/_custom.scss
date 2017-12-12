@@ -2,4 +2,43 @@ html, body {
   height: 100%;
   width: 100%;
   background: $brand-primary;
+  font-family: $font-copy;
+
+  &.modal-open {
+    overflow: auto;
+    @media (min-width: $screen-sm) {
+      overflow: hidden;
+    }
+  }
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: $font-heading;
+  &.section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 55px;
+    font-size: 45px;
+    .heading-left {
+      margin-right: 20px;
+    }
+    .heading-right {
+      margin-left: 20px;
+    }
+    .diag-bar {
+      display: inline-block;
+      height: 55px;
+      width: 2px;
+      background: #333;
+      transform: rotate(25deg);
+    }
+    .fa {
+      margin-left: 20px;
+    }
+  }
+}
+
+.clear {
+  clear: both;
 }

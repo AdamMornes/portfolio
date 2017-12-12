@@ -3,23 +3,39 @@
     {
       "name": "Splash Page Theme",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at accumsan ante, id eleifend nulla.",
+      "type": "CSS / Sass Theming",
       "imgPath": [
         "images/projects/splashpage/sp_desktoptop.jpg",
         "images/projects/splashpage/sp_desktopbottom.jpg",
         "images/projects/splashpage/sp_mobilecollapsed.jpg",
         "images/projects/splashpage/sp_mobileexpanded.jpg"
       ],
-      "demo": [
-        {
-          "available": true,
-          "inline": false,
-          "resource": "http://splash1.demo.ari-build.com/"
-        }
+      "demo": {
+        "available": true,
+        "inline": false,
+        "resource": "http://splash1.demo.ari-build.com/"
+      },
+      "markup": [
+        "HTML",
+        "CSS",
+        "Sass",
+        "Javascript"
+      ],
+      "framework": [
+        "Bootstrap 3",
+        "JQuery"
+      ],
+      "methodology": [
+        "Mobile First Development",
+        "Responsive Development",
+        "Theme Development",
+        "Atomic CSS"
       ]
     },
     {
       "name": "Atomic Style Library",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in consectetur libero, et sagittis orci.",
+      "type": "CSS Architecture / Style Guide Development",
       "imgPath": [
         "images/projects/atomicstyles/as_homescreen.jpg",
         "images/projects/atomicstyles/as_typography.jpg",
@@ -27,42 +43,92 @@
         "images/projects/atomicstyles/as_layout.jpg",
         "images/projects/atomicstyles/as_flex.jpg"
       ],
-      "demo": [
-        {
-          "available": false,
-          "inline": false,
-          "resource": ""
-        }
+      "demo": {
+        "available": false,
+        "inline": false,
+        "resource": ""
+      },
+      "markup": [
+        "HTML",
+        "CSS",
+        "Sass",
+        "Javascript"
+      ],
+      "framework": [
+        "Bootstrap 3",
+        "JQuery",
+        "Node.JS",
+        "KSS-Node"
+      ],
+      "methodology": [
+        "Mobile First Development",
+        "Responsive Development",
+        "Style Guide Development",
+        "Atomic CSS"
       ]
     },
     {
       "name": "Site Info Bookmarklet",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ante dolor, sollicitudin quis dolor maximus.",
+      "type": "Front-End Toolset Development",
       "imgPath": [
         "images/projects/siteinfo/si_responsive.jpg",
         "images/projects/siteinfo/si_endeavor.jpg"
       ],
-      "demo": [
-        {
-          "available": false,
-          "inline": false,
-          "resource": ""
-        }
+      "demo": {
+        "available": false,
+        "inline": false,
+        "resource": ""
+      },
+      "markup": [
+        "HTML",
+        "CSS",
+        "Sass",
+        "Javascript"
+      ],
+      "framework": [
+        "Bootstrap 3",
+        "JQuery",
+        "Node.JS",
+        "Vue.JS"
+      ],
+      "methodology": [
+        "Mobile First Development",
+        "Responsive Development",
+        "Style Guide Development",
+        "Atomic CSS"
       ]
     },
     {
       "name": "Site Info Bookmarklet",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ante dolor, sollicitudin quis dolor maximus.",
+      "type": "Front-End Toolset Development",
       "imgPath": [
         "images/projects/siteinfo/si_responsive.jpg",
         "images/projects/siteinfo/si_endeavor.jpg"
       ],
-      "demo": [
-        {
-          "available": false,
-          "inline": false,
-          "resource": ""
-        }
+      "demo": {
+        "available": false,
+        "inline": false,
+        "resource": ""
+      },
+      "markup": [
+        "HTML",
+        "CSS",
+        "Sass",
+        "Javascript"
+      ],
+      "framework": [
+        "Bootstrap 3",
+        "JQuery",
+        "Node.JS",
+        "Vue.JS"
+      ],
+      "methodology": [
+        "Mobile First Development",
+        "Responsive Development",
+        "Atomic CSS",
+        "Style Guide Development"
       ]
     }
   ]

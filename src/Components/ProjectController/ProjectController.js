@@ -10,12 +10,27 @@ class ProjectSlider extends Component {
   constructor(props) {
     super(props);
 
+    const projectsArr = Projects.projects;
+    const maxSlides = 3;
+    var scroll = projectsArr.length <= maxSlides;
+
     this.state = {
       projectsArr: Projects.projects,
-      dots: true,
-      className: 'projects-slider',
       details: null,
-      sliderSettings: {},
+      sliderSettings: {
+        adaptiveHeight: false,
+        arrows: !scroll,
+        className: 'projects-slider',
+        nextArrow: <SliderArrows direction={'next'}/>,
+        prevArrow: <SliderArrows direction={'prev'}/>,
+        centerMode: !scroll,
+        centerPadding: 0,
+        dots: !scroll,
+        draggable: !scroll,
+        initialSlide: 0,
+        infinite: !scroll,
+        slidesToShow: scroll ? projectsArr.length : maxSlides
+      },
       responsiveSliderSettings: [
         {
           breakpoint: 768,
@@ -32,27 +47,14 @@ class ProjectSlider extends Component {
     }
 
     this.toggleDetails = this.toggleDetails.bind(this);
+    this.handleToggle = this.handleToggle.bind(this);
   }
 
   componentDidMount() {
-    const maxSlides = 3;
-    var scroll = this.state.projectsArr.length <= maxSlides
+
     this.setState({
-        sliderSettings: {
-          adaptiveHeight: false,
-          arrows: !scroll,
-          className: 'projects-slider',
-          nextArrow: <SliderArrows direction={'next'}/>,
-          prevArrow: <SliderArrows direction={'prev'}/>,
-          centerMode: !scroll,
-          centerPadding: 0,
-          dots: !scroll,
-          draggable: !scroll,
-          infinite: !scroll,
-          initialSlide: 1,
-          slidesToShow: scroll ? this.state.projectsArr.length : maxSlides,
-          slidesToScroll: 1
-        }
+        mounted: true,
+
     })
   }
 
@@ -60,14 +62,22 @@ class ProjectSlider extends Component {
     if (this.state.details === null) {
       const project = this.state.projectsArr[i];
       const detailsInit = <ProjectDetails project={project} toggle={this.toggleDetails}/>;
+      $('.projects-slider').toggleClass('display-toggle');
       this.setState({
         details: detailsInit
       })
     } else {
-      this.setState({
-        details: null
-      })
+      $('.projects-slider').toggleClass('display-toggle');
+      setTimeout(() => {
+        this.setState({
+          details: null
+        })
+      }, 200);
+
     }
+  }
+
+  handleToggle(i) {
 
   }
 
@@ -76,16 +86,18 @@ class ProjectSlider extends Component {
     if (this.state.projectsArr.constructor === Array) {
       slides = this.state.projectsArr.map((project, i) => {
         return (
-          <div key={i}><ProjectBox name={project.name} toggle={this.toggleDetails.bind(this, i)} imgPath={project.imgPath[0]} /></div>
+          <div key={i}><ProjectBox name={project.name} type={project.type} toggle={this.toggleDetails.bind(this, i)} imgPath={project.imgPath[0]} /></div>
         )
       })
     }
     return (
       <div className="projects-wrapper">
-        <ReactSlick {...this.state.sliderSettings} responsive={this.state.responsiveSliderSettings}>
-          {slides}
-        </ReactSlick>
-        {this.state.details}
+        <div className="projects-track">
+          <ReactSlick {...this.state.sliderSettings} responsive={this.state.responsiveSliderSettings}>
+            {slides}
+          </ReactSlick>
+          {this.state.details}
+        </div>
       </div>
     )
   }

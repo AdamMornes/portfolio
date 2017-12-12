@@ -11,7 +11,7 @@ class Resume extends Component {
     if (win) {
       win.focus();
     } else {
-      alert('Please allow popups for this website');
+      alert('Something blocked this external link!');
     }
   }
 
@@ -23,11 +23,11 @@ class Resume extends Component {
             <div className="resume-controls">
 
               <div className="col-xs-3 col-sm-1 text-center">
-                <Button title={'Open Resume as PDF'} className={'btn-pdf'} action={this.openPDF} content={[<span key="0" className="fa fa-file-pdf-o fa-2x"></span>]}/>
+                <Button className="fa fa-file-pdf-o fa-2x" title={'Open Resume as PDF'} className={'btn-pdf'} action={this.openPDF} content={[<span key="0"></span>]}/>
               </div>
 
               <div className="col-xs-3 col-xs-offset-6 col-sm-1 col-sm-offset-10 text-center">
-                <Button title={'Close Resume'} className={'btn-resume-close'} action={this.props.toggle} content={'X'}/>
+                <Button className={'btn-resume-close'} title={'Close Resume'} action={this.props.toggle} content={'X'}/>
               </div>
 
             </div>

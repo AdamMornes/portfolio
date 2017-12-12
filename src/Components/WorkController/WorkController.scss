@@ -2,7 +2,8 @@
 
 .work-area {
   background: #cdccc8;
-
+  padding: 15px 0;
+  height: auto;
   @media (min-width: $screen-sm) {
     padding-top: 50px;
     padding-bottom: 50px;
