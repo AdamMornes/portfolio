@@ -11,44 +11,15 @@
     color: #000;
   }
 
-  /*=== [ Positioning for Diag line effects. ] ===*/
-  > .container {
-    position: relative;
-  }
-
-  /*=== [ Diagnal Line Effects ] ===*/
-  .left-diag-wrapper, .right-diag-wrapper {
-    position: absolute;
-    top: 0;
-    display: block;
-    height: 200px;
-    padding-left: 0;
-    padding-right: 0;
-    overflow: hidden;
-  }
-
-  .footer-diag {
-    position: absolute;
-    display: block;
-    width: 1px;
-    height: 500px;
-    background: #000;
-    transform: rotate(12deg);
-  }
-
-  .left-diag-wrapper {
-    left: 0;
-    .footer-diag {
-      top: -100px;
-      right: 50px;
+  .phone-icon {
+    p {
+      float: left;
     }
   }
 
-  .right-diag-wrapper {
-    right: 0;
-    .footer-diag {
-      top: -100px;
-      left: 30px;
+  .email-icon {
+    p {
+      float: right;
     }
   }
 
@@ -61,8 +32,8 @@
   .mobile-icons {
     .list-inline {
       li {
-        padding-left: 10px;
-        padding-right: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
       }
     }
   }
@@ -70,75 +41,6 @@
   /*=== [ Contact Info ] ===*/
   .contact-info {
     margin-bottom: 25px;
-  }
-
-  /*=== [ Form Collapse/Expand ] ===*/
-  .footer-top {
-    padding-top: 30px;
-    .footertop-block {
-      display: inline;
-      a {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        display: block;
-        height: 45px;
-        width: 60px;
-        background: #fff;
-        cursor: pointer;
-        line-height: 55px;
-        margin-top: -20px;
-        margin: -20px auto 0;
-        border-top: 1px solid #000;
-        border-left: 1px solid #000;
-        border-right: 1px solid #000;
-        transition: all .1s linear;
-        .fa {
-          font-size: 28px;
-          color: #000;
-          transition: all .35s ease;
-        }
-        &:hover {
-          text-decoration: none;
-          .fa {
-            text-decoration: none;
-          }
-        }
-      }
-
-      .form-text {
-        cursor: pointer;
-        font-size: 22px;
-        color: #333;
-        .top-divider {
-          margin-top: 8px;
-          border-color: #e5e5e5;
-        }
-      }
-
-      &.contact-toggle {
-        .fa-angle-double-up {
-          transform: rotate(180deg);
-        }
-      }
-      &:hover {
-        a {
-          height: 50px;
-          margin-top: -25px;
-        }
-      }
-    }
-  }
-
-  /*=== [ Contact Form ] ===*/
-  .contactform-wrapper {
-    margin-bottom: 30px;
-    .contact-form {
-      hr {
-        border-color: #e5e5e5;
-      }
-    }
   }
 
   /*=== [ Social Media ] ===*/
@@ -175,21 +77,5 @@
         }
       }
     }
-  }
-
-  @media (min-width: $screen-sm) {
-    .contact-info {
-      h2 {
-        margin-top: 5px;
-      }
-    }
-    .right-diag-wrapper, .left-diag-wrapper {
-      height: 150px;
-    }
-    .footer-diag {
-      transform: rotate(18deg);
-    }
-
-    /*=== [ Social Media ] ===*/
   }
 }

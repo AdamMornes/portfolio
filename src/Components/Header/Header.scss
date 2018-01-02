@@ -2,6 +2,9 @@
 
 $header-bg-color  : #fff !default;
 
+$header-height-xs-base    : 60px !default;
+$header-height-xs-scroll  : 42px !default;
+
 $header-height-sm-base    : 60px !default;
 $header-height-sm-scroll  : 50px !default;
 
@@ -9,21 +12,72 @@ $header-height-md-base    : 91px !default;
 $header-height-md-scroll  : 60px !default;
 
 #Header {
-  height: 60px;
-  transition: all .2s linear;
+  height: 100%;
+  .header-wrapper {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url('../../Images/hero-shot-mobile.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    box-shadow: inset 0px -5px 10px 3px rgba(0, 0, 0, 0.2);
+    @media (min-width: $screen-sm) {
+      background-image: url('../../Images/hero-shot.jpg');
+      background-position: bottom center;
+      min-height: 550px;
+    }
+
+    @media (min-width: $screen-md) {
+      min-height: 100%;
+    }
+  }
+
   .navbar {
+    position: fixed;
+    top: 0;
+    z-index: 1030;
+    width: 100%;
     background: $header-bg-color;
     border-bottom: 0;
     margin-bottom: 0;
-    min-height: 60px;
+    min-height: $header-height-xs-base;
     box-shadow: 0 0 12px 4px rgba(0,0,0,0.2);
     transition: all .2s linear;
     border: 0 solid transparent;
+
+    .logo-area {
+
+      .logo-wrapper {
+        display: flex;
+        height: $header-height-sm-base;
+        align-items: center;
+        transition: all .2s linear;
+      }
+
+      .logo-sm {
+        max-height: $header-height-sm-base - 10px;
+        transition: all .2s linear .1s;
+      }
+
+      .nav-top-icon {
+        font-size: 30px;
+        margin-left: 15px;
+        margin-top: -85px;
+        transition: all .1s ease-out;
+        a {
+          color: #000;
+        }
+      }
+    }
+
     .prime-nav {
       font-family: $font-heading;
       background: transparent;
 
       .navbar-header {
+        text-align: center;
         .navbar-toggle {
           padding: 22px 5px;
           margin: 0;
@@ -38,13 +92,14 @@ $header-height-md-scroll  : 60px !default;
         padding-left: 0;
         padding-right: 0;
       }
+
       #primeNav {
         .navbar-nav {
           > li {
             > a {
               position: relative;
               color: #000;
-              font-size: 25px;
+              font-size: 24px;
               padding: 20px 30px;
               cursor: pointer;
               &:hover, &:focus {
@@ -96,18 +151,147 @@ $header-height-md-scroll  : 60px !default;
         }
       }
     }
-  }
 
-  @media(min-width: $screen-sm) {
-    height: 550px;
-    .header-wrapper {
-      min-height: 550px;
-      background-image: url('../../../images/hero-shot.jpg');
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
+    &.navbar-fixed-top {
+      min-height: $header-height-xs-scroll;
+
+      .logo-area {
+
+        .logo-wrapper {
+          height: $header-height-xs-scroll;
+        }
+
+        .logo-sm {
+          transition: all .2s linear;
+          margin-left: -100px;
+          max-height: $header-height-xs-scroll - 10px;
+        }
+
+        .nav-top-icon {
+          transition: all .1s ease-out .2s;
+          margin-top: 0;
+        }
+      }
+
+      .prime-nav {
+        .navbar-header {
+          .navbar-toggle {
+            padding: 12px 5px;
+          }
+        }
+
+        #primeNav {
+          .navbar-nav {
+            > li {
+              > a:after {
+                top: 38px;
+              }
+            }
+          }
+        }
+      }
+
+      @media (min-width: $screen-sm) {
+        .logo {
+          width: 25%;
+          .diag-wrapper {
+            height: $header-height-sm-scroll;
+            .left-line-wrapper {
+              height: 32px;
+            }
+
+            .right-diag-wrapper {
+              height: $header-height-sm-scroll;
+              .right-diag-line-wrapper {
+                height: 32px;
+              }
+            }
+          }
+        }
+
+        .logo-area {
+          top: 0;
+          height: $header-height-sm-scroll;
+          .logo-lg {
+            top: -60px;
+            transform: rotate(36deg);
+            transition: all .2s linear;
+          }
+
+          .nav-top-icon {
+            left: 25px;
+            transition: all .1s ease-out .2s;
+          }
+        }
+
+        .prime-nav {
+          height: $header-height-sm-scroll;
+          width: 75%;
+          #primeNav {
+            .navbar-nav {
+              > li {
+                > a {
+                  padding: 15px 30px;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      @media (min-width: $screen-md) {
+        .logo {
+          width: 16.6667%;
+          .diag-wrapper {
+            height: $header-height-md-scroll;
+            .left-line-wrapper {
+              height: 42px;
+            }
+
+            .right-diag-wrapper {
+              height: $header-height-md-scroll;
+              .right-diag-line-wrapper {
+                height: 42px;
+              }
+            }
+          }
+        }
+
+        .logo-area {
+          .nav-top-icon {
+            left: 10px;
+            top: 8px;
+          }
+        }
+
+        .prime-nav {
+          height: $header-height-md-scroll;
+          width: 83.3333%;
+          #primeNav {
+            .navbar-nav {
+              > li {
+                > a {
+                  padding: 20px 50px;
+                  &:after {
+                    top: 45px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      @media (min-width: $screen-lg) {
+        .logo-area {
+          .logo-lg {
+            top: -75px;
+          }
+        }
+      }
     }
-    .navbar {
+
+    @media (min-width: $screen-sm) {
       background-color: transparent;
       box-shadow: none;
       .logo {
@@ -196,6 +380,39 @@ $header-height-md-scroll  : 60px !default;
         }
       }
 
+      .logo-area {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        display: block;
+        width: 50%;
+        height: 100%;
+        transition: all .2s linear;
+
+        .logo-wrapper {
+          position: relative;
+          display: block;
+          height: auto;
+        }
+
+        .logo-lg {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          max-width: 500px;
+          transition: all .2s linear .2s;
+        }
+
+        .nav-top-icon {
+          position: absolute;
+          top: 3px;
+          left: -35px;
+          margin: 0;
+          transition: all .2s ease-out;
+        }
+      }
+
       .prime-nav {
         background: $header-bg-color;
         height: $header-height-sm-base;
@@ -211,14 +428,8 @@ $header-height-md-scroll  : 60px !default;
         }
       }
     }
-  }
 
-  @media (min-width: $screen-md) {
-    height: 100%;
-    .header-wrapper {
-      min-height: 100%;
-    }
-    .navbar {
+    @media (min-width: $screen-md) {
       .logo {
         .diag-wrapper {
           height: 275px;
@@ -257,50 +468,34 @@ $header-height-md-scroll  : 60px !default;
         }
       }
     }
-  }
 
-  @media (min-width: $screen-lg) {
-    .navbar {
+    @media (min-width: $screen-lg) {
       .logo {
         .diag-wrapper {
           height: 470px;
         }
       }
-    }
-  }
 
-  /*-- 4K Diagnal Hack --*/
-  @media (min-width: 2000px) {
-    .navbar {
-      .logo {
-        .diag-wrapper {
-          height: 910px;
-          .right-diag {
-            right: 32px;
-            height: 800px;
-            width: 2100px;
-          }
+      .logo-area {
+        top: 25px;
+        left: 25px;
+
+        .nav-top-icon {
+          left: -45px;
         }
       }
     }
-  }
-}
 
-#Header.header-reduction {
-  .navbar {
-    min-height: 42px;
-    .prime-nav {
-      .navbar-header {
-        .navbar-toggle {
-          padding: 12px 5px;
-        }
-      }
-
-      #primeNav {
-        .navbar-nav {
-          > li {
-            > a:after {
-              top: 38px;
+    /*-- 4K Diagnal Hack --*/
+    @media (min-width: 2000px) {
+      .navbar {
+        .logo {
+          .diag-wrapper {
+            height: 910px;
+            .right-diag {
+              right: 32px;
+              height: 800px;
+              width: 2100px;
             }
           }
         }
@@ -308,74 +503,101 @@ $header-height-md-scroll  : 60px !default;
     }
   }
 
-  @media (min-width: $screen-sm) {
-    .navbar {
-      .logo {
-        width: 25%;
-        .diag-wrapper {
-          height: $header-height-sm-scroll;
-          .left-line-wrapper {
-            height: 32px;
-          }
+  .hero-content {
+    width: 100%;
+    height: 100%;
+    background: rgba(#fff,0.4);
+    padding: 150px 25px 25px;
+    .hero-content-wrapper {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-direction: column;
+      height: 100%;
+      width: 100%;
+    }
+    .hero-header {
+      font-size: 30px;
+      line-height: 32px;
+    }
 
-          .right-diag-wrapper {
-            height: $header-height-sm-scroll;
-            .right-diag-line-wrapper {
-              height: 32px;
-            }
-          }
-        }
-      }
-      .prime-nav {
-        height: $header-height-sm-scroll;
-        width: 75%;
-        #primeNav {
-          .navbar-nav {
-            > li {
-              > a {
-                padding: 15px 30px;
-              }
-            }
-          }
-        }
+    .hero-subheader {
+      font-size: 30px;
+      margin-top: 20px;
+    }
+
+    .hero-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 35px;
+      width: 100%;
+      background: rgba(#fff,0.9);
+      border: 1px solid #c3c3c3;
+      align-self: center;
+      padding: 0 10px 2px;
+      margin-top: auto;
+      justify-self: flex-end;
+      text-align: center;
+      color: #444;
+      box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
+      &:hover, &:focus, &:active {
+        text-decoration: none;
       }
     }
+
+    @media (min-width: $screen-sm) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: transparent;
+      padding: 25px 50px;
+      width: 50%;
+      float: right;
+      .hero-content-wrapper {
+        display: inline-block;
+        height: auto;
+        width: auto;
+      }
+      .hero-subheader {
+        margin-bottom: 30px;
+      }
+      .hero-nav {
+        align-self: auto;
+        margin: 0;
+        background: rgba(#fff,0.4);
+        box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.1);
+      }
+    }
+
+    @media (min-width: $screen-md) {
+      padding-top: 91px;
+      .hero-nav {
+        margin-top: auto;
+      }
+    }
+
+    @media (min-width: $screen-lg) {
+      .hero-header {
+        font-size: 40px;
+        line-height: 42px;
+      }
+      .hero-subheader {
+        font-size: 38px;
+      }
+      .hero-content-wrapper {
+        margin-left: -100px;
+      }
+    }
+  }
+
+  @media(min-width: $screen-sm) {
+    position: relative;
+    z-index: 1;
+    height: 550px;
   }
 
   @media (min-width: $screen-md) {
-    .navbar {
-      .logo {
-        width: 16.6667%;
-        .diag-wrapper {
-          height: $header-height-md-scroll;
-          .left-line-wrapper {
-            height: 42px;
-          }
-
-          .right-diag-wrapper {
-            height: $header-height-md-scroll;
-            .right-diag-line-wrapper {
-              height: 42px;
-            }
-          }
-        }
-      }
-      .prime-nav {
-        height: $header-height-md-scroll;
-        width: 83.3333%;
-        #primeNav {
-          .navbar-nav {
-            > li {
-              > a {
-                padding: 20px 50px;
-                &:after {
-                  top: 45px;
-                }
-              }
-            }
-          }
-        }
-      }
-    }
+    height: 100%;
   }
 }

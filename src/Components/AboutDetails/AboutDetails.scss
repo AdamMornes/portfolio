@@ -1,0 +1,52 @@
+@import "../../sass/variables";
+
+.about-details-wrapper {
+  .profile-wrapper {
+    display: inline-block;
+    background: #fff;
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
+    border: 1px solid #ccbcbc;
+    padding: 3px;
+    margin: 0 auto;
+
+    .profile {
+      max-width: 250px;
+    }
+
+    @media (min-width: $screen-sm) {
+      float: left;
+      margin: 0 15px 15px 0;
+      .profile {
+        max-width: 250px;
+      }
+    }
+
+    @media (min-width: $screen-md) {
+      .profile {
+        max-width: 290px;
+      }
+    }
+
+    @media (min-width: $screen-lg) {
+      .profile {
+        max-width: 400px;
+      }
+    }
+  }
+  .intro-wrapper {
+    text-align: center;
+    h4 {
+      font-size: 24px;
+      text-align: left;
+      @media (min-width: $screen-sm) {
+        margin-top: 0;
+        margin-bottom: 15px;
+      }
+    }
+    p {
+      text-align: left;
+      line-height: 24px;
+      margin: 0 0 20px;
+    }
+  }
+}

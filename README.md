@@ -1,25 +1,15 @@
 ## ToDo
 
 # Short Term
-- Optimize imagery pulled in Component views
+- Add skills section
+- Add zoom functionality to project images slideshow.
+- Optimize imagery pulled in Component views. This includes creating Thumbnails for large imagery.
+- Clean up footer.
+- Add transition effects.
+- Add Scroll Effects.
+- Allow back button controls to work logically with modal windows.
+- Cleanup how resume data is being pulled.
 
-#Long Term
-- Update to CSS Grids
-
-## Lazy Load reference for later
-
-if (document.querySelectorAll('.container').length) {
-  import(/* webpackChunkName: 'button' */ './Components/Button').then(module => {
-    const Button = module.default;
-    var button = new Button('google.com');
-    button.render('.container');
-  });
-}
-//
-if (document.querySelectorAll('h1').length) {
-  import(/* webpackChunkName: 'header' */ './Components/Header').then(module => {
-    const Header = module.default;
-    var header = new Header();
-    header.render('h1');
-  });
-}
+# Long Term
+- Update to CSS Grids.
+- Lazy load components more effectively.

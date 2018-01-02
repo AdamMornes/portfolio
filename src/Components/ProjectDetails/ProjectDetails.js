@@ -100,9 +100,19 @@ class ProjectDetails extends Component {
         return (
           <div key={i}>
             <div className="sample-wrapper">
-            <img className="sample" src={image}/>
+            <img className="sample img-responsive" src={require('../../' + image)}/>
             </div>
           </div>
+        )
+      })
+    }
+    var description = '';
+    if (this.props.project.description !== undefined) {
+      description = this.props.project.description.map((description, i) => {
+        return (
+          <p>
+            {description}
+          </p>
         )
       })
     }
@@ -148,6 +158,7 @@ class ProjectDetails extends Component {
     var info = {
       tabindex: tabindex,
       slides: slides,
+      description: description,
       button: button,
       markup: markup,
       framework: framework,
@@ -189,7 +200,9 @@ class ProjectDetails extends Component {
                     <hr/>
                     <h5 className="project-info-heading">Description</h5>
                     <hr/>
-                    <p className="project-description">{this.props.project.description}</p>
+                    <div className="project-description">
+                      {info.description}
+                    </div>
                   </div>
 
               </div>

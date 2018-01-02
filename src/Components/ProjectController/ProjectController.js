@@ -51,10 +51,8 @@ class ProjectSlider extends Component {
   }
 
   componentDidMount() {
-
     this.setState({
         mounted: true,
-
     })
   }
 
@@ -68,12 +66,9 @@ class ProjectSlider extends Component {
       })
     } else {
       $('.projects-slider').toggleClass('display-toggle');
-      setTimeout(() => {
-        this.setState({
-          details: null
-        })
-      }, 200);
-
+      this.setState({
+        details: null
+      })
     }
   }
 

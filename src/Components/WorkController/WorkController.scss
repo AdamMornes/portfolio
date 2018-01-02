@@ -4,12 +4,17 @@
   background: #cdccc8;
   padding: 15px 0;
   height: auto;
+  box-shadow: inset 0px 0px 10px 3px rgba(0, 0, 0, 0.2);
   @media (min-width: $screen-sm) {
     padding-top: 50px;
     padding-bottom: 50px;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: top right;
-    background-image: url("../../../images/work-bg.jpg");
+    background-position: top center;
+    background-image: url("../../Images/work-bg.jpg");
+  }
+
+  .heading-divider {
+    border-color: #adadad;
   }
 }

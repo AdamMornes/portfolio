@@ -2,13 +2,19 @@
   "projects": [
     {
       "name": "Splash Page Theme",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at accumsan ante, id eleifend nulla.",
+      "description": [
+        "After an initial mass client migration to ARI Network Service's new responsive platform, a need arose to create responsive themes that were more customizable. Since the idea of a website 'Theme' is to be more of a template, this created a unique problem. I created the Splash Page Theme as a proof of concept on how to create ARI Themes that accomplish that need.",
+        "At this point at ARI, the Responsive Themes were being created so that an internal developer could quickly develop websites based off of these themes. The end goal was/is to eventually have a more polished toolset to allow a client to easily go in and make these changes themselves. Since the system was/is still under development, this wasn't possible at the time of this project.",
+        "With that in mind, the goal was to create a theming method for internal developers to pick a Theme and customize it within 3-4 hours. After some research into CSS Architecture methodologies, I decided that using an Atomic Style Library would be the best way to accomplish this goal.",
+        "After developing a unique Atomic Style Library for ARI (also listed as a project in this portfolio), I created this Theme based upon it's library of classes. The result is a clean starting point for an easily customizable Theme. ARI developers can quickly activate this Theme, then update any of the styling classes on the fly to match their needs.",
+        "A public demo is available for this project, so take a look at it!"
+      ],
       "type": "CSS / Sass Theming",
       "imgPath": [
-        "images/projects/splashpage/sp_desktoptop.jpg",
-        "images/projects/splashpage/sp_desktopbottom.jpg",
-        "images/projects/splashpage/sp_mobilecollapsed.jpg",
-        "images/projects/splashpage/sp_mobileexpanded.jpg"
+        "Images/projects/splashpage/sp_desktoptop.jpg",
+        "Images/projects/splashpage/sp_desktopbottom.jpg",
+        "Images/projects/splashpage/sp_mobilecollapsed.jpg",
+        "Images/projects/splashpage/sp_mobileexpanded.jpg"
       ],
       "demo": {
         "available": true,
@@ -34,14 +40,21 @@
     },
     {
       "name": "Atomic Style Library",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in consectetur libero, et sagittis orci.",
+      "description": [
+        "After an initial mass client migration to ARI Network Service's new responsive platform, a need arose to create responsive themes that were more customizable. Since the idea of a website 'Theme' is to be more of a template, this created a unique problem. This is the Atomic Style Library that I developed to accomplish that need.",
+        "At this point at ARI, the Responsive Themes were being created so that an internal developer could quickly develop websites based off of these themes. The end goal was/is to eventually have a more polished toolset to allow a client to easily go in and make these changes themselves. Since the system was/is still under development, this wasn't possible at the time of this project.",
+        "With that in mind, the goal was to create a theming method for internal developers to pick a Theme and customize it within 3-4 hours. After some research into CSS Architecture methodologies, I decided that using an Atomic Style Library would be the best way to accomplish this goal.",
+        "The biggest challenge with this project was finding the balance between stylesheet weight, and class granularity. We decided to go somewhere in the middle, so that all of the most common values for particular styling effects were accounted for, while at the same time avoiding the weight of turning every style effect into a CSS class.",
+        "Since this library is targeting a fairly specific need for ARI, I decided to forgo a more traditional BEM naming convention for the CSS classes and came up with a logical method that fit ARI's needs more closely. Also, since we were using Bootstrap 3 at the time, it seemed logical to use a naming methodology that closer matched Bootstraps conventions.",
+        "As this is an internal ARI library, a public demo is unavailable. However, feel free to browse the images above for a general sense of how the Atomic Library and the Style Guide created for it turned out."
+      ],
       "type": "CSS Architecture / Style Guide Development",
       "imgPath": [
-        "images/projects/atomicstyles/as_homescreen.jpg",
-        "images/projects/atomicstyles/as_typography.jpg",
-        "images/projects/atomicstyles/as_color.jpg",
-        "images/projects/atomicstyles/as_layout.jpg",
-        "images/projects/atomicstyles/as_flex.jpg"
+        "Images/projects/atomicstyles/as_homescreen.jpg",
+        "Images/projects/atomicstyles/as_typography.jpg",
+        "Images/projects/atomicstyles/as_color.jpg",
+        "Images/projects/atomicstyles/as_layout.jpg",
+        "Images/projects/atomicstyles/as_flex.jpg"
       ],
       "demo": {
         "available": false,
@@ -69,11 +82,17 @@
     },
     {
       "name": "Site Info Bookmarklet",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ante dolor, sollicitudin quis dolor maximus.",
+      "description": [
+        "As with most large companys, there are many internal toolsets that an employee needs to navigate to throughout the day. While dealing with thousands of clients and their websites, it becomes important to have one tool that brings all those resources together. This is what the Site Info Bookmarklet accomplishes.",
+        "The Site Info Bookmarklet is a javascript based tool that uses Ajax to pull in client ID information from a page that exists on all ARI websites, but is only available to ARI office IP addresses. Then it uses that data to compile different links and buttons for all of the various ARI portals and resources.",
+        "What makes this extra useful to ARI employees is that they can run this script from the Dealer's website itself, while it's up in their browser. This allows the employee to navigate to wherever they need with just the link of the website. There is no need to track down ID information, as this finds it for them.",
+        "The Site Info tool also works on both of ARI's major platforms, which is significant because the ID information has to be pulled different depending on the platform.",
+        "Since the Site Info Bookmarklet pulls sensitive data, and the information it pulls is on externally hidden pages, a public demo for this is unavailable. The example images above have been censored to hide any site ID information."
+      ],
       "type": "Front-End Toolset Development",
       "imgPath": [
-        "images/projects/siteinfo/si_responsive.jpg",
-        "images/projects/siteinfo/si_endeavor.jpg"
+        "Images/projects/siteinfo/si_responsive.jpg",
+        "Images/projects/siteinfo/si_endeavor.jpg"
       ],
       "demo": {
         "available": false,
@@ -87,48 +106,12 @@
         "Javascript"
       ],
       "framework": [
-        "Bootstrap 3",
         "JQuery",
         "Node.JS",
         "Vue.JS"
       ],
       "methodology": [
-        "Mobile First Development",
-        "Responsive Development",
-        "Style Guide Development",
-        "Atomic CSS"
-      ]
-    },
-    {
-      "name": "Site Info Bookmarklet",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ante dolor, sollicitudin quis dolor maximus.",
-      "type": "Front-End Toolset Development",
-      "imgPath": [
-        "images/projects/siteinfo/si_responsive.jpg",
-        "images/projects/siteinfo/si_endeavor.jpg"
-      ],
-      "demo": {
-        "available": false,
-        "inline": false,
-        "resource": ""
-      },
-      "markup": [
-        "HTML",
-        "CSS",
-        "Sass",
-        "Javascript"
-      ],
-      "framework": [
-        "Bootstrap 3",
-        "JQuery",
-        "Node.JS",
-        "Vue.JS"
-      ],
-      "methodology": [
-        "Mobile First Development",
-        "Responsive Development",
-        "Atomic CSS",
-        "Style Guide Development"
+        "Ajax"
       ]
     }
   ]

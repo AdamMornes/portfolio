@@ -25,15 +25,13 @@
   }
 
   .preview-wrapper {
+    background: #fff;
     margin: 10px;
     box-shadow: 0 0 5px 1px rgba(#000,0.2);
     border: 1px solid #cccbcb;
     padding: 3px;
     .project-hvr {
       border: 1px solid #e4e4e4;
-    }
-    .prev {
-      width: 100%;
     }
   }
 

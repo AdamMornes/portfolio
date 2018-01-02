@@ -123,7 +123,7 @@ module.exports = {
             loader: 'url-loader',
             options: {
               limit: 10000,
-              name: '[path][name].[ext]',
+              name: 'images/[name].[ext]',
             },
           },
         ],
@@ -148,6 +148,17 @@ module.exports = {
             loader: 'file-loader',
             options: {
               name: 'fonts/[name].[ext]',
+            },
+          },
+        ],
+      },
+      {
+        test: /\.pdf$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: 'pdfs/[name].[ext]',
             },
           },
         ],
