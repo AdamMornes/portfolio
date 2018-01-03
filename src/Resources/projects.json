@@ -83,7 +83,7 @@
     {
       "name": "Site Info Bookmarklet",
       "description": [
-        "As with most large companys, there are many internal toolsets that an employee needs to navigate to throughout the day. While dealing with thousands of clients and their websites, it becomes important to have one tool that brings all those resources together. This is what the Site Info Bookmarklet accomplishes.",
+        "As with most large companies, there are many internal toolsets that an employee needs to navigate to throughout the day. While dealing with thousands of clients and their websites, it becomes important to have one tool that brings all those resources together. This is what the Site Info Bookmarklet accomplishes.",
         "The Site Info Bookmarklet is a javascript based tool that uses Ajax to pull in client ID information from a page that exists on all ARI websites, but is only available to ARI office IP addresses. Then it uses that data to compile different links and buttons for all of the various ARI portals and resources.",
         "What makes this extra useful to ARI employees is that they can run this script from the Dealer's website itself, while it's up in their browser. This allows the employee to navigate to wherever they need with just the link of the website. There is no need to track down ID information, as this finds it for them.",
         "The Site Info tool also works on both of ARI's major platforms, which is significant because the ID information has to be pulled different depending on the platform.",
