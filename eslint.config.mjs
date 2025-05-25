@@ -16,6 +16,9 @@ const eslintConfig = [
     plugins: ['eslint-plugin-prettier'],
     rules: {
       ...prettierConfig.rules,
+      'no-console': 'warn',
+      semi: ['error', 'always'],
+      quotes: ['error', 'single'],
       'prettier/prettier': 'error',
     },
   }),
