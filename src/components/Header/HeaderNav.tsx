@@ -1,23 +1,17 @@
-import Link from 'next/link';
+import HeaderNavLink from './HeaderNavLink';
 
 export default function HeaderNav() {
   return (
     <nav>
       <ul className="flex gap-20">
         <li>
-          <Link className="text-2xl text-white" href="/about">
-            About
-          </Link>
+          <HeaderNavLink href="/about">About</HeaderNavLink>
         </li>
         <li>
-          <Link className="text-2xl text-white" href="/projects">
-            Projects
-          </Link>
+          <HeaderNavLink href="/projects">Projects</HeaderNavLink>
         </li>
         <li>
-          <Link className="text-2xl text-white" href="/contact">
-            Contact
-          </Link>
+          <HeaderNavLink href="/contact">Contact</HeaderNavLink>
         </li>
       </ul>
     </nav>
