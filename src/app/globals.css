@@ -2,7 +2,7 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #111111;
   --brand-light: #9da894;
   --brand-dark: #505a49;
   --info-light: #5bc0de;
@@ -13,8 +13,8 @@
   --danger-dark: #a5220d;
 
   @media (prefers-color-scheme: dark) {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #111111;
+    --foreground: #ffffff;
   }
 }
 
