@@ -2,7 +2,7 @@
   @apply flex items-center gap-4;
 
   &__link {
-    @apply text-foreground;
+    @apply text-foreground text-2xl;
 
     &:hover,
     &:focus {

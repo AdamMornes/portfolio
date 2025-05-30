@@ -1,3 +1,5 @@
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { MdEmail } from 'react-icons/md';
 import join from '@/ts/utils/classNameJoin';
 
 type FooterSocialProps = {
@@ -13,7 +15,7 @@ export default function FooterSocial({ className }: FooterSocialProps) {
           href="https://github.com/AdamMornes"
           target="_blank"
         >
-          GitHub
+          <FaGithub />
         </a>
       </li>
       <li>
@@ -22,12 +24,12 @@ export default function FooterSocial({ className }: FooterSocialProps) {
           href="https://www.linkedin.com/in/adam-mornes-a3564495/"
           target="_blank"
         >
-          LinkedIn
+          <FaLinkedin />
         </a>
       </li>
       <li>
         <a className="footer-social__link" href="mailto:adammornes@gmail.com">
-          Email
+          <MdEmail />
         </a>
       </li>
     </ul>
