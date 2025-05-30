@@ -1,5 +1,6 @@
 import Link, { LinkProps } from 'next/link';
 import { PropsWithChildren } from 'react';
+import styles from './HeaderNavLink.module.css';
 
 type HeaderNavLinkProps = LinkProps & {
   classNameOverride?: string;
@@ -12,7 +13,7 @@ export default function HeaderNavLink({
 }: PropsWithChildren<HeaderNavLinkProps>) {
   const className = classNameOverride
     ? classNameOverride
-    : 'text-2xl text-foreground';
+    : styles.headerNavLink;
   return (
     <Link className={className} {...props}>
       {children}

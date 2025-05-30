@@ -1,0 +1,16 @@
+@reference '../../app/globals.css';
+
+.headerNavLink {
+  @apply relative text-2xl text-foreground;
+
+  &:after {
+    @apply absolute left-0 right-0 top-8 block h-0.5 w-0 bg-foreground text-center mx-auto transition-all duration-300;
+    content: '';
+  }
+
+  &:hover {
+    &:after {
+      @apply w-full;
+    }
+  }
+}
