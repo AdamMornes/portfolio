@@ -10,26 +10,24 @@
 
     &.-top {
       @apply top-0;
+
+      .-open & {
+        @apply top-1/2 rotate-45 -translate-y-1/2;
+      }
     }
 
     &.-middle {
       @apply top-1/2 -translate-y-1/2;
+
+      .-open & {
+        @apply opacity-0;
+      }
     }
 
     &.-bottom {
       @apply bottom-0;
-    }
 
-    .-open & {
-      &.-top {
-        @apply top-1/2 rotate-45 -translate-y-1/2;
-      }
-
-      &.-middle {
-        @apply opacity-0;
-      }
-
-      &.-bottom {
+      .-open & {
         @apply bottom-1/2 -rotate-45 translate-y-1/2;
       }
     }
