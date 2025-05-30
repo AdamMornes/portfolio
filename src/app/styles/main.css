@@ -35,9 +35,15 @@
 }
 
 @layer base {
-  @import './themes/light.css';
-
-  @media (prefers-color-scheme: dark) {
-    @import './themes/dark.css';
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--open-sans), Arial, Helvetica, sans-serif;
   }
+
+  @import './themes/themes.css';
+}
+
+@layer components {
+  @import './components/components.css';
 }

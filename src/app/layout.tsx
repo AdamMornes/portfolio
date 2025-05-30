@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Raleway, Open_Sans } from 'next/font/google';
 import Header from '@/components/Header/Header';
-import './globals.css';
+import './styles/main.css';
 
 const raleway = Raleway({
   variable: '--font-raleway',

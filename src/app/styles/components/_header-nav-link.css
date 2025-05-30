@@ -1,6 +1,4 @@
-@reference '../../app/globals.css';
-
-.headerNavLink {
+.header-nav-link {
   @apply relative text-2xl text-foreground;
 
   &:after {
