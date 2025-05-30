@@ -1,5 +1,0 @@
-@media (prefers-color-scheme: dark) {
-  a {
-    @apply text-info-light;
-  }
-}
