@@ -1,14 +1,17 @@
+import { useState } from 'react';
 import ButtonHamburger from '../Common/Buttons/ButtonHamburger';
 import HeaderNavLink from './HeaderNavLink';
 
 export default function HeaderNav() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   return (
     <nav>
       <ButtonHamburger
         className="lg:hidden"
-        open={false}
+        open={mobileMenuOpen}
         openSrLabel="Menu"
         closeSrLabel="Close"
+        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
       />
       <div className="hidden lg:block">
         <ul className="flex gap-20">
