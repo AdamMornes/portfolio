@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Raleway, Open_Sans } from 'next/font/google';
 import Header from '@/ts/components/Header/Header';
+import Footer from '@/ts/components/Footer/Footer';
 import '@/styles/main.css';
 
 const raleway = Raleway({
@@ -27,7 +28,8 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${raleway.variable} ${openSans.variable} antialiased`}>
         <Header />
-        {children}
+        <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );
