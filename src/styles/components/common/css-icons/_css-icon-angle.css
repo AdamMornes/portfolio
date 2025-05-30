@@ -1,0 +1,27 @@
+.css-icon-angle {
+  @apply inline-flex flex-col items-center;
+
+  &__line {
+    @apply h-2.5 w-0.5 bg-foreground;
+
+    &.-top {
+      @apply -rotate-45 translate-y-0.5;
+    }
+
+    &.-bottom {
+      @apply rotate-45 -translate-y-0.5;
+    }
+  }
+
+  &.-left {
+    @apply rotate-180;
+  }
+
+  &.-down {
+    @apply rotate-90;
+  }
+
+  &.-up {
+    @apply -rotate-90;
+  }
+}
