@@ -1,0 +1,34 @@
+.footer-social {
+  @apply flex items-center gap-4;
+
+  &__link {
+    @apply text-foreground;
+
+    &:hover,
+    &:focus {
+      @apply text-info-foreground;
+    }
+
+    &.-github {
+      &:hover,
+      &:focus {
+        @apply text-[#104C35];
+
+        @variant dark {
+          @apply text-[#5FED83];
+        }
+      }
+    }
+
+    &.-linkedin {
+      &:hover,
+      &:focus {
+        @apply text-[#004471];
+
+        @variant dark {
+          @apply text-[#34B3E4];
+        }
+      }
+    }
+  }
+}
