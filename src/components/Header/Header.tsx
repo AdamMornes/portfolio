@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import HeaderLogo from './HeaderLogo';
 import HeaderNav from './HeaderNav';
+import join from '@/utils/classNameJoin';
 
 export default function Header() {
   const [isMinimized, setIsMinimized] = useState(false);
@@ -17,7 +18,7 @@ export default function Header() {
   }, []);
 
   return (
-    <header className={`header ${isMinimized ? '-minimized' : ''}`}>
+    <header className={join(['header', isMinimized ? '-minimized' : ''])}>
       <div className="flex justify-between items-center h-full">
         <HeaderLogo />
         <HeaderNav />
