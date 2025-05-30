@@ -1,2 +1,4 @@
+@import './common/common.css';
+
 @import './_header-nav-link.css';
 @import './_header.css';

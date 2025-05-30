@@ -17,15 +17,13 @@ export default function ButtonHamburger({
   return (
     <button
       {...props}
-      className={join([
-        'btn-hamburger flex flex-col justify-between w-7 h-5',
-        className,
-        open ? '-open' : '',
-      ])}
+      className={join(['button-hamburger', className, open ? '-open' : ''])}
     >
-      <div className="btn-hamburger__line w-full h-0.5 bg-foreground rounded"></div>
-      <div className="btn-hamburger__line w-full h-0.5 bg-foreground rounded"></div>
-      <div className="btn-hamburger__line w-full h-0.5 bg-foreground rounded"></div>
+      <div className="button-hamburger__lines">
+        <div className="button-hamburger__line -top"></div>
+        <div className="button-hamburger__line -middle"></div>
+        <div className="button-hamburger__line -bottom"></div>
+      </div>
       <span className="sr-only">{open ? closeSrLabel : openSrLabel}</span>
     </button>
   );
