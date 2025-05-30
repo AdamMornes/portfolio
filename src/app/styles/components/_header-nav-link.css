@@ -6,7 +6,8 @@
     content: '';
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     &:after {
       @apply w-full;
     }

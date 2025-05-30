@@ -1,11 +1,11 @@
 .header {
-  @apply fixed top-0 left-0 right-0 bg-background font-raleway py-7 px-16 z-10 shadow-md transition-all duration-300;
+  @apply fixed top-0 left-0 right-0 h-24 bg-background font-raleway px-16 py-4 z-10 shadow-md transition-all duration-300;
 
   @media (prefers-color-scheme: dark) {
     @apply border-b border-gray-800 shadow-none;
   }
-}
 
-.minimized {
-  @apply py-3;
+  &.-minimized {
+    @apply h-18;
+  }
 }
