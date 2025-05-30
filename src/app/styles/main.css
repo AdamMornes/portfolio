@@ -20,7 +20,7 @@
   --danger-background: var(--danger-light);
   --danger-foreground: var(--danger-dark);
 
-  @media (prefers-color-scheme: dark) {
+  @variant dark {
     --background: #111111;
     --foreground: #ffffff;
     --brand-background: var(--brand-dark);
