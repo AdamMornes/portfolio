@@ -1,6 +1,12 @@
-export default function FooterSocial() {
+import join from '@/ts/utils/classNameJoin';
+
+type FooterSocialProps = {
+  className?: string;
+};
+
+export default function FooterSocial({ className }: FooterSocialProps) {
   return (
-    <ul className="footer-social">
+    <ul className={join(['footer-social', className])}>
       <li>
         <a
           className="footer-social__link -github"
