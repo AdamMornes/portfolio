@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import HeaderLogo from './HeaderLogo';
 import HeaderNav from './HeaderNav';
-import join from '@/utils/classNameJoin';
+import join from '@/ts/utils/classNameJoin';
 
 export default function Header() {
   const [isMinimized, setIsMinimized] = useState(false);

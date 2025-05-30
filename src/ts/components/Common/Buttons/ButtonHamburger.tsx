@@ -1,4 +1,4 @@
-import join from '@/utils/classNameJoin';
+import join from '@/ts/utils/classNameJoin';
 import { ButtonProps } from './types';
 
 type ButtonHamburgerProps = ButtonProps & {
