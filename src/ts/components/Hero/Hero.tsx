@@ -19,7 +19,7 @@ export default function Hero() {
 
       <div className="hero__content">
         <div className="hero__container">
-          <div className="bg-white/90 text-foreground rounded-md px-4 py-6">
+          <div className="hero__background">
             <h1 className="font-raleway text-3xl">
               Hi,
               <br />

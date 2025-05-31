@@ -1,6 +1,18 @@
 .hero {
   @apply relative w-full h-full;
 
+  &__background {
+    @apply bg-background/95 text-foreground rounded-md px-4 py-6;
+
+    @variant lg {
+      @apply bg-transparent;
+    }
+
+    @variant dark {
+      @apply bg-transparent;
+    }
+  }
+
   &__container {
     @apply w-full max-w-screen-md flex items-center justify-center mx-auto px-4 md:justify-end xl:max-w-screen-lg;
   }
@@ -11,5 +23,11 @@
 
   &__fill {
     @apply absolute top-0 left-0 right-0 bottom-0 z-[-1];
+
+    &.-overlay {
+      @variant dark {
+        @apply bg-black opacity-80;
+      }
+    }
   }
 }
