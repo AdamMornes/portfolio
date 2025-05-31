@@ -1,24 +1,9 @@
-'use client';
-
-import { useEffect, useState } from 'react';
 import HeaderLogo from './HeaderLogo';
 import HeaderNav from './HeaderNav';
-import join from '@/ts/utils/classNameJoin';
 
 export default function Header() {
-  const [isMinimized, setIsMinimized] = useState(false);
-  const onScroll = () => {
-    setIsMinimized(window.scrollY > 0);
-  };
-
-  useEffect(() => {
-    window.addEventListener('scroll', onScroll);
-
-    return () => window.removeEventListener('scroll', onScroll);
-  }, []);
-
   return (
-    <header className={join(['header', isMinimized ? '-minimized' : ''])}>
+    <header className="header">
       <div className="flex justify-between items-center h-full">
         <HeaderLogo />
         <HeaderNav />

@@ -27,9 +27,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${raleway.variable} ${openSans.variable} antialiased`}>
-        <Header />
-        <main>{children}</main>
-        <Footer />
+        <div className="flex flex-col min-h-screen">
+          <Header />
+          <main className="relative flex-1">{children}</main>
+          <Footer />
+        </div>
       </body>
     </html>
   );

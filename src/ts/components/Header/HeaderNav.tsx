@@ -1,3 +1,5 @@
+'use client';
+
 import { useState } from 'react';
 import ButtonHamburger from '../Common/Buttons/ButtonHamburger';
 import HeaderNavLink from './HeaderNavLink';

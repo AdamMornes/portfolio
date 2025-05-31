@@ -1,5 +1,5 @@
 .header {
-  @apply fixed top-0 left-0 right-0 h-24 bg-background font-raleway px-4 py-4 z-10 shadow-md transition-[height] duration-300;
+  @apply h-24 bg-background font-raleway px-4 py-4 z-10 shadow-md;
 
   @variant dark {
     @apply border-b border-gray-800 shadow-none;
@@ -7,9 +7,5 @@
 
   @variant lg {
     @apply px-16;
-  }
-
-  &.-minimized {
-    @apply h-18;
   }
 }

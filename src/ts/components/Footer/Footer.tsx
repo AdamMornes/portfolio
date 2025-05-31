@@ -6,7 +6,7 @@ export default function Footer() {
     <footer>
       <div className="container">
         <div className="mb-4">
-          <SectionHeader>Adam Mornes</SectionHeader>
+          <SectionHeader>Contact</SectionHeader>
         </div>
         <div className="flex flex-col justify-between items-center gap-4 mb-4 md:flex-row">
           <FooterSocial />
