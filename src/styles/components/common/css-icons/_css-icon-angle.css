@@ -15,7 +15,7 @@
 
   &.-left {
     &:before {
-      @apply rotate-135;
+      @apply -rotate-45;
     }
   }
 
@@ -27,7 +27,7 @@
 
   &.-up {
     &:before {
-      @apply -rotate-45;
+      @apply rotate-45;
     }
   }
 
