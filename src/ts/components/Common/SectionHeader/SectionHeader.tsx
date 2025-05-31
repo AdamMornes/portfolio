@@ -16,7 +16,7 @@ export default function SectionHeader({
       {children}
       <div className="ml-auto">
         <div className="flex items-center gap-4">
-          <div className="h-8 w-0.5 bg-foreground rotate-25"></div>
+          <div className="h-6 w-0.5 bg-foreground rotate-25"></div>
           <CssIconAngle />
         </div>
       </div>
