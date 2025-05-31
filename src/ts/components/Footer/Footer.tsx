@@ -1,6 +1,6 @@
 import FooterSocial from './FooterSocial';
 import SectionHeader from '../Common/SectionHeader/SectionHeader';
-
+import FooterCopyright from './FooterCopyright';
 export default function Footer() {
   return (
     <footer>
@@ -8,8 +8,9 @@ export default function Footer() {
         <div className="mb-4">
           <SectionHeader>Adam Mornes</SectionHeader>
         </div>
-        <div className="mb-4">
+        <div className="flex flex-col justify-between items-center gap-4 mb-4 md:flex-row">
           <FooterSocial />
+          <FooterCopyright />
         </div>
       </div>
     </footer>
