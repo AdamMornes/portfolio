@@ -8,9 +8,9 @@ export default function CssIconAngle({
   orientation = 'right',
 }: CssIconAngleProps) {
   return (
-    <div className={join(['css-icon-angle', `-${orientation}`])}>
-      <div className="css-icon-angle__line -top" />
-      <div className="css-icon-angle__line -bottom" />
-    </div>
+    <span
+      aria-hidden="true"
+      className={join(['css-icon-angle', `-${orientation}`])}
+    />
   );
 }

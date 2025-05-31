@@ -12,11 +12,10 @@ export default function SectionHeader({
   const RootElement = rootElement;
   return (
     <RootElement className="section-header">
-      <CssIconAngle orientation="left" />
       {children}
       <div className="ml-auto">
-        <div className="flex items-center gap-4">
-          <div className="h-6 w-0.5 bg-foreground rotate-25"></div>
+        <div className="flex items-center gap-2">
+          <div className="h-6 w-0.5 bg-foreground rotate-25 lg:h-8"></div>
           <CssIconAngle />
         </div>
       </div>

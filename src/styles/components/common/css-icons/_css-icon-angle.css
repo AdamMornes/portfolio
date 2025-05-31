@@ -1,16 +1,17 @@
 .css-icon-angle {
-  @apply inline-flex flex-col items-center;
+  @apply inline-flex flex-col items-center h-4 w-4;
 
-  &__line {
-    @apply h-2.5 w-0.5 bg-foreground;
+  &:before,
+  &:after {
+    @apply content-[''] block h-2.5 w-0.5 bg-foreground;
+  }
 
-    &.-top {
-      @apply -rotate-45 translate-y-0.5;
-    }
+  &:before {
+    @apply -rotate-45 translate-y-0.5;
+  }
 
-    &.-bottom {
-      @apply rotate-45 -translate-y-0.5;
-    }
+  &:after {
+    @apply rotate-45 -translate-y-0.5;
   }
 
   &.-left {
