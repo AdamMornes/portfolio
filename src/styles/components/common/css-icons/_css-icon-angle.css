@@ -1,28 +1,45 @@
 .css-icon-angle {
-  @apply inline-flex flex-col items-center h-4 w-4;
-
-  &:before,
-  &:after {
-    @apply content-[''] block h-2.5 w-0.5 bg-foreground;
-  }
+  @apply inline-flex items-center justify-center h-4 w-4;
 
   &:before {
-    @apply -rotate-45 translate-y-0.5;
-  }
-
-  &:after {
-    @apply rotate-45 -translate-y-0.5;
-  }
-
-  &.-left {
-    @apply rotate-180;
+    @apply content-[''] inline-block h-full w-full border-current no-underline scale-[0.75];
+    border-left-width: 0.125rem;
+    border-top-width: 0.125rem;
   }
 
   &.-down {
-    @apply rotate-90;
+    &:before {
+      @apply -rotate-135;
+    }
+  }
+
+  &.-left {
+    &:before {
+      @apply rotate-135;
+    }
+  }
+
+  &.-right {
+    &:before {
+      @apply rotate-135;
+    }
   }
 
   &.-up {
-    @apply -rotate-90;
+    &:before {
+      @apply -rotate-45;
+    }
+  }
+
+  &.-sm {
+    @apply scale-[0.75];
+  }
+
+  &.-lg {
+    @apply scale-[1.25];
+  }
+
+  &.-xl {
+    @apply scale-[1.5];
   }
 }
