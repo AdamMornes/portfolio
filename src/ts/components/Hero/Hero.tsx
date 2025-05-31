@@ -3,8 +3,8 @@ import ButtonBrand from '../Common/Buttons/ButtonBrand';
 
 export default function Hero() {
   return (
-    <div className="relative w-full h-full">
-      <div className="absolute top-0 left-0 right-0 bottom-0 z-[-1]">
+    <div className="hero">
+      <div className="hero__image">
         <Image
           alt="Developer working in their office"
           className="object-cover"
@@ -15,8 +15,8 @@ export default function Hero() {
         />
       </div>
 
-      <div className="flex h-full text-foreground py-16 md:items-center">
-        <div className="max-w-screen-md flex items-center justify-center md:justify-end">
+      <div className="hero__content">
+        <div className="hero__content-container">
           <div className="">
             <h1 className="font-raleway text-3xl">
               Hi,
