@@ -1,3 +1,0 @@
-.button-brand {
-  @apply inline-flex items-center bg-brand-background text-foreground py-1.5 px-4 rounded-md cursor-pointer;
-}

@@ -1,18 +1,16 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
-import CssIconAngle from '../CssIcons/CssIconAngle';
-import { ThemedButtonProps } from './types';
+import { ButtonBaseProps } from './types';
 
-export default function ButtonBrand({
+export default function ButtonBase({
   children,
   className,
-  hideIcon,
   isAnchor = false,
   onClick,
   href,
   ...props
-}: ThemedButtonProps) {
+}: ButtonBaseProps) {
   const Element = isAnchor ? 'a' : 'button';
   const router = useRouter();
 
@@ -30,12 +28,6 @@ export default function ButtonBrand({
       onClick={isAnchor ? onAnchorClick : onClick}
     >
       {children}
-
-      {!hideIcon && (
-        <span className="ml-4 mt-1">
-          <CssIconAngle size="sm" />
-        </span>
-      )}
     </Element>
   );
 }

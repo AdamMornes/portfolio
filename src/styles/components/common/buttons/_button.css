@@ -1,0 +1,11 @@
+.button {
+  @apply inline-flex items-center py-1.5 px-4 rounded-md cursor-pointer;
+
+  &.-brand {
+    @apply bg-brand-background text-foreground;
+  }
+
+  &.-info {
+    @apply bg-info-background text-foreground;
+  }
+}
