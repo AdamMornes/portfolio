@@ -4,7 +4,7 @@
   &__background {
     @apply bg-background/95 text-foreground rounded-md px-4 py-6;
 
-    @variant lg {
+    @variant md {
       @apply bg-transparent;
     }
 
