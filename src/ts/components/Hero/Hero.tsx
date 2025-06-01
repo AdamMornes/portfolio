@@ -1,6 +1,4 @@
 import Image from 'next/image';
-import ButtonBrand from '../Common/Buttons/ButtonBrand';
-import ButtonWhite from '../Common/Buttons/ButtonBackground';
 import ButtonBackground from '../Common/Buttons/ButtonBackground';
 
 export default function Hero() {
