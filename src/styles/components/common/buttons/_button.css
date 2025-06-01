@@ -8,4 +8,12 @@
   &.-info {
     @apply bg-info-background text-foreground;
   }
+
+  &.-warning {
+    @apply bg-warning-background text-foreground;
+  }
+
+  &.-danger {
+    @apply bg-danger-background text-foreground;
+  }
 }
