@@ -21,7 +21,7 @@ export default function HeaderNav() {
             <HeaderNavLink href="/about">About</HeaderNavLink>
           </li>
           <li>
-            <HeaderNavLink href="/projects">Projects</HeaderNavLink>
+            <HeaderNavLink href="/work">Work</HeaderNavLink>
           </li>
           <li>
             <HeaderNavLink href="/contact">Contact</HeaderNavLink>
