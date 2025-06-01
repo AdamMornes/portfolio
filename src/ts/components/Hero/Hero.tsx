@@ -8,7 +8,7 @@ export default function Hero() {
         <div className="hero__container">
           <Image
             alt="Adam Mornes Profile"
-            className="rounded-full mr-4 lg:mr-8"
+            className="border border-gray-300 p-0.5 rounded-full mr-4 lg:mr-8 dark:border-gray-700"
             src="/profile.jpg"
             width={200}
             height={200}

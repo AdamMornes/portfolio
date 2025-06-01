@@ -15,14 +15,6 @@ h1 {
 }
 
 h2 {
-  @apply text-2xl font-raleway;
-
-  @variant lg {
-    @apply text-3xl;
-  }
-}
-
-h3 {
   @apply text-xl font-raleway;
 
   @variant lg {
@@ -30,10 +22,18 @@ h3 {
   }
 }
 
-h4 {
+h3 {
   @apply text-lg font-raleway;
 
   @variant lg {
     @apply text-xl;
+  }
+}
+
+h4 {
+  @apply text-base font-raleway;
+
+  @variant lg {
+    @apply text-lg;
   }
 }

@@ -1,5 +1,5 @@
 .header {
-  @apply h-24 bg-background font-raleway px-4 py-4 z-10 shadow-md;
+  @apply h-24 bg-background font-raleway px-4 py-4 z-10 border-b border-gray-200;
 
   @variant dark {
     @apply border-b border-gray-800 shadow-none;
