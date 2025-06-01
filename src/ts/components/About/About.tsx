@@ -3,7 +3,7 @@ import Content from '../Common/Content/Content';
 
 export default function About() {
   return (
-    <div className="lg:flex items-center gap-4 mb-4">
+    <div className="flex flex-col items-center justify-center gap-4 mb-4 lg:flex-row">
       <Image
         className="shrink-0 shadow-sm border border-gray-300 p-0.5 rounded-full mb-4 lg:mb-0 dark:border-gray-700"
         src="/profile.jpg"
