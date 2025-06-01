@@ -1,8 +1,20 @@
 .button {
-  @apply inline-flex items-center py-1.5 px-4 rounded-md cursor-pointer;
+  @apply inline-flex items-center py-1.5 px-4 rounded-lg cursor-pointer;
+
+  &.-background {
+    @apply bg-background text-foreground border border-gray-400;
+
+    @variant dark {
+      @apply border-gray-700;
+    }
+  }
 
   &.-brand {
     @apply bg-brand-background text-foreground;
+  }
+
+  &.-danger {
+    @apply bg-danger-background text-foreground;
   }
 
   &.-info {
@@ -11,9 +23,5 @@
 
   &.-warning {
     @apply bg-warning-background text-foreground;
-  }
-
-  &.-danger {
-    @apply bg-danger-background text-foreground;
   }
 }

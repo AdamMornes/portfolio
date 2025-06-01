@@ -25,6 +25,7 @@ export default function ButtonBase({
     <Element
       {...props}
       className={className}
+      href={href}
       onClick={isAnchor ? onAnchorClick : onClick}
     >
       {children}

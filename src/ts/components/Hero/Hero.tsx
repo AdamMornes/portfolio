@@ -1,5 +1,7 @@
 import Image from 'next/image';
 import ButtonBrand from '../Common/Buttons/ButtonBrand';
+import ButtonWhite from '../Common/Buttons/ButtonBackground';
+import ButtonBackground from '../Common/Buttons/ButtonBackground';
 
 export default function Hero() {
   return (
@@ -26,9 +28,9 @@ export default function Hero() {
               I&apos;m Adam Mornes.
             </h1>
             <p className="font-raleway text-3xl mt-4">I do web.</p>
-            <ButtonBrand className="mt-6" isAnchor={true} href="/about">
+            <ButtonBackground className="mt-6" isAnchor={true} href="/about">
               Learn more about me
-            </ButtonBrand>
+            </ButtonBackground>
           </div>
         </div>
       </div>
