@@ -1,5 +1,5 @@
 .section-header {
-  @apply flex items-center gap-4 py-4 border-b border-gray-200;
+  @apply flex items-center gap-4 py-4 border-b border-gray-200 mb-4;
 
   @variant dark {
     @apply border-gray-800;

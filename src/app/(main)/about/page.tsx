@@ -10,10 +10,10 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      <SectionHeader className="text-3xl" rootElement="h1">
-        About
-      </SectionHeader>
+      <SectionHeader rootElement="h1">About</SectionHeader>
       <About />
+      <SectionHeader>History</SectionHeader>
+      <SectionHeader>Hobbies</SectionHeader>
     </>
   );
 }
