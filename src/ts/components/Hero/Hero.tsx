@@ -1,25 +1,20 @@
-import Image from 'next/image';
 import ButtonBackground from '../Common/Buttons/ButtonBackground';
+import Image from 'next/image';
 
 export default function Hero() {
   return (
     <div className="hero">
-      <div className="hero__fill">
-        <Image
-          alt="Developer working in their office"
-          className="object-cover"
-          fill
-          priority={true}
-          src="/hero-shot.jpg"
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 1200px"
-        />
-      </div>
-
-      <div className="hero__fill -overlay" />
-
       <div className="hero__content">
         <div className="hero__container">
-          <div className="hero__background">
+          <Image
+            alt="Adam Mornes Profile"
+            className="rounded-full mr-4 lg:mr-8"
+            src="/profile.jpg"
+            width={200}
+            height={200}
+            sizes="(max-width: 768px) 150px"
+          />
+          <div className="text-foreground shrink-0">
             <h1 className="font-raleway text-3xl">
               Hi,
               <br />
