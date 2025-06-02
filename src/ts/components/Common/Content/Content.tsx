@@ -1,3 +1,4 @@
+import join from '@/ts/utils/classNameJoin';
 import { PropsWithChildren } from 'react';
 
 type ContentProps = PropsWithChildren<{
@@ -5,5 +6,5 @@ type ContentProps = PropsWithChildren<{
 }>;
 
 export default function Content({ children, className }: ContentProps) {
-  return <div className={`content ${className}`}>{children}</div>;
+  return <div className={join(['content', className])}>{children}</div>;
 }
