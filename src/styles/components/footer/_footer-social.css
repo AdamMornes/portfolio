@@ -1,33 +1,33 @@
 .footer-social {
   @apply flex items-center gap-4;
+}
 
-  &__link {
-    @apply text-foreground text-2xl;
+.footer-social__link {
+  @apply text-foreground text-2xl;
 
+  &:hover,
+  &:focus {
+    @apply text-info-foreground;
+  }
+
+  &.-github {
     &:hover,
     &:focus {
-      @apply text-info-foreground;
-    }
+      @apply text-[#104C35];
 
-    &.-github {
-      &:hover,
-      &:focus {
-        @apply text-[#104C35];
-
-        @variant dark {
-          @apply text-[#5FED83];
-        }
+      @variant dark {
+        @apply text-[#5FED83];
       }
     }
+  }
 
-    &.-linkedin {
-      &:hover,
-      &:focus {
-        @apply text-[#004471];
+  &.-linkedin {
+    &:hover,
+    &:focus {
+      @apply text-[#004471];
 
-        @variant dark {
-          @apply text-[#34B3E4];
-        }
+      @variant dark {
+        @apply text-[#34B3E4];
       }
     }
   }

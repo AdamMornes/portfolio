@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default function History() {
   return (
-    <Content className="gap-8">
+    <Content className="lg:gap-8">
       <div className="flex flex-col gap-4 lg:flex-row lg:items-center">
         <div className="shrink-0 lg:order-1">
           <Image
