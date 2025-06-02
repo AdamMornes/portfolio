@@ -1,9 +1,8 @@
-import Content from '../Common/Content/Content';
 import Image from 'next/image';
 
 export default function History() {
   return (
-    <Content className="lg:gap-8">
+    <div className="flex flex-col gap-4 mb-4 lg:gap-8">
       <div className="flex flex-col gap-4 lg:flex-row lg:items-center">
         <div className="shrink-0 lg:order-1">
           <Image
@@ -16,7 +15,7 @@ export default function History() {
           />
         </div>
         <div className="flex-1">
-          <Content>
+          <div className="flex flex-col gap-4 mb-4">
             <p>
               Born and raised in MN, I spent the first three years of my career
               at{' '}
@@ -31,7 +30,7 @@ export default function History() {
               learned many important lessons about CSS Theming I now consider
               core to my skillset.
             </p>
-          </Content>
+          </div>
         </div>
       </div>
       <div className="flex flex-col gap-4 lg:flex-row lg:items-center">
@@ -45,7 +44,7 @@ export default function History() {
             sizes="(max-width: 768px) 100vw"
           />
         </div>
-        <Content>
+        <div className="flex flex-col gap-4 mb-4">
           <p>
             After all that time in the frigid north, I decided to make a major
             change. I moved to 1200 miles south to Austin, TX.
@@ -59,8 +58,8 @@ export default function History() {
             Working on projects with technology stacks ranging from .NET and
             JQuery to React and Next.js.
           </p>
-        </Content>
+        </div>
       </div>
-    </Content>
+    </div>
   );
 }

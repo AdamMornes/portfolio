@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import Content from '../Common/Content/Content';
 
 export default function About() {
   return (
@@ -11,7 +10,7 @@ export default function About() {
         width={250}
         height={250}
       />
-      <Content className="mb-0">
+      <div className="flex flex-col gap-4 mb-0">
         <p>
           Hello, I&apos;m Adam Mornes. I&apos;m a Web Developer located in
           Flint, MI.
@@ -26,7 +25,7 @@ export default function About() {
           There is no better feeling than creating an easy to use, beautiful
           website that clients can be proud of.
         </p>
-      </Content>
+      </div>
     </section>
   );
 }
