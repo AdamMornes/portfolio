@@ -3,9 +3,9 @@ import Image from 'next/image';
 
 export default function Hero() {
   return (
-    <div className="hero">
-      <div className="hero__content">
-        <div className="hero__container">
+    <div className="relative w-full h-full">
+      <div className="flex h-full items-center justify-center py-8">
+        <div className="w-full max-w-screen-md flex flex-col items-center justify-center mx-auto px-4 lg:flex-row">
           <Image
             alt="Adam Mornes Profile"
             className="border border-gray-300 p-0.5 rounded-full lg:mr-8 dark:border-gray-700"
