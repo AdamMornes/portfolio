@@ -10,5 +10,7 @@ globs: src/ts/components/**/*.tsx, src/ts/components/**/*.ts
 
 - Contains all custom React/Typescript components
 - Prioritize formatting of existing components in all new components created here
+- If an element has 6 or more Tailwind CSS classes, instead create a new class using BEM Methodology.
+- Any component using BEM Methodology will use the root element as the Block and any children as the Elements.
 
 
