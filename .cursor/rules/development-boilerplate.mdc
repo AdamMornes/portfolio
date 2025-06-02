@@ -13,6 +13,4 @@ alwaysApply: true
 - Follow the coding standards defined in the ESLint configuration.
 - Ensure all components are responsive and accessible.
 - Use Tailwind CSS for styling, adhering to the defined Tailwind CSS theme.
-- If an element has 6 or more Tailwind CSS classes, instead create a new class using BEM Methodology.
-- Any component using BEM Methodology will use the root element as the Block and any children as the Elements.
 
