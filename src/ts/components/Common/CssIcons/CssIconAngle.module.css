@@ -1,4 +1,6 @@
-.css-icon-angle {
+@reference '../../../../styles/main.css';
+
+.cssIconAngle {
   @apply inline-flex items-center justify-center h-4 w-4;
 
   &:before {
@@ -7,39 +9,39 @@
     border-top-width: 0.125rem;
   }
 
-  &.-down {
+  &.down {
     &:before {
       @apply -rotate-135;
     }
   }
 
-  &.-left {
+  &.left {
     &:before {
       @apply -rotate-45;
     }
   }
 
-  &.-right {
+  &.right {
     &:before {
       @apply rotate-135;
     }
   }
 
-  &.-up {
+  &.up {
     &:before {
       @apply rotate-45;
     }
   }
 
-  &.-sm {
+  &.sm {
     @apply scale-[0.75];
   }
 
-  &.-lg {
+  &.lg {
     @apply scale-[1.25];
   }
 
-  &.-xl {
+  &.xl {
     @apply scale-[1.5];
   }
 }

@@ -1,4 +1,5 @@
 import join from '@/ts/utils/classNameJoin';
+import styles from './CssIconAngle.module.css';
 
 type CssIconAngleProps = {
   orientation?: 'up' | 'down' | 'left' | 'right';
@@ -12,11 +13,7 @@ export default function CssIconAngle({
   return (
     <span
       aria-hidden="true"
-      className={join([
-        'css-icon-angle',
-        `-${orientation}`,
-        size ? `-${size}` : '',
-      ])}
+      className={join([styles.cssIconAngle, styles[orientation], styles[size]])}
     />
   );
 }
