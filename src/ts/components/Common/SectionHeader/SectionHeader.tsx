@@ -1,20 +1,17 @@
 import { PropsWithChildren } from 'react';
 import CssIconAngle from '../CssIcons/CssIconAngle';
-import join from '@/ts/utils/classNameJoin';
 
 type SectionHeaderProps = {
-  className?: string;
   rootElement?: keyof HTMLElementTagNameMap;
 };
 
 export default function SectionHeader({
   children,
-  className,
   rootElement = 'h2',
 }: PropsWithChildren<SectionHeaderProps>) {
   const RootElement = rootElement;
   return (
-    <RootElement className={join(['section-header', className])}>
+    <RootElement className="flex items-center gap-4 py-4 mb-4">
       {children}
       <div className="ml-auto">
         <div className="flex items-center gap-2">
