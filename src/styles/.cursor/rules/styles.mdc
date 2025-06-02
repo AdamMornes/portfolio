@@ -1,0 +1,12 @@
+---
+description: 
+globs: src/styles/**/*.css
+alwaysApply: false
+---
+---
+description: Component Styles Guidelines
+globs: src/styles/**/*.css
+---
+
+- Contains all custom CSS
+

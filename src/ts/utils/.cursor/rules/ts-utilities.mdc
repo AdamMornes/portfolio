@@ -1,0 +1,12 @@
+---
+description: 
+globs:  src/ts/utils/**/*.ts,src/ts/utils/**/*.tsx
+alwaysApply: false
+---
+---
+description: Utility Typescript Guidelines
+globs: src/ts/utils/**/*.tsx, src/ts/utils/**/*.ts
+---
+
+- Contains all non-component typescript utilities
+

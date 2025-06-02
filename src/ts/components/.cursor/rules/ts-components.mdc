@@ -1,0 +1,12 @@
+---
+description: 
+globs: src/ts/components/**/*.tsx, src/ts/components/**/*.ts
+alwaysApply: false
+---
+---
+description: Component React/Typescript Guidelines
+globs: src/ts/components/**/*.tsx, src/ts/components/**/*.ts
+---
+
+- Contains all custom React/Typescript components
+

@@ -1,0 +1,11 @@
+---
+description: 
+globs: src/app/**/*
+alwaysApply: false
+---
+---
+description: Component Styles Guidelines
+globs: src/app/**/*
+---
+
+- Next.js app for routing
