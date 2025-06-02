@@ -9,4 +9,6 @@ globs: src/ts/components/**/*.tsx, src/ts/components/**/*.ts
 ---
 
 - Contains all custom React/Typescript components
+- Prioritize formatting of existing components in all new components created here
+
 

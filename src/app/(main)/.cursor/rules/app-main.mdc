@@ -8,4 +8,6 @@ description: Next.js App (main) Guidelines
 globs: src/app/(main)/**/*
 ---
 
-- All non-home Pages are placed here using Next.js App Router
+- All non-home routes are placed here using Next.js App Router
+- All route components will start with the SectionHeader component
+- All route components will also export metadata with it's name as the title and a brief description
