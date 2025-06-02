@@ -1,11 +1,11 @@
 ---
 description: 
-globs: src/ts/components/**/*.tsx, src/ts/components/**/*.ts
+globs: src/ts/components/Common/**/*.tsx, src/ts/components/Common/**/*.ts
 alwaysApply: false
 ---
 ---
 description: Common Component React/Typescript Guidelines
-globs: src/ts/components/**/*.tsx, src/ts/components/**/*.ts
+globs: src/ts/components/Common/**/*.tsx, src/ts/components/Common/**/*.ts
 ---
 
 - Contains all reuseable React/Typescript components
