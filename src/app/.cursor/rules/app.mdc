@@ -4,7 +4,7 @@ globs: src/app/**/*
 alwaysApply: false
 ---
 ---
-description: Component Styles Guidelines
+description: Next.js App Guidelines
 globs: src/app/**/*
 ---
 

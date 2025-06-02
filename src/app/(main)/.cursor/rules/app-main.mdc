@@ -1,0 +1,11 @@
+---
+description: 
+globs: src/app/(main)/**/*
+alwaysApply: false
+---
+---
+description: Next.js App (main) Guidelines
+globs: src/app/(main)/**/*
+---
+
+- All non-home Pages are placed here using Next.js App Router
