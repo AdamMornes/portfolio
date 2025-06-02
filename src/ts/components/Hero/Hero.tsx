@@ -8,20 +8,20 @@ export default function Hero() {
         <div className="hero__container">
           <Image
             alt="Adam Mornes Profile"
-            className="border border-gray-300 p-0.5 rounded-full mr-4 lg:mr-8 dark:border-gray-700"
+            className="border border-gray-300 p-0.5 rounded-full lg:mr-8 dark:border-gray-700"
             src="/profile.jpg"
             width={200}
             height={200}
             sizes="(max-width: 768px) 150px"
           />
           <div className="text-foreground shrink-0">
-            <h1 className="font-raleway text-3xl">
+            <h1 className="font-raleway text-3xl mb-4">
               Hi,
               <br />
               I&apos;m Adam Mornes.
             </h1>
-            <p className="font-raleway text-3xl mt-4">I do web.</p>
-            <ButtonBackground className="mt-6" isAnchor={true} href="/about">
+            <p className="font-raleway text-3xl mb-4">I do web.</p>
+            <ButtonBackground isAnchor={true} href="/about">
               Learn more about me
             </ButtonBackground>
           </div>

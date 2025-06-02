@@ -2,10 +2,10 @@
   @apply relative w-full h-full;
 
   &__container {
-    @apply w-full max-w-screen-md flex items-start justify-center mx-auto px-4;
+    @apply w-full max-w-screen-md flex flex-col items-center justify-center mx-auto px-4 lg:flex-row;
   }
 
   &__content {
-    @apply flex h-full items-center;
+    @apply flex h-full items-center justify-center py-8;
   }
 }
