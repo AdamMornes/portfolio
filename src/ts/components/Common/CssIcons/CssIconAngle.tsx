@@ -13,7 +13,11 @@ export default function CssIconAngle({
   return (
     <span
       aria-hidden="true"
-      className={join([styles.cssIconAngle, styles[orientation], styles[size]])}
-    />
+      className={join([styles.cssIconAngle, styles[size]])}
+    >
+      <span
+        className={join([styles.cssIconAngle__triangle, styles[orientation]])}
+      />
+    </span>
   );
 }

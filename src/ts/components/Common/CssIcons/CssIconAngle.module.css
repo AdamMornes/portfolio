@@ -1,47 +1,41 @@
 @reference '../../../../styles/main.css';
 
-.cssIconAngle {
-  @apply inline-flex items-center justify-center h-4 w-4;
+@layer base {
+  .cssIconAngle {
+    @apply inline-flex items-center justify-center h-4 w-4;
 
-  &:before {
-    @apply content-[''] inline-block h-full w-full border-current no-underline scale-[0.75];
+    &.sm {
+      @apply scale-[0.75];
+    }
+
+    &.lg {
+      @apply scale-[1.25];
+    }
+
+    &.xl {
+      @apply scale-[1.5];
+    }
+  }
+
+  .cssIconAngle__triangle {
+    @apply inline-block h-full w-full border-current no-underline scale-[0.75];
     border-left-width: 0.125rem;
     border-top-width: 0.125rem;
-  }
 
-  &.down {
-    &:before {
+    &.down {
       @apply -rotate-135;
     }
-  }
 
-  &.left {
-    &:before {
+    &.left {
       @apply -rotate-45;
     }
-  }
 
-  &.right {
-    &:before {
+    &.right {
       @apply rotate-135;
     }
-  }
 
-  &.up {
-    &:before {
+    &.up {
       @apply rotate-45;
     }
-  }
-
-  &.sm {
-    @apply scale-[0.75];
-  }
-
-  &.lg {
-    @apply scale-[1.25];
-  }
-
-  &.xl {
-    @apply scale-[1.5];
   }
 }
