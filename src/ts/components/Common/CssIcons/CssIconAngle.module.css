@@ -4,15 +4,15 @@
   .cssIconAngle {
     @apply inline-flex items-center justify-center h-4 w-4;
 
-    &.sm {
+    &.cssIconAngle--sm {
       @apply scale-[0.75];
     }
 
-    &.lg {
+    &.cssIconAngle--lg {
       @apply scale-[1.25];
     }
 
-    &.xl {
+    &.cssIconAngle--xl {
       @apply scale-[1.5];
     }
   }
@@ -22,19 +22,19 @@
     border-left-width: 0.125rem;
     border-top-width: 0.125rem;
 
-    &.down {
+    &.cssIconAngle__triangle--down {
       @apply -rotate-135;
     }
 
-    &.left {
+    &.cssIconAngle__triangle--left {
       @apply -rotate-45;
     }
 
-    &.right {
+    &.cssIconAngle__triangle--right {
       @apply rotate-135;
     }
 
-    &.up {
+    &.cssIconAngle__triangle--up {
       @apply rotate-45;
     }
   }

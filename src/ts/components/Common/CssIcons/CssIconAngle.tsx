@@ -13,10 +13,16 @@ export default function CssIconAngle({
   return (
     <span
       aria-hidden="true"
-      className={join([styles.cssIconAngle, styles[size]])}
+      className={join([
+        styles['cssIconAngle'],
+        styles[`cssIconAngle--${size}`],
+      ])}
     >
       <span
-        className={join([styles.cssIconAngle__triangle, styles[orientation]])}
+        className={join([
+          styles['cssIconAngle__triangle'],
+          styles[`cssIconAngle__triangle--${orientation}`],
+        ])}
       />
     </span>
   );
