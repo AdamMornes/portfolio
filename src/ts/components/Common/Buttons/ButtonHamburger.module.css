@@ -1,37 +1,39 @@
 @reference '../../../../styles/main.css';
 
-.button {
-  @apply px-1 py-2;
-}
-
-.lines {
-  @apply relative w-7 h-5;
-}
-
-.line {
-  @apply absolute left-0 right-0 h-0.5 bg-foreground rounded transition-all duration-300;
-
-  &.-top {
-    @apply top-0;
-
-    .-open & {
-      @apply top-1/2 rotate-45 -translate-y-1/2;
-    }
+@layer base {
+  .button {
+    @apply px-1 py-2;
   }
 
-  &.-middle {
-    @apply top-1/2 -translate-y-1/2;
-
-    .-open & {
-      @apply opacity-0;
-    }
+  .lines {
+    @apply relative w-7 h-5;
   }
 
-  &.-bottom {
-    @apply bottom-0;
+  .line {
+    @apply absolute left-0 right-0 h-0.5 bg-foreground rounded transition-all duration-300;
 
-    .-open & {
-      @apply bottom-1/2 -rotate-45 translate-y-1/2;
+    &.-top {
+      @apply top-0;
+
+      .-open & {
+        @apply top-1/2 rotate-45 -translate-y-1/2;
+      }
+    }
+
+    &.-middle {
+      @apply top-1/2 -translate-y-1/2;
+
+      .-open & {
+        @apply opacity-0;
+      }
+    }
+
+    &.-bottom {
+      @apply bottom-0;
+
+      .-open & {
+        @apply bottom-1/2 -rotate-45 translate-y-1/2;
+      }
     }
   }
 }
