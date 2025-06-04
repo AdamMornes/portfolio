@@ -1,34 +1,36 @@
-.button-hamburger {
+@reference '../../../../styles/main.css';
+
+.btnHamburger {
   @apply px-1 py-2;
 }
 
-.button-hamburger__lines {
+.btnHamburger__lines {
   @apply relative w-7 h-5;
 }
 
-.button-hamburger__line {
+.btnHamburger__line {
   @apply absolute left-0 right-0 h-0.5 bg-foreground rounded transition-all duration-300;
 
-  &.-top {
+  &.btnHamburger__line--top {
     @apply top-0;
 
-    .-open & {
+    .btnHamburger--open & {
       @apply top-1/2 rotate-45 -translate-y-1/2;
     }
   }
 
-  &.-middle {
+  &.btnHamburger__line--middle {
     @apply top-1/2 -translate-y-1/2;
 
-    .-open & {
+    .btnHamburger--open & {
       @apply opacity-0;
     }
   }
 
-  &.-bottom {
+  &.btnHamburger__line--bottom {
     @apply bottom-0;
 
-    .-open & {
+    .btnHamburger--open & {
       @apply bottom-1/2 -rotate-45 translate-y-1/2;
     }
   }
