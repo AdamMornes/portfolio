@@ -1,40 +1,40 @@
 @reference '../../../../styles/main.css';
 
 @layer base {
-  .cssIconAngle {
+  .angle {
     @apply inline-flex items-center justify-center h-4 w-4;
 
-    &.sm {
+    &.-sm {
       @apply scale-[0.75];
     }
 
-    &.lg {
+    &.-lg {
       @apply scale-[1.25];
     }
 
-    &.xl {
+    &.-xl {
       @apply scale-[1.5];
     }
   }
 
-  .cssIconAngle__triangle {
+  .triangle {
     @apply inline-block h-full w-full border-current no-underline scale-[0.75];
     border-left-width: 0.125rem;
     border-top-width: 0.125rem;
 
-    &.down {
+    &.-down {
       @apply -rotate-135;
     }
 
-    &.left {
+    &.-left {
       @apply -rotate-45;
     }
 
-    &.right {
+    &.-right {
       @apply rotate-135;
     }
 
-    &.up {
+    &.-up {
       @apply rotate-45;
     }
   }
