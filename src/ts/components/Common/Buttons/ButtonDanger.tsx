@@ -9,7 +9,7 @@ export default function ButtonDanger({
   return (
     <ButtonTransparent
       {...props}
-      className={join(['bg-danger-dark text-white', className])}
+      className={join(['bg-danger-dark text-white no-underline', className])}
     />
   );
 }

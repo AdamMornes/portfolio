@@ -9,7 +9,10 @@ export default function ButtonWarning({
   return (
     <ButtonTransparent
       {...props}
-      className={join(['bg-warning-light text-gray-950', className])}
+      className={join([
+        'bg-warning-light text-gray-950 no-underline',
+        className,
+      ])}
     />
   );
 }

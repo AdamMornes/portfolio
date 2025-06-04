@@ -8,7 +8,7 @@ export default function HeaderNavLink({
   return (
     <Link
       {...props}
-      className="group relative text-2xl font-raleway text-foreground"
+      className="group relative text-2xl font-raleway text-foreground no-underline"
     >
       {children}
 

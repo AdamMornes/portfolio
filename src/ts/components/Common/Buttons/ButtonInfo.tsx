@@ -9,7 +9,7 @@ export default function ButtonBrand({
   return (
     <ButtonTransparent
       {...props}
-      className={join(['bg-info-light text-gray-950', className])}
+      className={join(['bg-info-light text-gray-950 no-underline', className])}
     />
   );
 }

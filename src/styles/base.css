@@ -4,6 +4,11 @@ body {
 
 a {
   @apply text-info-foreground;
+
+  &:hover,
+  &:focus {
+    @apply underline;
+  }
 }
 
 h1 {

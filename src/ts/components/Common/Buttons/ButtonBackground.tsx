@@ -10,7 +10,7 @@ export default function ButtonBackground({
     <ButtonTransparent
       {...props}
       className={join([
-        'bg-background text-foreground border border-gray-200 dark:border-gray-800',
+        'bg-background text-foreground border border-gray-200 no-underline dark:border-gray-800',
         className,
       ])}
     />
