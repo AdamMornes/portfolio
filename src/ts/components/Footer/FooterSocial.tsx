@@ -6,7 +6,7 @@ export default function FooterSocial() {
     <ul className="flex items-center gap-4">
       <li>
         <a
-          className="text-foreground text-2xl -github hover:text-[#104C35] focus:text-[#104C35] dark:hover:text-[#5FED83] dark:focus:text-[#5FED83]"
+          className="text-foreground text-2xl hover:text-[#104C35] focus:text-[#104C35] dark:hover:text-[#5FED83] dark:focus:text-[#5FED83]"
           href="https://github.com/AdamMornes"
           target="_blank"
         >
