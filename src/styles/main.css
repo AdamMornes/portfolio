@@ -3,10 +3,6 @@
 :root {
   --background: #ffffff;
   --foreground: #111111;
-  --brand-light: #9da894;
-  --brand-dark: #505a49;
-  --brand-background: var(--brand-light);
-  --brand-foreground: var(--brand-dark);
   --info-light: #5bc0de;
   --info-dark: #196076;
   --info-background: var(--info-light);
@@ -23,8 +19,6 @@
   @variant dark {
     --background: #111111;
     --foreground: #ffffff;
-    --brand-background: var(--brand-dark);
-    --brand-foreground: var(--brand-light);
     --info-background: var(--info-dark);
     --info-foreground: var(--info-light);
     --warning-background: var(--warning-dark);
@@ -37,8 +31,6 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-brand-background: var(--brand-background);
-  --color-brand-foreground: var(--brand-foreground);
   --color-info-background: var(--info-background);
   --color-info-foreground: var(--info-foreground);
   --color-warning-background: var(--warning-background);
