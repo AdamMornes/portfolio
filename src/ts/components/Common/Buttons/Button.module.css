@@ -10,7 +10,7 @@
   }
 
   &.-danger {
-    @apply bg-danger-background text-foreground;
+    @apply bg-danger-dark text-foreground;
   }
 
   &.-info {

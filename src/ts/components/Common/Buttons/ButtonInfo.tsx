@@ -1,11 +1,15 @@
-import { ButtonBaseProps, ButtonIconProps } from './types';
+import { ButtonTransparentProps } from './types';
 import join from '@/ts/utils/classNameJoin';
-import ButtonIcon from './ButtonIcon';
+import ButtonTransparent from './ButtonTransparent';
 
-type ButtonBrandProps = ButtonBaseProps & ButtonIconProps;
-
-export default function ButtonBrand({ className, ...props }: ButtonBrandProps) {
+export default function ButtonBrand({
+  className,
+  ...props
+}: ButtonTransparentProps) {
   return (
-    <ButtonIcon {...props} className={join(['button -info', className])} />
+    <ButtonTransparent
+      {...props}
+      className={join(['bg-info-light text-gray-950', className])}
+    />
   );
 }

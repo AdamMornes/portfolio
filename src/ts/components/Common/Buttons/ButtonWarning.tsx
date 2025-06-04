@@ -1,14 +1,15 @@
-import { ButtonBaseProps, ButtonIconProps } from './types';
+import { ButtonTransparentProps } from './types';
 import join from '@/ts/utils/classNameJoin';
-import ButtonIcon from './ButtonIcon';
-
-type ButtonWarningProps = ButtonBaseProps & ButtonIconProps;
+import ButtonTransparent from './ButtonTransparent';
 
 export default function ButtonWarning({
   className,
   ...props
-}: ButtonWarningProps) {
+}: ButtonTransparentProps) {
   return (
-    <ButtonIcon {...props} className={join(['button -warning', className])} />
+    <ButtonTransparent
+      {...props}
+      className={join(['bg-warning-light text-gray-950', className])}
+    />
   );
 }

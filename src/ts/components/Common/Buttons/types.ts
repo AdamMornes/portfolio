@@ -10,3 +10,5 @@ export type ButtonBaseProps = ButtonProps &
 export type ButtonIconProps = ButtonBaseProps & {
   hideIcon?: boolean;
 };
+
+export type ButtonTransparentProps = ButtonBaseProps & ButtonIconProps;

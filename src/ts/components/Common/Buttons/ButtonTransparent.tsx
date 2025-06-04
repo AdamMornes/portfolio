@@ -1,16 +1,16 @@
 import { ButtonTransparentProps } from './types';
 import join from '@/ts/utils/classNameJoin';
-import ButtonTransparent from './ButtonTransparent';
+import ButtonIcon from './ButtonIcon';
 
-export default function ButtonBackground({
+export default function ButtonTransparent({
   className,
   ...props
 }: ButtonTransparentProps) {
   return (
-    <ButtonTransparent
+    <ButtonIcon
       {...props}
       className={join([
-        'bg-background text-foreground border border-gray-200 dark:border-gray-800',
+        'inline-flex items-center leading-tight py-1.5 px-4 rounded-lg cursor-pointer',
         className,
       ])}
     />
