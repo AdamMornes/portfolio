@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import ButtonHamburger from '../Common/Buttons/ButtonHamburger';
 import HeaderNavLink from './HeaderNavLink';
+import { navigation } from '@/ts/config/navigation';
 
 export default function HeaderNav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -17,15 +18,11 @@ export default function HeaderNav() {
       />
       <div className="hidden lg:block">
         <ul className="flex gap-20">
-          <li>
-            <HeaderNavLink href="/about">About</HeaderNavLink>
-          </li>
-          <li>
-            <HeaderNavLink href="/work">Work</HeaderNavLink>
-          </li>
-          <li>
-            <HeaderNavLink href="/contact">Contact</HeaderNavLink>
-          </li>
+          {navigation.map((item) => (
+            <li key={item.href}>
+              <HeaderNavLink href={item.href}>{item.label}</HeaderNavLink>
+            </li>
+          ))}
         </ul>
       </div>
     </nav>
