@@ -20,31 +20,12 @@ export default function ButtonHamburger({
   return (
     <ButtonBase
       {...props}
-      className={join([
-        styles['btnHamburger'],
-        className,
-        open ? styles['btnHamburger--open'] : '',
-      ])}
+      className={join([styles.button, className, open ? styles['-open'] : ''])}
     >
-      <div className={styles['btnHamburger__lines']}>
-        <div
-          className={classNameJoin([
-            styles['btnHamburger__line'],
-            styles['btnHamburger__line--top'],
-          ])}
-        />
-        <div
-          className={classNameJoin([
-            styles['btnHamburger__line'],
-            styles['btnHamburger__line--middle'],
-          ])}
-        />
-        <div
-          className={classNameJoin([
-            styles['btnHamburger__line'],
-            styles['btnHamburger__line--bottom'],
-          ])}
-        />
+      <div className={styles.lines}>
+        <div className={classNameJoin([styles.line, styles['-top']])} />
+        <div className={classNameJoin([styles.line, styles['-middle']])} />
+        <div className={classNameJoin([styles.line, styles['-bottom']])} />
       </div>
       <span className="sr-only">{open ? closeSrLabel : openSrLabel}</span>
     </ButtonBase>
