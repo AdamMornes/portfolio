@@ -12,13 +12,15 @@ export default function HeaderNav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const mobileMenuRef = useRef<HTMLElement>(null);
 
+  const closeMenu = () => {
+    if (mobileMenuOpen) {
+      setMobileMenuOpen(false);
+    }
+  };
+
   useOutsideClick({
     ref: mobileMenuRef,
-    handler: () => {
-      if (mobileMenuOpen) {
-        setMobileMenuOpen(false);
-      }
-    },
+    handler: closeMenu,
   });
 
   useEffect(() => {
@@ -57,7 +59,8 @@ export default function HeaderNav() {
 
         <TransitionFade in={mobileMenuOpen}>
           <div className="absolute top-full left-0 right-0 h-[calc(100vh-(--spacing(24)))] bg-black/40 border-t border-gray-200 z-10 dark:border-gray-800">
-            <div className="relative h-full flex justify-end">
+            <div className="relative h-full flex">
+              <div className="flex-1" onClick={closeMenu} />
               <div className="w-5/6 bg-background overflow-y-auto">
                 <div className="p-4">
                   <ul className="flex flex-col gap-4">
