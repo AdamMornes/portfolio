@@ -1,14 +1,20 @@
 import Link, { LinkProps } from 'next/link';
 import { PropsWithChildren } from 'react';
 
+type HeaderNavLinkProps = LinkProps & {
+  onClick?: () => void;
+};
+
 export default function HeaderNavLink({
   children,
+  onClick,
   ...props
-}: PropsWithChildren<LinkProps>) {
+}: PropsWithChildren<HeaderNavLinkProps>) {
   return (
     <Link
       {...props}
       className="group relative text-2xl font-raleway text-foreground no-underline"
+      onClick={onClick}
     >
       {children}
 
