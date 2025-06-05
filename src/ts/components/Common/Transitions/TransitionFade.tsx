@@ -3,23 +3,21 @@ import { CSSTransition } from 'react-transition-group';
 import styles from './TransitionFade.module.css';
 
 type TransitionFadeProps = {
-  in: boolean;
-  unmountOnExit?: boolean;
+  visible: boolean;
 };
 
 export default function TransitionFade({
   children,
-  in: inProp,
-  unmountOnExit = true,
+  visible,
 }: PropsWithChildren<TransitionFadeProps>) {
   const nodeRef = useRef<HTMLDivElement>(null);
   return (
     <CSSTransition
       classNames={{ ...styles }}
-      in={inProp}
+      in={visible}
       timeout={300}
       nodeRef={nodeRef}
-      unmountOnExit={unmountOnExit}
+      unmountOnExit
     >
       <div ref={nodeRef}>{children}</div>
     </CSSTransition>

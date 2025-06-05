@@ -57,7 +57,7 @@ export default function HeaderNav() {
           </ul>
         </div>
 
-        <TransitionFade in={mobileMenuOpen}>
+        <TransitionFade visible={mobileMenuOpen}>
           <div className="absolute top-full left-0 right-0 h-[calc(100vh-(--spacing(24)))] bg-black/40 border-t border-gray-200 z-10 dark:border-gray-800">
             <div className="relative h-full flex">
               <div className="flex-1" onClick={closeMenu} />
