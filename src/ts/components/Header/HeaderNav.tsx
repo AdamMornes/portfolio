@@ -25,6 +25,22 @@ export default function HeaderNav() {
           ))}
         </ul>
       </div>
+
+      {mobileMenuOpen && (
+        <div className="lg:hidden">
+          <div className="absolute top-full right-0 h-[calc(100vh-(--spacing(24)))] z-10 w-full bg-background border-t border-gray-200 dark:border-gray-800">
+            <div className="p-4">
+              <ul className="flex flex-col gap-4">
+                {navigation.map((item) => (
+                  <li key={item.href}>
+                    <HeaderNavLink href={item.href}>{item.label}</HeaderNavLink>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      )}
     </nav>
   );
 }
