@@ -8,7 +8,7 @@ export default function Hero() {
         <div className="w-full max-w-screen-md flex flex-col items-center justify-center mx-auto px-4 lg:flex-row">
           <Image
             alt="Adam Mornes Profile"
-            className="border border-gray-300 p-0.5 rounded-full lg:mr-8 dark:border-gray-700"
+            className="border border-gray-300 p-0.5 rounded-full mb-4 lg:mb-0 lg:mr-8 dark:border-gray-700"
             src="/profile.jpg"
             width={200}
             height={200}

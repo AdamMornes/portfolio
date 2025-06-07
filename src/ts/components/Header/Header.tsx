@@ -30,7 +30,7 @@ export default function Header() {
       <div className="relative h-full p-4 lg:px-16">
         <div className="flex justify-between items-center h-full">
           <HeaderLogo />
-          <HeaderNav />
+          <HeaderNav isMinimized={isMinimized} />
         </div>
       </div>
     </header>

@@ -8,8 +8,13 @@ import { FocusTrap } from 'focus-trap-react';
 import useOutsideClick from '@/ts/hooks/useOutsideClick';
 import TransitionFade from '../Common/Transitions/TransitionFade';
 import TransitionSlideIn from '../Common/Transitions/TransitionSlideIn';
+import join from '@/ts/utils/classNameJoin';
 
-export default function HeaderNav() {
+type HeaderNavProps = {
+  isMinimized: boolean;
+};
+
+export default function HeaderNav({ isMinimized }: HeaderNavProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const mobileMenuRef = useRef<HTMLElement>(null);
 
@@ -60,14 +65,26 @@ export default function HeaderNav() {
 
         <TransitionFade visible={mobileMenuOpen}>
           <div
-            className="absolute top-full left-0 right-0 h-[calc(100vh-(--spacing(20)))] bg-black/40 z-10"
+            className={join([
+              'absolute top-full left-0 right-0 bg-black/40 z-10',
+              isMinimized
+                ? 'h-[calc(100vh-(--spacing(20)))]'
+                : 'h-[calc(100vh-(--spacing(24)))]',
+            ])}
             onClick={closeMenu}
           />
         </TransitionFade>
 
-        <div className="absolute top-full right-0 w-5/6 border-t border-gray-200 overflow-hidden z-10 dark:border-gray-800">
+        <div className="absolute top-[calc(100%+1px)] right-0 w-5/6 overflow-hidden z-10">
           <TransitionSlideIn visible={mobileMenuOpen}>
-            <div className="h-screen bg-background overflow-y-auto p-8">
+            <div
+              className={join([
+                'bg-background overflow-y-auto p-8',
+                isMinimized
+                  ? 'h-[calc(100vh-(--spacing(20)))]'
+                  : 'h-[calc(100vh-(--spacing(24)))]',
+              ])}
+            >
               <ul className="flex flex-col gap-8">
                 {navigation.map((item) => (
                   <li key={item.href}>
