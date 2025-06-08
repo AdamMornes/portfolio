@@ -103,6 +103,10 @@ export const journey = {
           After 4 years in Austin, while still working at XCentium, I moved back to the midwest.
           My wife and I moved to Flint, MI to be closer to family and to be back in a climate that I grew up with.
         </p>
+        <p>
+          Here I continued to work at XCentium for 5 more years on various projects, bolstering my skills with Vue.js, React, and Next.js. 
+          In May of 2025, I finally departed from XCentium and I'm excited for the next step in my career.
+        </p>
       `,
     },
   ],
