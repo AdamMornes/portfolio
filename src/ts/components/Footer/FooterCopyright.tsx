@@ -1,7 +1,12 @@
+import sharedData from '@/data/shared.json';
+
 export default function FooterCopyright() {
   return (
     <p className="text-sm">
-      Copyright &copy; {new Date().getFullYear()} Adam Mornes
+      {sharedData.copyright.replace(
+        '${copyright}',
+        `${new Date().getFullYear()}`,
+      )}
     </p>
   );
 }

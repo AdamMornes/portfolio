@@ -3,12 +3,12 @@
 import { useEffect, useRef, useState } from 'react';
 import ButtonHamburger from '../Common/Buttons/ButtonHamburger';
 import HeaderNavLink from './HeaderNavLink';
-import { navigation } from '@/ts/config/navigation';
 import { FocusTrap } from 'focus-trap-react';
 import useOutsideClick from '@/ts/hooks/useOutsideClick';
 import TransitionFade from '../Common/Transitions/TransitionFade';
 import TransitionRightSlideIn from '../Common/Transitions/TransitionRightSlideIn';
 import join from '@/ts/utils/classNameJoin';
+import sharedData from '@/data/shared.json';
 
 type HeaderNavProps = {
   isMinimized: boolean;
@@ -55,7 +55,7 @@ export default function HeaderNav({ isMinimized }: HeaderNavProps) {
         />
         <div className="hidden lg:block">
           <ul className="flex gap-20">
-            {navigation.map((item) => (
+            {sharedData.navigation.map((item) => (
               <li key={item.href}>
                 <HeaderNavLink href={item.href}>{item.label}</HeaderNavLink>
               </li>
@@ -86,7 +86,7 @@ export default function HeaderNav({ isMinimized }: HeaderNavProps) {
               ])}
             >
               <ul className="flex flex-col gap-8">
-                {navigation.map((item) => (
+                {sharedData.navigation.map((item) => (
                   <li key={item.href}>
                     <HeaderNavLink
                       href={item.href}
