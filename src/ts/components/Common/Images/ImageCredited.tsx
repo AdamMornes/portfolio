@@ -7,14 +7,14 @@ export default function ImageCredited({
   ...props
 }: PropsWithChildren<ImageProps>) {
   return (
-    <div className="group relative">
+    <figure className="group relative inline-block">
       <Image alt={alt} {...props} />
-      <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-        <div className="absolute top-0 left-0 w-full h-full bg-black/50" />
-        <p className="absolute bottom-0 right-0 text-sm text-gray-white p-2 [&_a]:text-info-light">
+      <div className="group-hover:opacity-100 transition-opacity duration-300 lg:opacity-0">
+        <div className="hidden absolute top-0 left-0 w-full h-full bg-black/50 lg:block" />
+        <figcaption className="text-sm lg:absolute lg:bottom-0 lg:right-0 lg:text-gray-white lg:p-2 lg:[&_a]:text-info-light">
           {children}
-        </p>
+        </figcaption>
       </div>
-    </div>
+    </figure>
   );
 }
