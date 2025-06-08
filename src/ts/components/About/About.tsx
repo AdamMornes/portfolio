@@ -6,6 +6,7 @@ export default function About() {
   return (
     <ContentBlock>
       <ContentImageBlock
+        classNameImageWrapper="flex justify-center"
         image={{
           ...about.profileImage,
           className: 'rounded-full mb-4 lg:mb-0',

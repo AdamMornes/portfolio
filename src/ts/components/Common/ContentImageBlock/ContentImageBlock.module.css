@@ -1,0 +1,19 @@
+@reference '../../../../styles/main.css';
+
+@layer base {
+  .content {
+    @apply flex flex-col gap-4 lg:flex-row lg:items-center;
+  }
+
+  .description {
+    @apply flex-1;
+  }
+
+  .image {
+    @apply shrink-0;
+
+    &.flip {
+      @apply lg:order-1;
+    }
+  }
+}
