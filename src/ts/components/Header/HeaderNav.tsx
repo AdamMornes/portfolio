@@ -7,7 +7,7 @@ import { navigation } from '@/ts/config/navigation';
 import { FocusTrap } from 'focus-trap-react';
 import useOutsideClick from '@/ts/hooks/useOutsideClick';
 import TransitionFade from '../Common/Transitions/TransitionFade';
-import TransitionSlideIn from '../Common/Transitions/TransitionSlideIn';
+import TransitionRightSlideIn from '../Common/Transitions/TransitionRightSlideIn';
 import join from '@/ts/utils/classNameJoin';
 
 type HeaderNavProps = {
@@ -76,7 +76,7 @@ export default function HeaderNav({ isMinimized }: HeaderNavProps) {
         </TransitionFade>
 
         <div className="absolute top-[calc(100%+1px)] right-0 w-5/6 overflow-hidden z-10">
-          <TransitionSlideIn visible={mobileMenuOpen}>
+          <TransitionRightSlideIn visible={mobileMenuOpen}>
             <div
               className={join([
                 'bg-background overflow-y-auto p-8',
@@ -98,7 +98,7 @@ export default function HeaderNav({ isMinimized }: HeaderNavProps) {
                 ))}
               </ul>
             </div>
-          </TransitionSlideIn>
+          </TransitionRightSlideIn>
         </div>
       </nav>
     </FocusTrap>

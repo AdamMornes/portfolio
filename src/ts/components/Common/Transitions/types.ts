@@ -1,3 +1,15 @@
+export type TransitionClassNames = {
+  appear?: string;
+  appearActive?: string;
+  appearDone?: string;
+  enter?: string;
+  enterActive?: string;
+  enterDone?: string;
+  exit?: string;
+  exitActive?: string;
+  exitDone?: string;
+};
+
 export type TransitionBaseProps = {
   onEnter?: (isAppearing: boolean) => void;
   onEntering?: (isAppearing: boolean) => void;
@@ -6,7 +18,7 @@ export type TransitionBaseProps = {
   onExiting?: () => void;
   onExited?: () => void;
   unmountOnExit?: boolean;
-  classNames: { [key: string]: string };
+  classNames: TransitionClassNames;
   visible: boolean;
 };
 
