@@ -9,7 +9,10 @@ export default function History() {
         <ContentImageBlock
           description={section.description}
           key={index}
-          image={section.image}
+          image={{
+            ...section.image,
+            className: 'rounded-md',
+          }}
           flip={isOdd(index)}
         />
       ))}
