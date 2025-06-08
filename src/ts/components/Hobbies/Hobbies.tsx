@@ -1,10 +1,12 @@
 import { hobbies } from '@/data/about';
+import SectionHeader from '../Common/SectionHeader/SectionHeader';
+import ContentBlock from '../Common/ContentImageBlock/ContentBlock';
 
 export default function Hobbies() {
   return (
-    <div
-      className="flex flex-col gap-4 mb-4"
-      dangerouslySetInnerHTML={{ __html: hobbies.description }}
-    />
+    <section>
+      <SectionHeader>{hobbies.heading}</SectionHeader>
+      <ContentBlock html={hobbies.description} />
+    </section>
   );
 }

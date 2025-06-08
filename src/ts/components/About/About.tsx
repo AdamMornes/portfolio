@@ -1,20 +1,20 @@
-import Image from 'next/image';
 import { about } from '@/data/about';
+import ContentImageBlock from '../Common/ContentImageBlock/ContentImageBlock';
+import ContentBlock from '../Common/ContentImageBlock/ContentBlock';
 
 export default function About() {
   return (
-    <section className="flex flex-col items-center justify-center gap-4 mb-4 lg:flex-row">
-      <Image
-        className="shrink-0 rounded-full mb-4 lg:mb-0"
-        src={about.profileImage.src}
-        alt={about.profileImage.alt}
-        width={250}
-        height={250}
-      />
-      <div
-        className="flex flex-col gap-4 mb-0"
-        dangerouslySetInnerHTML={{ __html: about.description }}
-      ></div>
-    </section>
+    <ContentBlock>
+      <ContentImageBlock
+        image={{
+          ...about.profileImage,
+          className: 'rounded-full mb-4 lg:mb-0',
+          width: 250,
+          height: 250,
+        }}
+      >
+        <ContentBlock html={about.description} />
+      </ContentImageBlock>
+    </ContentBlock>
   );
 }
