@@ -23,7 +23,7 @@ export default function Header() {
   return (
     <header
       className={join([
-        'sticky top-0 z-10 bg-background border-b border-gray-200 dark:border-gray-800 transition-all duration-300',
+        'sticky top-0 z-10 bg-background border-b border-gray-200 transition-all duration-300 dark:border-gray-800',
         isMinimized ? 'h-20' : 'h-24',
       ])}
     >

@@ -66,7 +66,7 @@ export default function HeaderNav({ isMinimized }: HeaderNavProps) {
         <TransitionFade visible={mobileMenuOpen}>
           <div
             className={join([
-              'absolute top-full left-0 right-0 bg-black/40 z-10',
+              'absolute top-[calc(100%+1px)] left-0 right-0 bg-black/40 z-10',
               isMinimized
                 ? 'h-[calc(100vh-(--spacing(20)))]'
                 : 'h-[calc(100vh-(--spacing(24)))]',
