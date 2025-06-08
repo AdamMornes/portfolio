@@ -13,6 +13,17 @@ export const about = {
   <p>There is no better feeling than creating an easy to use, beautiful website that clients can be proud of.</p>`,
 };
 
+export const hobbies = {
+  heading: 'Hobbies',
+  description: `
+    <p>
+      When I'm not crunching code, I enjoy playing cards (yes, the nerdy
+      kind - Magic: the Gathering), playing music on my guitar, and trying the
+      newest fancy IPA or Belgian beer I can find.
+    </p>
+  `,
+};
+
 export const journey = {
   heading: 'Journey',
   sections: [

@@ -3,6 +3,7 @@ import Journey from '@/ts/components/Journey/Journey';
 import Hobbies from '@/ts/components/Hobbies/Hobbies';
 import SectionHeader from '@/ts/components/Common/SectionHeader/SectionHeader';
 import type { Metadata } from 'next';
+import { about, journey, hobbies } from '@/data/about';
 
 export const metadata: Metadata = {
   title: 'About | Adam Mornes',
@@ -12,11 +13,11 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      <SectionHeader rootElement="h1">About</SectionHeader>
+      <SectionHeader rootElement="h1">{about.heading}</SectionHeader>
       <About />
-      <SectionHeader>Journey</SectionHeader>
+      <SectionHeader>{journey.heading}</SectionHeader>
       <Journey />
-      <SectionHeader>Hobbies</SectionHeader>
+      <SectionHeader>{hobbies.heading}</SectionHeader>
       <Hobbies />
     </>
   );
