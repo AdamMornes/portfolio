@@ -13,12 +13,11 @@ export default function History() {
         >
           <div className={join(['shrink-0', isOdd(index) ? 'lg:order-1' : ''])}>
             <ImageCredited
-              className="rounded-md"
-              src={section.image.src}
               alt={section.image.alt}
-              width={250}
-              height={167}
-              sizes="(max-width: 768px) 100vw"
+              className="rounded-md"
+              height={section.image.height}
+              src={section.image.src}
+              width={section.image.width}
             >
               <span
                 dangerouslySetInnerHTML={{ __html: section.image.credit }}
