@@ -1,0 +1,7 @@
+@reference '../../../../styles/main.css';
+
+@layer base {
+  .content {
+    @apply flex flex-col gap-4;
+  }
+}

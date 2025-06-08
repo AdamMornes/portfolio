@@ -1,9 +1,9 @@
 import Image, { ImageProps } from 'next/image';
 import ImageCredited from '@/ts/components/Common/Images/ImageCredited';
 import join from '@/ts/utils/classNameJoin';
+import { PropsWithChildren } from 'react';
 
 type ContentImageBlockProps = {
-  description: string;
   image: ImageProps & {
     credit?: string;
   };
@@ -11,10 +11,10 @@ type ContentImageBlockProps = {
 };
 
 export default function ContentImageBlock({
-  description,
+  children,
   image,
   flip = false,
-}: ContentImageBlockProps) {
+}: PropsWithChildren<ContentImageBlockProps>) {
   const { alt, credit, ...imageProps } = image;
   return (
     <div className="flex flex-col gap-4 lg:flex-row lg:items-center">
@@ -27,12 +27,7 @@ export default function ContentImageBlock({
           <Image alt={alt} {...imageProps} />
         )}
       </div>
-      <div className="flex-1">
-        <div
-          className="flex flex-col gap-4 mb-4"
-          dangerouslySetInnerHTML={{ __html: description }}
-        />
-      </div>
+      <div className="flex-1">{children}</div>
     </div>
   );
 }
