@@ -1,25 +1,10 @@
-import { PropsWithChildren, useRef } from 'react';
-import { CSSTransition } from 'react-transition-group';
+import { PropsWithChildren } from 'react';
 import styles from './TransitionFade.module.css';
+import type { TransitionProps } from './types';
+import TransitionBase from './TransitionBase';
 
-type TransitionFadeProps = {
-  visible: boolean;
-};
-
-export default function TransitionFade({
-  children,
-  visible,
-}: PropsWithChildren<TransitionFadeProps>) {
-  const nodeRef = useRef<HTMLDivElement>(null);
-  return (
-    <CSSTransition
-      classNames={{ ...styles }}
-      in={visible}
-      timeout={300}
-      nodeRef={nodeRef}
-      unmountOnExit
-    >
-      <div ref={nodeRef}>{children}</div>
-    </CSSTransition>
-  );
+export default function TransitionFade(
+  props: PropsWithChildren<TransitionProps>,
+) {
+  return <TransitionBase {...props} classNames={{ ...styles }} />;
 }
