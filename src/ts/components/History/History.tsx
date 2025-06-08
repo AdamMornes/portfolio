@@ -13,16 +13,14 @@ export default function History() {
             height={167}
             sizes="(max-width: 768px) 100vw"
           >
-            <p>
-              Photo by{' '}
-              <a href="https://unsplash.com/@ging_dlh?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">
-                ginger
-              </a>{' '}
-              on{' '}
-              <a href="https://unsplash.com/photos/snow-covered-lighthouse-ydrp-zMoMsg?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">
-                Unsplash
-              </a>
-            </p>
+            Photo by{' '}
+            <a href="https://unsplash.com/@ging_dlh?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">
+              ginger
+            </a>{' '}
+            on{' '}
+            <a href="https://unsplash.com/photos/snow-covered-lighthouse-ydrp-zMoMsg?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">
+              Unsplash
+            </a>
           </ImageCredited>
         </div>
         <div className="flex-1">
