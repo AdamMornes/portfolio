@@ -10,8 +10,9 @@ export default function About() {
         image={{
           ...about.profileImage,
           className: 'rounded-full mb-4 lg:mb-0',
-          width: 250,
           height: 250,
+          priority: true,
+          width: 250,
         }}
       >
         <ContentBlock html={about.description} />

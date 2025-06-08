@@ -5,7 +5,7 @@ export const about = {
     src: '/profile.jpg',
   },
   description: `
-  <p>Hello, I'm Adam Mornes. I'm a Web Developer located inFlint, MI.</p>
+  <p>Hello, I'm Adam Mornes. I'm a Web Developer located in Flint, MI.</p>
 
   <p>I have a passion for creating outstanding responsive web sites - while keeping in mind intelligent, intuitive user interface. 
   To do so, I work to keep up with the best and newest development trends; as well as implementing those them on every project I take on.</p>
@@ -38,7 +38,7 @@ export const journey = {
             <a href="https://unsplash.com/photos/snow-covered-lighthouse-ydrp-zMoMsg?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">
               Unsplash
             </a>`,
-        height: 167,
+        height: 166,
         src: '/duluth-lighthouse.jpg',
         width: 250,
       },
@@ -76,10 +76,33 @@ export const journey = {
             change. I moved to 1200 miles south to Austin, TX.
           </p>
           <p>
-            While in Austin, I got my next job at <a href="" target="_blank">XCentium</a>. I spent the next 7 years in the wild west of contract work.
-            Working on projects with technology stacks ranging from .NET and
+            While in Austin, I got my next job at <a href="https://www.xcentium.com/" target="_blank">XCentium</a>. 
+            I spent the next 7 years in the wild west of contract work;
+            working on projects with technology stacks ranging from .NET and
             JQuery to React and Next.js.
           </p>
+      `,
+    },
+    {
+      image: {
+        alt: 'Graffiti in Flint, MI',
+        credit: `Photo by 
+          <a href="https://unsplash.com/@kazaks?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">
+            Krišjānis Kazaks
+          </a> 
+          on 
+          <a href="https://unsplash.com/photos/colorful-graffiti-on-the-side-of-a-building-slXpdVgW2pQ?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">
+            Unsplash
+          </a>`,
+        height: 199,
+        src: '/flint-graffiti.jpg',
+        width: 300,
+      },
+      description: `
+        <p>
+          After 4 years in Austin, while still working at XCentium, I moved back to the midwest.
+          My wife and I moved to Flint, MI to be closer to family and to be back in a climate that I grew up with.
+        </p>
       `,
     },
   ],
