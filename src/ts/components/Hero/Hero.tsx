@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import ButtonBackground from '../Common/Buttons/ButtonBackground';
-import homeData from '@/data/home.json';
+import { hero } from '@/data/home';
 
 export default function Hero() {
   return (
@@ -8,9 +8,9 @@ export default function Hero() {
       <div className="flex h-full items-center justify-center py-8">
         <div className="w-full max-w-screen-md flex flex-col items-center justify-center mx-auto px-4 lg:flex-row">
           <Image
-            alt={homeData.hero.profileImage.alt}
+            alt={hero.profileImage.alt}
             className="rounded-full mb-4 lg:mb-0 lg:mr-8"
-            src={homeData.hero.profileImage.src}
+            src={hero.profileImage.src}
             width={200}
             height={200}
             priority={true}
@@ -18,14 +18,14 @@ export default function Hero() {
           <div className="text-foreground shrink-0">
             <h1
               className="font-raleway text-3xl mb-4"
-              dangerouslySetInnerHTML={{ __html: homeData.hero.heading }}
+              dangerouslySetInnerHTML={{ __html: hero.heading }}
             />
             <p
               className="font-raleway text-3xl mb-4"
-              dangerouslySetInnerHTML={{ __html: homeData.hero.subheading }}
+              dangerouslySetInnerHTML={{ __html: hero.subheading }}
             />
             <ButtonBackground isAnchor={true} href="/about">
-              {homeData.hero.cta}
+              {hero.cta}
             </ButtonBackground>
           </div>
         </div>
