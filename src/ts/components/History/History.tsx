@@ -1,11 +1,11 @@
-import Image from 'next/image';
+import ImageBordered from '../Common/ImageBordered/ImageBordered';
 
 export default function History() {
   return (
     <div className="flex flex-col gap-4 mb-4 lg:gap-8">
       <div className="flex flex-col gap-4 lg:flex-row lg:items-center">
         <div className="shrink-0 lg:order-1">
-          <Image
+          <ImageBordered
             className="rounded-md"
             src="/duluth-lighthouse.jpg"
             alt="Lighthouse in Duluth, MN"
@@ -35,7 +35,7 @@ export default function History() {
       </div>
       <div className="flex flex-col gap-4 lg:flex-row lg:items-center">
         <div className="shrink-0">
-          <Image
+          <ImageBordered
             className="rounded-md"
             src="/austin-skyline.jpg"
             alt="Lighthouse in Duluth, MN"
