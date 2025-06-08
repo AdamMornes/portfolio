@@ -1,17 +1,26 @@
-.enter {
-  opacity: 0;
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 .enterActive {
-  opacity: 1;
-  transition: opacity 300ms;
-}
-
-.exit {
-  opacity: 1;
+  animation: fadeIn 300ms;
 }
 
 .exitActive {
   opacity: 0;
-  transition: opacity 300ms;
+  animation: fadeOut 300ms;
 }
