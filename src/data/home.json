@@ -1,0 +1,11 @@
+{
+  "hero": {
+    "cta": "Learn more about me",
+    "heading": "Hi,<br />I'm Adam Mornes",
+    "profileImage": {
+      "alt": "Adam Mornes Profile",
+      "src": "/profile.jpg"
+    },
+    "subheading": "I do web."
+  }
+}
