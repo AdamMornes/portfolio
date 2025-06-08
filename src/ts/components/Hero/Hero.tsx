@@ -1,12 +1,12 @@
+import Image from 'next/image';
 import ButtonBackground from '../Common/Buttons/ButtonBackground';
-import ImageBordered from '../Common/ImageBordered/ImageBordered';
 
 export default function Hero() {
   return (
     <div className="relative w-full h-full">
       <div className="flex h-full items-center justify-center py-8">
         <div className="w-full max-w-screen-md flex flex-col items-center justify-center mx-auto px-4 lg:flex-row">
-          <ImageBordered
+          <Image
             alt="Adam Mornes Profile"
             className="rounded-full mb-4 lg:mb-0 lg:mr-8"
             src="/profile.jpg"

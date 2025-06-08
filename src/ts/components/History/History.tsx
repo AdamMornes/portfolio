@@ -1,18 +1,30 @@
-import ImageBordered from '../Common/ImageBordered/ImageBordered';
+import Image from 'next/image';
+import ImageCredited from '../Common/Images/ImageCredited';
 
 export default function History() {
   return (
     <div className="flex flex-col gap-4 mb-4 lg:gap-8">
       <div className="flex flex-col gap-4 lg:flex-row lg:items-center">
         <div className="shrink-0 lg:order-1">
-          <ImageBordered
+          <ImageCredited
             className="rounded-md"
             src="/duluth-lighthouse.jpg"
             alt="Lighthouse in Duluth, MN"
             width={250}
             height={167}
             sizes="(max-width: 768px) 100vw"
-          />
+          >
+            <p>
+              Photo by{' '}
+              <a href="https://unsplash.com/@ging_dlh?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">
+                ginger
+              </a>{' '}
+              on{' '}
+              <a href="https://unsplash.com/photos/snow-covered-lighthouse-ydrp-zMoMsg?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">
+                Unsplash
+              </a>
+            </p>
+          </ImageCredited>
         </div>
         <div className="flex-1">
           <div className="flex flex-col gap-4 mb-4">
@@ -35,14 +47,23 @@ export default function History() {
       </div>
       <div className="flex flex-col gap-4 lg:flex-row lg:items-center">
         <div className="shrink-0">
-          <ImageBordered
+          <ImageCredited
             className="rounded-md"
             src="/austin-skyline.jpg"
             alt="Lighthouse in Duluth, MN"
             width={300}
             height={200}
             sizes="(max-width: 768px) 100vw"
-          />
+          >
+            Photo by{' '}
+            <a href="https://unsplash.com/@mitchkmetz?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">
+              Mitchell Kmetz
+            </a>{' '}
+            on{' '}
+            <a href="https://unsplash.com/photos/man-in-black-jacket-walking-on-bridge-near-body-of-water-during-daytime-ztVcGTSD8xw?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">
+              Unsplash
+            </a>
+          </ImageCredited>
         </div>
         <div className="flex flex-col gap-4 mb-4">
           <p>

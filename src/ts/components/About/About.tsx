@@ -1,9 +1,9 @@
-import ImageBordered from '../Common/ImageBordered/ImageBordered';
+import Image from 'next/image';
 
 export default function About() {
   return (
     <section className="flex flex-col items-center justify-center gap-4 mb-4 lg:flex-row">
-      <ImageBordered
+      <Image
         className="shrink-0 rounded-full mb-4 lg:mb-0"
         src="/profile.jpg"
         alt="Adam Mornes"
