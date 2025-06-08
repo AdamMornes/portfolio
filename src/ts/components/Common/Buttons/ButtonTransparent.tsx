@@ -10,7 +10,7 @@ export default function ButtonTransparent({
     <ButtonIcon
       {...props}
       className={join([
-        'inline-flex items-center leading-tight py-1.5 px-4 rounded-lg cursor-pointer',
+        'inline-flex items-center leading-tight py-1.5 px-4 rounded-md cursor-pointer',
         className,
       ])}
     />
