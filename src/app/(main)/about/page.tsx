@@ -12,9 +12,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      <SectionHeader className="mb-8" rootElement="h1">
-        About
-      </SectionHeader>
+      <SectionHeader rootElement="h1">About</SectionHeader>
       <About />
       <SectionHeader>History</SectionHeader>
       <History />
