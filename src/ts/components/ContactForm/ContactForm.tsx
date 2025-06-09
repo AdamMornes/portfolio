@@ -32,23 +32,19 @@ export default function ContactForm() {
         />
         <FormInput
           errorMessage="Email is required"
-          isInvalid={!!errors.name}
+          isInvalid={!!errors.email}
           label="Email Address"
           placeholder="example@domain.com"
           {...register('email', { required: true })}
         />
-        <div className="mb-3">
-          <label className="block text-sm mb-3" htmlFor="message">
-            Message
-          </label>
-          <textarea
-            className="w-full border border-gray-300 rounded-md py-3 px-4 dark:border-gray-700"
-            placeholder="Type your message"
-            rows={4}
-            {...register('message', { required: true })}
-            id="message"
-          />
-        </div>
+        <FormInput
+          errorMessage="Message is required"
+          isInvalid={!!errors.message}
+          label="Message"
+          placeholder="Type your message"
+          type="textarea"
+          {...register('message', { required: true })}
+        />
         <ButtonInfo type="submit" hideIcon>
           Submit
         </ButtonInfo>
