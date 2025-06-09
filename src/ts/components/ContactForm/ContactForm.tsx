@@ -4,6 +4,7 @@ import { useForm } from 'react-hook-form';
 import ButtonInfo from '../Common/Buttons/ButtonInfo';
 import FormInput from '../Common/Forms/FormInput';
 import { socialLinks } from '@/data/shared';
+import { contactForm } from '@/data/contact';
 
 type ContactFormData = {
   name: string;
@@ -28,31 +29,33 @@ export default function ContactForm() {
       <div className="lg:w-1/2">
         <FormInput
           error={errors.name?.message}
-          label="Full Name"
-          placeholder="Full Name"
-          {...register('name', { required: 'Full Name is required' })}
+          label={contactForm.name.label}
+          placeholder={contactForm.name.placeholder}
+          {...register('name', { required: contactForm.name.errorRequired })}
         />
         <FormInput
           error={errors.email?.message}
-          label="Email Address"
-          placeholder="example@domain.com"
+          label={contactForm.email.label}
+          placeholder={contactForm.email.placeholder}
           {...register('email', {
-            required: 'Email Address is required',
+            required: contactForm.email.errorRequired,
             pattern: {
               value: /\S+@\S+\.\S+/,
-              message: 'Invalid Email Address',
+              message: contactForm.email.errorPatterm,
             },
           })}
         />
         <FormInput
           error={errors.message?.message}
-          label="Message"
-          placeholder="Type your message"
+          label={contactForm.message.label}
+          placeholder={contactForm.message.placeholder}
           type="textarea"
-          {...register('message', { required: 'Message is required' })}
+          {...register('message', {
+            required: contactForm.message.errorRequired,
+          })}
         />
         <ButtonInfo type="submit" hideIcon>
-          Submit
+          {contactForm.submit.label}
         </ButtonInfo>
       </div>
     </form>
