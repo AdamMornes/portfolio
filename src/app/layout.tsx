@@ -3,6 +3,7 @@ import { Raleway, Open_Sans } from 'next/font/google';
 import Header from '@/ts/components/Header/Header';
 import Footer from '@/ts/components/Footer/Footer';
 import SkipToLink from '@/ts/components/SkipToLink/SkipToLink';
+import { mainContentId } from '@/ts/config/ids';
 import '@/styles/main.css';
 
 const raleway = Raleway({
@@ -14,8 +15,6 @@ const openSans = Open_Sans({
   variable: '--font-open-sans',
   subsets: ['latin'],
 });
-
-export const mainContentId = 'main-content';
 
 export const metadata: Metadata = {
   title: 'Adam Mornes | Front-End Developer | Flint, Michigan',
