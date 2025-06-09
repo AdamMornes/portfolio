@@ -6,6 +6,7 @@ type FormInputProps = Omit<
 > & {
   error?: string;
   label: string;
+  rows?: number;
   type?: HTMLInputTypeAttribute | 'textarea';
 };
 
@@ -13,11 +14,13 @@ export default function FormInput({
   className = 'mb-4',
   error,
   label,
+  rows = 4,
   type = 'text',
   ...props
 }: FormInputProps) {
   const id = useId();
-  const InputElement = type === 'textarea' ? 'textarea' : 'input';
+  const isTextarea = type === 'textarea';
+  const InputElement = isTextarea ? 'textarea' : 'input';
   return (
     <div className={className}>
       <label className="block text-sm mb-3" htmlFor={id}>
@@ -30,6 +33,7 @@ export default function FormInput({
         className="w-full border border-gray-300 rounded-md py-3 px-4 dark:border-gray-700"
         id={id}
         type={type}
+        rows={isTextarea ? rows : undefined}
       />
       {!!error && (
         <p className="text-danger-foreground text-sm mt-2" id="nameError">
