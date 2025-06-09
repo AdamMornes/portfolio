@@ -28,7 +28,7 @@ export default function FormInput({
       </label>
       <InputElement
         {...props}
-        aria-describedby={!!error ? 'nameError' : undefined}
+        aria-describedby={!!error ? `${id}_error` : undefined}
         aria-invalid={!!error ? 'true' : 'false'}
         className="w-full border border-gray-300 rounded-md py-3 px-4 dark:border-gray-700"
         id={id}
@@ -36,7 +36,7 @@ export default function FormInput({
         rows={isTextarea ? rows : undefined}
       />
       {!!error && (
-        <p className="text-danger-foreground text-sm mt-2" id="nameError">
+        <p className="text-danger-foreground text-sm mt-2" id={`${id}_error`}>
           {error}
         </p>
       )}
