@@ -15,7 +15,11 @@ export const navigation = [
   },
 ];
 
-export const siteName = 'Adam Mornes';
+export const siteLogo = 'Adam Mornes';
+
+export const skipToLink = {
+  text: 'Skip to main content',
+};
 
 export const socialLinks = {
   heading: 'Socials',
