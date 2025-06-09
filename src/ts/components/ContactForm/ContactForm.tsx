@@ -3,6 +3,7 @@
 import { useForm } from 'react-hook-form';
 import ButtonInfo from '../Common/Buttons/ButtonInfo';
 import FormInput from '../Common/Forms/FormInput';
+import { socialLinks } from '@/data/shared';
 
 type ContactFormData = {
   name: string;
@@ -17,7 +18,9 @@ export default function ContactForm() {
     handleSubmit,
   } = useForm<ContactFormData>();
   const onSubmit = (data: ContactFormData) => {
-    console.log(data);
+    const anchor = document.createElement('a');
+    anchor.href = `mailto:${socialLinks.email.href}?subject=Contact Submission from ${data.name}: ${data.email}&body=${data.message}`;
+    anchor.click();
   };
 
   return (
