@@ -4,16 +4,14 @@ type FormInputProps = Omit<
   InputHTMLAttributes<HTMLInputElement | HTMLTextAreaElement>,
   'type'
 > & {
-  errorMessage?: string;
-  isInvalid?: boolean;
+  error?: string;
   label: string;
   type?: HTMLInputTypeAttribute | 'textarea';
 };
 
 export default function FormInput({
   className = 'mb-4',
-  errorMessage = 'This field is required',
-  isInvalid = false,
+  error,
   label,
   type = 'text',
   ...props
@@ -27,15 +25,15 @@ export default function FormInput({
       </label>
       <InputElement
         {...props}
-        aria-describedby={isInvalid ? 'nameError' : undefined}
-        aria-invalid={isInvalid ? 'true' : 'false'}
+        aria-describedby={!!error ? 'nameError' : undefined}
+        aria-invalid={!!error ? 'true' : 'false'}
         className="w-full border border-gray-300 rounded-md py-3 px-4 dark:border-gray-700"
         id={id}
         type={type}
       />
-      {isInvalid && (
+      {!!error && (
         <p className="text-danger-foreground text-sm mt-2" id="nameError">
-          {errorMessage}
+          {error}
         </p>
       )}
     </div>

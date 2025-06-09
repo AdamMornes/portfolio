@@ -27,26 +27,23 @@ export default function ContactForm() {
     <form onSubmit={handleSubmit(onSubmit)}>
       <div className="lg:w-1/2">
         <FormInput
-          errorMessage="Name is required"
-          isInvalid={!!errors.name}
+          error={errors.name?.message}
           label="Full Name"
           placeholder="Full Name"
-          {...register('name', { required: true })}
+          {...register('name', { required: 'Full Name is required' })}
         />
         <FormInput
-          errorMessage="Email is required"
-          isInvalid={!!errors.email}
+          error={errors.email?.message}
           label="Email Address"
           placeholder="example@domain.com"
-          {...register('email', { required: true })}
+          {...register('email', { required: 'Email Address is required' })}
         />
         <FormInput
-          errorMessage="Message is required"
-          isInvalid={!!errors.message}
+          error={errors.message?.message}
           label="Message"
           placeholder="Type your message"
           type="textarea"
-          {...register('message', { required: true })}
+          {...register('message', { required: 'Message is required' })}
         />
         <ButtonInfo type="submit" hideIcon>
           Submit
