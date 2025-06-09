@@ -36,7 +36,13 @@ export default function ContactForm() {
           error={errors.email?.message}
           label="Email Address"
           placeholder="example@domain.com"
-          {...register('email', { required: 'Email Address is required' })}
+          {...register('email', {
+            required: 'Email Address is required',
+            pattern: {
+              value: /\S+@\S+\.\S+/,
+              message: 'Invalid Email Address',
+            },
+          })}
         />
         <FormInput
           error={errors.message?.message}
