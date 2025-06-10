@@ -3,18 +3,20 @@ import Journey from '@/ts/components/Journey/Journey';
 import Hobbies from '@/ts/components/Hobbies/Hobbies';
 import SectionHeader from '@/ts/components/Common/SectionHeader/SectionHeader';
 import type { Metadata } from 'next';
-import { about, journey, hobbies } from '@/data/about';
+import { siteName } from '@/data/shared';
+import { about, journey, hobbies, meta } from '@/data/about';
 
 export const metadata: Metadata = {
-  title: 'About | Adam Mornes',
-  description: 'About Adam Mornes',
+  title: `${meta.title} | ${siteName}`,
+  description: meta.description,
 };
 
 export default function AboutPage() {
   return (
     <>
+      <SectionHeader rootElement="h1">{meta.title}</SectionHeader>
       <section>
-        <SectionHeader rootElement="h1">{about.heading}</SectionHeader>
+        <h2 className="sr-only">{about.heading}</h2>
         <About />
       </section>
       <section>

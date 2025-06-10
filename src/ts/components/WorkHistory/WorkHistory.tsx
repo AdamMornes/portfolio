@@ -4,10 +4,10 @@ import ContentImageBlock from '../Common/ContentImageBlock/ContentImageBlock';
 import join from '@/ts/utils/classNameJoin';
 import { Fragment } from 'react';
 
-export default function Work() {
+export default function WorkHistory() {
   return (
     <ContentBlock>
-      {workHistory.map((work, index) => (
+      {workHistory.jobList.map((work, index) => (
         <Fragment key={index}>
           <ContentImageBlock
             className="items-start"

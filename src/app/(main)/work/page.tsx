@@ -1,18 +1,22 @@
 import type { Metadata } from 'next';
-import Work from '@/ts/components/Work/Work';
+import WorkHistory from '@/ts/components/WorkHistory/WorkHistory';
 import SectionHeader from '@/ts/components/Common/SectionHeader/SectionHeader';
+import { workHistory, meta } from '@/data/work';
+import { siteName } from '@/data/shared';
 
 export const metadata: Metadata = {
-  title: 'My Work | Adam Mornes | Front-End Developer',
-  description:
-    'Explore my portfolio of web development projects and applications. See examples of my work in front-end development.',
+  title: `${meta.title} | ${siteName}`,
+  description: meta.description,
 };
 
 export default function WorkPage() {
   return (
     <>
-      <SectionHeader rootElement="h1">Work</SectionHeader>
-      <Work />
+      <SectionHeader rootElement="h1">{meta.title}</SectionHeader>
+      <section>
+        <h2 className="sr-only">{workHistory.heading}</h2>
+        <WorkHistory />
+      </section>
     </>
   );
 }

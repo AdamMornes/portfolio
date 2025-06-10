@@ -1,5 +1,5 @@
 export const about = {
-  heading: 'About',
+  heading: 'About Me',
   profileImage: {
     alt: 'Adam Mornes Profile',
     src: '/profile.jpg',
@@ -110,4 +110,10 @@ export const journey = {
       `,
     },
   ],
+};
+
+export const meta = {
+  title: 'About',
+  description:
+    'Learn more about Adam Mornes, a web developer based in Flint, MI.',
 };

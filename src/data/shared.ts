@@ -15,14 +15,14 @@ export const navigation = [
   },
 ];
 
-export const siteLogo = 'Adam Mornes';
+export const siteName = 'Adam Mornes';
 
 export const skipToLink = {
   text: 'Skip to main content',
 };
 
 export const socialLinks = {
-  heading: 'Socials',
+  heading: 'Social Links',
   github: {
     label: 'GitHub',
     href: 'https://github.com/AdamMornes',
