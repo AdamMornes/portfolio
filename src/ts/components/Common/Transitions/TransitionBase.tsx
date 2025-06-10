@@ -21,7 +21,7 @@ export default function TransitionBase({
       if (transitionNode) {
         transitionNode.style.display = 'block';
         setTimeout(() => {
-          transitionNode?.removeAttribute('style');
+          transitionNode.style.display = '';
         }, 300);
       }
     }
