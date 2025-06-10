@@ -5,17 +5,17 @@ import TransitionBase from './TransitionBase';
 export default function TransitionFade(
   props: PropsWithChildren<TransitionProps>,
 ) {
-  const nodeRef = useRef<HTMLDivElement>(null);
+  const transitionNodeRef = useRef<HTMLDivElement>(null);
 
   const removeStyle = () => {
-    const node = nodeRef.current;
+    const node = transitionNodeRef.current;
     if (node) {
       node.removeAttribute('style');
     }
   };
 
   const onEntering = () => {
-    const node = nodeRef.current;
+    const node = transitionNodeRef.current;
     if (node) {
       node.style.height = `${node.scrollHeight}px`;
     }
@@ -26,7 +26,7 @@ export default function TransitionFade(
   };
 
   const onExit = () => {
-    const node = nodeRef.current;
+    const node = transitionNodeRef.current;
     if (node) {
       node.style.height = `${node.clientHeight}px`;
     }
@@ -47,7 +47,7 @@ export default function TransitionFade(
       onEntering={onEntering}
       onExit={onExit}
       onExiting={onExiting}
-      ref={nodeRef}
+      ref={transitionNodeRef}
     />
   );
 }
