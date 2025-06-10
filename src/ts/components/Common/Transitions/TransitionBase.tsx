@@ -1,9 +1,11 @@
 import { PropsWithChildren, useRef } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import { TransitionBaseProps } from './types';
+import join from '@/ts/utils/classNameJoin';
 
 export default function TransitionBase({
   children,
+  className,
   onExit: onExitProp,
   ref,
   unmountOnExit = true,
@@ -36,7 +38,13 @@ export default function TransitionBase({
       timeout={300}
       unmountOnExit={unmountOnExit}
     >
-      <div className={!unmountOnExit && !visible ? 'hidden' : ''} ref={nodeRef}>
+      <div
+        className={join([
+          !unmountOnExit && !visible ? 'hidden' : '',
+          className,
+        ])}
+        ref={nodeRef}
+      >
         {children}
       </div>
     </CSSTransition>
