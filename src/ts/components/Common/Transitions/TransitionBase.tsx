@@ -12,6 +12,7 @@ export default function TransitionBase({
   children,
   unmountOnExit = true,
   visible,
+  ref,
   ...props
 }: PropsWithChildren<TransitionBaseProps>) {
   const nodeRef = useRef<HTMLDivElement>(null);
@@ -37,10 +38,13 @@ export default function TransitionBase({
       {...props}
       in={visible}
       timeout={300}
-      nodeRef={nodeRef}
+      nodeRef={ref || nodeRef}
       unmountOnExit={unmountOnExit}
     >
-      <div className={!unmountOnExit && !visible ? 'hidden' : ''} ref={nodeRef}>
+      <div
+        className={!unmountOnExit && !visible ? 'hidden' : ''}
+        ref={ref || nodeRef}
+      >
         {children}
       </div>
     </CSSTransition>

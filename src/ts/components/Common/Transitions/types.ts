@@ -19,6 +19,7 @@ export type TransitionBaseProps = {
   onExited?: () => void;
   unmountOnExit?: boolean;
   classNames: TransitionClassNames;
+  ref?: React.RefObject<HTMLDivElement | null>;
   visible: boolean;
 };
 
