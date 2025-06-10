@@ -1,29 +1,35 @@
+'use client';
+
+import { useState } from 'react';
 import ButtonBackground from '../Common/Buttons/ButtonBackground';
-import ButtonInfo from '../Common/Buttons/ButtonInfo';
+import ContentBlock from '../Common/ContentImageBlock/ContentBlock';
 import Divider from '../Common/Divider/Divider';
 
 export default function Resume() {
+  const [isResumeVisible, setIsResumeVisible] = useState(false);
   return (
     <div className="text-center">
       <Divider />
 
-      <p className="font-raleway text-2xl mb-4">
-        Need more details about my work history?
-        <br />
-        Check out my resume!
-      </p>
+      <ContentBlock className="items-center">
+        <p className="font-raleway text-2xl">
+          Need more details about my work history?
+          <br />
+          Check out my resume!
+        </p>
 
-      <div className="inline-flex flex-col gap-4">
-        <ButtonBackground
-          isAnchor
-          href="/resume-adam-mornes.pdf"
-          target="_blank"
-        >
-          Download Resume
+        <ButtonBackground onClick={() => setIsResumeVisible(!isResumeVisible)}>
+          View Resume
         </ButtonBackground>
 
-        <ButtonInfo>View Resume</ButtonInfo>
-      </div>
+        {isResumeVisible && (
+          <iframe
+            className="w-full aspect-[.54]"
+            src="/resume-adam-mornes.pdf"
+            title="Resume"
+          />
+        )}
+      </ContentBlock>
 
       <Divider />
     </div>
