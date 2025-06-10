@@ -28,9 +28,11 @@ export default function TransitionBase({
   };
 
   const onExited = () => {
-    const transitionNode = nodeRef.current;
-    if (transitionNode) {
-      transitionNode.style.display = '';
+    if (!unmountOnExit) {
+      const transitionNode = nodeRef.current;
+      if (transitionNode) {
+        transitionNode.style.display = '';
+      }
     }
 
     onExitedProp?.();
