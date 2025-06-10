@@ -23,4 +23,14 @@ export type TransitionBaseProps = {
   visible: boolean;
 };
 
-export type TransitionProps = Omit<TransitionBaseProps, 'classNames'>;
+export type TransitionProps = Omit<
+  TransitionBaseProps,
+  | 'classNames'
+  | 'onEnter'
+  | 'onEntering'
+  | 'onEntered'
+  | 'onExit'
+  | 'onExiting'
+  | 'onExited'
+  | 'ref'
+>;
