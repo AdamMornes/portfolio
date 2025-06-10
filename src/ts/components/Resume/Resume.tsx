@@ -12,7 +12,7 @@ export default function Resume() {
     <div className="text-center">
       <Divider />
 
-      <ContentBlock className="items-center">
+      <ContentBlock className="items-center gap-8">
         <p className="font-raleway text-2xl">
           Need more details about my work history?
           <br />
@@ -24,9 +24,9 @@ export default function Resume() {
         </ButtonBackground>
 
         <div className="w-full">
-          <TransitionExpand visible={isResumeVisible}>
+          <TransitionExpand visible={isResumeVisible} unmountOnExit={false}>
             <iframe
-              className="w-full aspect-[.54]"
+              className="w-full h-[1000px]"
               src="/resume-adam-mornes.pdf"
               title="Resume"
             />
