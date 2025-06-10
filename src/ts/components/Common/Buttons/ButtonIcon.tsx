@@ -7,6 +7,7 @@ export default function ButtonIcon({
   children,
   className,
   hideIcon,
+  icon = <CssIconAngle size="sm" />,
   ...props
 }: ButtonIconProps) {
   return (
@@ -17,8 +18,8 @@ export default function ButtonIcon({
       {children}
 
       {!hideIcon && (
-        <span className="ml-4 mt-1">
-          <CssIconAngle size="sm" />
+        <span className="ml-4 mt-1" aria-hidden="true">
+          {icon}
         </span>
       )}
     </ButtonBase>
