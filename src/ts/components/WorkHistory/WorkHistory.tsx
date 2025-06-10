@@ -1,8 +1,9 @@
+import { Fragment } from 'react';
 import { workHistory } from '@/data/work';
 import ContentBlock from '../Common/ContentImageBlock/ContentBlock';
 import ContentImageBlock from '../Common/ContentImageBlock/ContentImageBlock';
 import join from '@/ts/utils/classNameJoin';
-import { Fragment } from 'react';
+import Divider from '../Common/Divider/Divider';
 
 export default function WorkHistory() {
   return (
@@ -39,7 +40,7 @@ export default function WorkHistory() {
             </ul>
           </ContentImageBlock>
 
-          <hr className="border-gray-200 dark:border-gray-800 my-4 lg:my-8 last:hidden" />
+          <Divider className="last:hidden" />
         </Fragment>
       ))}
     </ContentBlock>
