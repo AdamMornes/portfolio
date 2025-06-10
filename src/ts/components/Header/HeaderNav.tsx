@@ -36,6 +36,7 @@ export default function HeaderNav({ isMinimized }: HeaderNavProps) {
       document.body.classList.remove('overflow-hidden');
     }
   }, [mobileMenuOpen]);
+  console.log('this log should only be on preview');
 
   return (
     <FocusTrap
