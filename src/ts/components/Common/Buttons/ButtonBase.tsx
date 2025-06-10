@@ -9,6 +9,7 @@ export default function ButtonBase({
   isAnchor = false,
   onClick,
   href,
+  target,
   ...props
 }: ButtonBaseProps) {
   const Element = isAnchor ? 'a' : 'button';
@@ -17,7 +18,11 @@ export default function ButtonBase({
   const onAnchorClick = (e: React.MouseEvent) => {
     e.preventDefault();
     if (href) {
-      router.push(href);
+      if (target === '_blank') {
+        window.open(href, '_blank');
+      } else {
+        router.push(href);
+      }
     }
   };
 
@@ -27,6 +32,7 @@ export default function ButtonBase({
       className={className}
       href={href}
       onClick={isAnchor ? onAnchorClick : onClick}
+      target={target}
     >
       {children}
     </Element>
