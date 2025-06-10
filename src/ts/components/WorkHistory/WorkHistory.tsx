@@ -25,7 +25,7 @@ export default function WorkHistory() {
             }}
             imageContent={
               <div className="order-1 mt-4">
-                <h2 className="sr-only">{work.heading}</h2>
+                <h3 className="sr-only">{work.heading}</h3>
                 <p className="mb-1">{work.workTitle}</p>
                 <p className="text-sm">
                   {work.startDate} - {work.endDate}
