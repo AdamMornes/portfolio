@@ -1,50 +1,42 @@
-import { PropsWithChildren, useEffect, useRef } from 'react';
+import { PropsWithChildren, useRef } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import { TransitionBaseProps } from './types';
 
-/**
- * Use additional variable to prevent display effect from being applied
- * when the component is mounted.
- */
-let isDisplayEffectReady = false;
-
 export default function TransitionBase({
   children,
+  onExit: onExitProp,
+  ref,
   unmountOnExit = true,
   visible,
-  ref,
   ...props
 }: PropsWithChildren<TransitionBaseProps>) {
-  const nodeRef = useRef<HTMLDivElement>(null);
+  const fallbackRef = useRef<HTMLDivElement>(null);
+  const nodeRef = ref || fallbackRef;
 
-  useEffect(() => {
-    if (visible) {
-      isDisplayEffectReady = true;
-    } else {
-      if (!unmountOnExit && isDisplayEffectReady) {
-        const transitionNode = nodeRef.current;
-        if (transitionNode) {
-          transitionNode.style.display = 'block';
-          setTimeout(() => {
-            transitionNode?.removeAttribute('style');
-          }, 300);
-        }
+  const onExit = () => {
+    if (!unmountOnExit) {
+      const transitionNode = nodeRef.current;
+      if (transitionNode) {
+        transitionNode.style.display = 'block';
+        setTimeout(() => {
+          transitionNode?.removeAttribute('style');
+        }, 300);
       }
     }
-  }, [visible]); // eslint-disable-line react-hooks/exhaustive-deps
+
+    onExitProp?.();
+  };
 
   return (
     <CSSTransition
       {...props}
       in={visible}
+      nodeRef={nodeRef}
+      onExit={onExit}
       timeout={300}
-      nodeRef={ref || nodeRef}
       unmountOnExit={unmountOnExit}
     >
-      <div
-        className={!unmountOnExit && !visible ? 'hidden' : ''}
-        ref={ref || nodeRef}
-      >
+      <div className={!unmountOnExit && !visible ? 'hidden' : ''} ref={nodeRef}>
         {children}
       </div>
     </CSSTransition>
