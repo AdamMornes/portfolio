@@ -48,3 +48,34 @@ export const meta = {
   description:
     'Work history of Adam Mornes, a web developer based in Flint, MI.',
 };
+
+export const skills = {
+  heading: 'Skills',
+  skillSections: [
+    {
+      heading: 'Frontend',
+      skills: [
+        'HTML5',
+        'JavaScript',
+        'TypeScript',
+        'React',
+        'Next.js',
+        'Vue.js',
+        'JQuery',
+        'Webpack',
+      ],
+    },
+    {
+      heading: 'Backend',
+      skills: ['Node.js', 'ASP.NET', 'Sitecore', 'MVC Architecture'],
+    },
+    {
+      heading: 'Styling',
+      skills: ['CSS', 'Tailwind CSS', 'SASS', 'Bootstrap', 'CSS Modules'],
+    },
+    {
+      heading: 'Miscellaneous',
+      skills: ['Git', 'Azure DevOps', 'Atlassian Tools'],
+    },
+  ],
+};
