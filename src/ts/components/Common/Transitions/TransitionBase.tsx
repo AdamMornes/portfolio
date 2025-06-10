@@ -7,6 +7,7 @@ export default function TransitionBase({
   children,
   className,
   onExit: onExitProp,
+  onExited: onExitedProp,
   ref,
   unmountOnExit = true,
   visible,
@@ -20,13 +21,19 @@ export default function TransitionBase({
       const transitionNode = nodeRef.current;
       if (transitionNode) {
         transitionNode.style.display = 'block';
-        setTimeout(() => {
-          transitionNode.style.display = '';
-        }, 300);
       }
     }
 
     onExitProp?.();
+  };
+
+  const onExited = () => {
+    const transitionNode = nodeRef.current;
+    if (transitionNode) {
+      transitionNode.style.display = '';
+    }
+
+    onExitedProp?.();
   };
 
   return (
@@ -35,6 +42,7 @@ export default function TransitionBase({
       in={visible}
       nodeRef={nodeRef}
       onExit={onExit}
+      onExited={onExited}
       timeout={300}
       unmountOnExit={unmountOnExit}
     >
