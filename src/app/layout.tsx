@@ -5,6 +5,7 @@ import Footer from '@/ts/components/Footer/Footer';
 import SkipToLink from '@/ts/components/SkipToLink/SkipToLink';
 import { mainContentId } from '@/ts/config/ids';
 import '@/styles/main.css';
+import { meta } from '@/data/shared';
 
 const raleway = Raleway({
   variable: '--font-raleway',
@@ -17,8 +18,8 @@ const openSans = Open_Sans({
 });
 
 export const metadata: Metadata = {
-  title: 'Adam Mornes | Front-End Developer | Flint, Michigan',
-  description: 'Adam Mornes is a front-end developer based in Flint, Michigan.',
+  title: meta.title,
+  description: meta.description,
 };
 
 export default function RootLayout({

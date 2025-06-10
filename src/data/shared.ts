@@ -17,6 +17,11 @@ export const navigation = [
 
 export const siteName = 'Adam Mornes';
 
+export const meta = {
+  title: siteName,
+  description: 'Adam Mornes is a front-end developer based in Flint, Michigan.',
+};
+
 export const skipToLink = {
   text: 'Skip to main content',
 };

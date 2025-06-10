@@ -1,4 +1,5 @@
 export const contactForm = {
+  heading: 'Contact Form',
   name: {
     label: 'Full Name',
     placeholder: 'Full Name',
@@ -18,4 +19,9 @@ export const contactForm = {
   submit: {
     label: 'Submit',
   },
+};
+
+export const meta = {
+  title: 'Contact',
+  description: 'Contact Adam Mornes, a web developer based in Flint, MI.',
 };
