@@ -7,10 +7,10 @@ export default function TransitionFade(
 ) {
   const transitionNodeRef = useRef<HTMLDivElement>(null);
 
-  const removeStyle = () => {
+  const removeHeight = () => {
     const node = transitionNodeRef.current;
     if (node) {
-      node.removeAttribute('style');
+      node.style.height = '';
     }
   };
 
@@ -22,7 +22,7 @@ export default function TransitionFade(
   };
 
   const onEntered = () => {
-    removeStyle();
+    removeHeight();
   };
 
   const onExit = () => {
@@ -33,7 +33,7 @@ export default function TransitionFade(
   };
 
   const onExiting = () => {
-    removeStyle();
+    removeHeight();
   };
 
   return (
