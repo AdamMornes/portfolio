@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import ButtonBackground from '../Common/Buttons/ButtonBackground';
-import ContentBlock from '../Common/ContentImageBlock/ContentBlock';
 import Divider from '../Common/Divider/Divider';
 import TransitionExpand from '../Common/Transitions/TransitionExpand';
 
@@ -12,27 +11,27 @@ export default function Resume() {
     <div className="text-center">
       <Divider />
 
-      <ContentBlock className="items-center gap-8">
-        <p className="font-raleway text-2xl">
-          Need more details about my work history?
-          <br />
-          Check out my resume!
-        </p>
+      <p className="font-raleway text-2xl mb-8">
+        Need more details about my work history?
+        <br />
+        Check out my resume!
+      </p>
 
-        <ButtonBackground onClick={() => setIsResumeVisible(!isResumeVisible)}>
-          View Resume
-        </ButtonBackground>
+      <ButtonBackground onClick={() => setIsResumeVisible(!isResumeVisible)}>
+        View Resume
+      </ButtonBackground>
 
-        <div className="w-full">
-          <TransitionExpand visible={isResumeVisible} unmountOnExit={false}>
-            <iframe
-              className="w-full h-[1000px]"
-              src="/resume-adam-mornes.pdf"
-              title="Resume"
-            />
-          </TransitionExpand>
-        </div>
-      </ContentBlock>
+      <TransitionExpand
+        className="w-full"
+        visible={isResumeVisible}
+        unmountOnExit={false}
+      >
+        <iframe
+          className="w-full h-[1000px] mt-8"
+          src="/resume-adam-mornes.pdf"
+          title="Resume"
+        />
+      </TransitionExpand>
 
       <Divider />
     </div>
