@@ -35,7 +35,10 @@ export default function WorkHistory() {
           >
             <ul className="list-disc pl-4 lg:pl-8">
               {work.highlights.map((highlight) => (
-                <li key={highlight}>{highlight}</li>
+                <li
+                  key={highlight}
+                  dangerouslySetInnerHTML={{ __html: highlight }}
+                />
               ))}
             </ul>
           </ContentImageBlock>
