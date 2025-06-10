@@ -4,6 +4,7 @@ import { useState } from 'react';
 import ButtonBackground from '../Common/Buttons/ButtonBackground';
 import ContentBlock from '../Common/ContentImageBlock/ContentBlock';
 import Divider from '../Common/Divider/Divider';
+import TransitionExpand from '../Common/Transitions/TransitionExpand';
 
 export default function Resume() {
   const [isResumeVisible, setIsResumeVisible] = useState(false);
@@ -22,13 +23,15 @@ export default function Resume() {
           View Resume
         </ButtonBackground>
 
-        {isResumeVisible && (
-          <iframe
-            className="w-full aspect-[.54]"
-            src="/resume-adam-mornes.pdf"
-            title="Resume"
-          />
-        )}
+        <div className="w-full">
+          <TransitionExpand visible={isResumeVisible}>
+            <iframe
+              className="w-full aspect-[.54]"
+              src="/resume-adam-mornes.pdf"
+              title="Resume"
+            />
+          </TransitionExpand>
+        </div>
       </ContentBlock>
 
       <Divider />
