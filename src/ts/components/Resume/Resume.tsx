@@ -4,6 +4,7 @@ import { useState } from 'react';
 import ButtonBackground from '../Common/Buttons/ButtonBackground';
 import Divider from '../Common/Divider/Divider';
 import TransitionExpand from '../Common/Transitions/TransitionExpand';
+import { resume } from '@/data/work';
 
 export default function Resume() {
   const [isResumeVisible, setIsResumeVisible] = useState(false);
@@ -11,14 +12,13 @@ export default function Resume() {
     <div className="text-center">
       <Divider />
 
-      <p className="font-raleway text-2xl mb-8">
-        Need more details about my work history?
-        <br />
-        Check out my resume!
-      </p>
+      <div
+        className="font-raleway text-2xl mb-8"
+        dangerouslySetInnerHTML={{ __html: resume.description }}
+      />
 
       <ButtonBackground onClick={() => setIsResumeVisible(!isResumeVisible)}>
-        View Resume
+        {resume.cta}
       </ButtonBackground>
 
       <TransitionExpand
