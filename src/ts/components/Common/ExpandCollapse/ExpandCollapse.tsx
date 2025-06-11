@@ -3,6 +3,7 @@
 import { PropsWithChildren, useId, useState } from 'react';
 import ButtonBackground from '../Buttons/ButtonBackground';
 import TransitionExpandCollapse from '../Transitions/TransitionExpandCollapse';
+import CssIconPlusMinus from '../CssIcons/CssIconPlusMinus';
 
 type ExpandCollapseProps = {
   buttonLabel: string;
@@ -22,6 +23,8 @@ export default function ExpandCollapse({
       <ButtonBackground
         aria-expanded={isExpanded}
         aria-controls={!unmountOnExit ? id : undefined}
+        icon={<CssIconPlusMinus size="sm" />}
+        hideIconAnimation
         onClick={() => setIsExpanded(!isExpanded)}
       >
         {buttonLabel}

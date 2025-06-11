@@ -1,0 +1,32 @@
+@reference '../../../../styles/main.css';
+
+@layer base {
+  .icon {
+    @apply relative h-4 w-4;
+
+    &:before,
+    &:after {
+      @apply content-[''] absolute bg-foreground top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+    }
+
+    &:before {
+      @apply w-0.5 h-full;
+    }
+
+    &:after {
+      @apply w-full h-0.5;
+    }
+
+    &.-sm {
+      @apply scale-[0.75];
+    }
+
+    &.-lg {
+      @apply scale-[1.25];
+    }
+
+    &.-xl {
+      @apply scale-[1.5];
+    }
+  }
+}

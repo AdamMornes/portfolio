@@ -18,9 +18,9 @@ export default function ButtonIcon({
       {!hideIcon && (
         <span
           className={join([
-            'ml-4 mt-1',
+            'flex-1 flex items-center ml-4',
             !hideIconAnimation
-              ? 'group-focus:translate-x-1 group-hover:translate-x-1 transition-transform duration-300'
+              ? 'transition-transform duration-300 group-focus:translate-x-1 group-hover:translate-x-1'
               : '',
           ])}
           aria-hidden="true"
