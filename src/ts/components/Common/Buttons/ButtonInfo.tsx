@@ -1,15 +1,10 @@
-import { ButtonTransparentProps } from './types';
+import { ButtonIconProps } from './types';
 import join from '@/ts/utils/classNameJoin';
-import ButtonTransparent from './ButtonTransparent';
+import ButtonIcon from './ButtonIcon';
+import styles from './Button.module.css';
 
-export default function ButtonInfo({
-  className,
-  ...props
-}: ButtonTransparentProps) {
+export default function ButtonInfo({ className, ...props }: ButtonIconProps) {
   return (
-    <ButtonTransparent
-      {...props}
-      className={join(['bg-info-light text-gray-950 no-underline', className])}
-    />
+    <ButtonIcon {...props} className={join([className, styles['-info']])} />
   );
 }

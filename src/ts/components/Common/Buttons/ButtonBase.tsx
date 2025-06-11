@@ -2,6 +2,8 @@
 
 import { useRouter } from 'next/navigation';
 import { ButtonBaseProps } from './types';
+import join from '@/ts/utils/classNameJoin';
+import styles from './Button.module.css';
 
 export default function ButtonBase({
   children,
@@ -29,7 +31,7 @@ export default function ButtonBase({
   return (
     <Element
       {...props}
-      className={className}
+      className={join([styles.button, className])}
       href={href}
       onClick={isAnchor ? onAnchorClick : onClick}
       target={target}
