@@ -49,6 +49,13 @@ export const meta = {
     'Work history of Adam Mornes, a web developer based in Flint, MI.',
 };
 
+export const resume = {
+  cta: 'View Resume',
+  description:
+    '<p>Need more details about my work history?<br />Check out my resume!</p>',
+  heading: 'Resume',
+};
+
 export const skills = {
   heading: 'Skills',
   skillSections: [

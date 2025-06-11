@@ -20,7 +20,7 @@ export default function ButtonHamburger({
   return (
     <ButtonBase
       {...props}
-      className={join([styles.button, className, open ? styles['-open'] : ''])}
+      className={join(['px-1 py-2', className, open ? styles['-open'] : ''])}
     >
       <div className={styles.lines}>
         <div className={classNameJoin([styles.line, styles['-top']])} />

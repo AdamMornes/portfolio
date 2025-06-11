@@ -1,6 +1,6 @@
 import { about } from '@/data/about';
 import ContentImageBlock from '../Common/ContentImageBlock/ContentImageBlock';
-import ContentBlock from '../Common/ContentImageBlock/ContentBlock';
+import ContentBlock from '../Common/ContentBlock/ContentBlock';
 
 export default function About() {
   return (

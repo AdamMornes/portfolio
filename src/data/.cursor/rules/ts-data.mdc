@@ -1,0 +1,12 @@
+---
+description: 
+globs: src/data/**/*.ts
+alwaysApply: false
+---
+---
+description: Data Typescript Guidelines
+globs: src/data/**/*.ts
+---
+
+- Contains all data for application
+- Prioritize saving data as typescript modules for editing convenience
