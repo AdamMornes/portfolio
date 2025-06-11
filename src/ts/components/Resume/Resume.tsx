@@ -21,16 +21,14 @@ export default function Resume() {
         {resume.cta}
       </ButtonBackground>
 
-      <TransitionExpandCollapse
-        className="w-full"
-        visible={isResumeVisible}
-        unmountOnExit={false}
-      >
-        <iframe
-          className="w-full h-[1000px] mt-8"
-          src="/resume-adam-mornes.pdf"
-          title="Resume"
-        />
+      <TransitionExpandCollapse visible={isResumeVisible} unmountOnExit={false}>
+        <div className="mt-8">
+          <iframe
+            className="w-full h-[1000px]"
+            src="/resume-adam-mornes.pdf"
+            title="Resume"
+          />
+        </div>
       </TransitionExpandCollapse>
 
       <Divider />
