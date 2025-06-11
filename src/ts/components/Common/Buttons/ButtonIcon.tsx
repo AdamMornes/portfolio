@@ -7,18 +7,24 @@ export default function ButtonIcon({
   children,
   className,
   hideIcon,
+  hideIconAnimation,
   icon = <CssIconAngle size="sm" />,
   ...props
 }: ButtonIconProps) {
   return (
-    <ButtonBase
-      className={join([className, 'inline-flex items-center justify-between'])}
-      {...props}
-    >
+    <ButtonBase className={join([className, 'group'])} {...props}>
       {children}
 
       {!hideIcon && (
-        <span className="ml-4 mt-1" aria-hidden="true">
+        <span
+          className={join([
+            'ml-4 mt-1',
+            !hideIconAnimation
+              ? 'group-focus:translate-x-1 group-hover:translate-x-1 transition-transform duration-300'
+              : '',
+          ])}
+          aria-hidden="true"
+        >
           {icon}
         </span>
       )}

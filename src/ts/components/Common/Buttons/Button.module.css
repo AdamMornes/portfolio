@@ -2,7 +2,7 @@
 
 @layer base {
   .button {
-    @apply inline-flex items-center justify-between no-underline leading-tight py-2 px-4 rounded-md cursor-pointer;
+    @apply inline-flex items-center justify-between leading-tight py-2 px-4 rounded-md cursor-pointer hover:no-underline focus:no-underline;
 
     &.-background {
       @apply bg-background text-foreground border border-gray-200 dark:border-gray-800;

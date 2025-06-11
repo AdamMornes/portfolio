@@ -9,6 +9,7 @@ export type ButtonBaseProps = ButtonProps &
 
 export type ButtonIconProps = ButtonBaseProps & {
   hideIcon?: boolean;
+  hideIconAnimation?: boolean;
   icon?: ReactNode;
 };
 
