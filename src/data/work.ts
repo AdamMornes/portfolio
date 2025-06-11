@@ -1,3 +1,6 @@
+import xcLogo from '/public/xc-logo.webp';
+import ariLogo from '/public/ari-logo.png';
+
 export const workHistory = {
   heading: 'Work History',
   jobList: [
@@ -17,7 +20,7 @@ export const workHistory = {
         alt: 'XCentium',
         backgroundColor: 'bg-white',
         height: 35,
-        src: '/xc-logo.webp',
+        src: xcLogo.src,
         width: 200,
       },
     },
@@ -36,7 +39,7 @@ export const workHistory = {
         alt: 'ARI Network Services',
         backgroundColor: 'bg-white',
         height: 35,
-        src: '/ari-logo.png',
+        src: ariLogo.src,
         width: 200,
       },
     },
