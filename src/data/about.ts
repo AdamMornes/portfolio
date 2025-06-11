@@ -1,8 +1,13 @@
+import profileImage from '/public/profile.jpg';
+import duluthLighthouse from '/public/duluth-lighthouse.jpg';
+import austinSkyline from '/public/austin-skyline.jpg';
+import flintGraffiti from '/public/flint-graffiti.jpg';
+
 export const about = {
   heading: 'About Me',
   profileImage: {
     alt: 'Adam Mornes Profile',
-    src: '/profile.jpg',
+    src: profileImage.src,
   },
   description: `
   <p>Hello, I'm Adam Mornes. I'm a Web Developer located in Flint, MI.</p>
@@ -39,7 +44,7 @@ export const journey = {
               Unsplash
             </a>`,
         height: 166,
-        src: '/duluth-lighthouse.jpg',
+        src: duluthLighthouse.src,
         width: 250,
       },
       description: `
@@ -67,7 +72,7 @@ export const journey = {
               Unsplash
             </a>`,
         height: 200,
-        src: '/austin-skyline.jpg',
+        src: austinSkyline.src,
         width: 300,
       },
       description: `
@@ -95,7 +100,7 @@ export const journey = {
             Unsplash
           </a>`,
         height: 199,
-        src: '/flint-graffiti.jpg',
+        src: flintGraffiti.src,
         width: 300,
       },
       description: `
