@@ -12,6 +12,7 @@ export type TransitionClassNames = {
 
 export type TransitionBaseProps = {
   className?: string;
+  id?: string;
   onEnter?: (isAppearing: boolean) => void;
   onEntering?: (isAppearing: boolean) => void;
   onEntered?: (isAppearing: boolean) => void;

@@ -6,6 +6,7 @@ import join from '@/ts/utils/classNameJoin';
 export default function TransitionBase({
   children,
   className,
+  id,
   onExit: onExitProp,
   onExited: onExitedProp,
   ref,
@@ -53,6 +54,7 @@ export default function TransitionBase({
           !unmountOnExit && !visible ? 'hidden' : '',
           className,
         ])}
+        id={id}
         ref={nodeRef}
       >
         {children}
