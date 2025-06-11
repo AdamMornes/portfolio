@@ -12,13 +12,14 @@ export default function Resume() {
         dangerouslySetInnerHTML={{ __html: resume.description }}
       />
 
-      <ExpandCollapse buttonLabel={resume.cta}>
+      <ExpandCollapse buttonLabel={resume.cta} unmountOnExit={false}>
         <iframe
           className="w-full h-[1000px]"
           src="/resume-adam-mornes.pdf"
           title="Resume"
         />
       </ExpandCollapse>
+
       <Divider />
     </div>
   );
