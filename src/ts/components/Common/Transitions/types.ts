@@ -11,6 +11,8 @@ export type TransitionClassNames = {
 };
 
 export type TransitionBaseProps = {
+  className?: string;
+  id?: string;
   onEnter?: (isAppearing: boolean) => void;
   onEntering?: (isAppearing: boolean) => void;
   onEntered?: (isAppearing: boolean) => void;
@@ -19,7 +21,18 @@ export type TransitionBaseProps = {
   onExited?: () => void;
   unmountOnExit?: boolean;
   classNames: TransitionClassNames;
+  ref?: React.RefObject<HTMLDivElement | null>;
   visible: boolean;
 };
 
-export type TransitionProps = Omit<TransitionBaseProps, 'classNames'>;
+export type TransitionProps = Omit<
+  TransitionBaseProps,
+  | 'classNames'
+  | 'onEnter'
+  | 'onEntering'
+  | 'onEntered'
+  | 'onExit'
+  | 'onExiting'
+  | 'onExited'
+  | 'ref'
+>;

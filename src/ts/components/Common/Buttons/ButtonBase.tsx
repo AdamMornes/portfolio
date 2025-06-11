@@ -2,6 +2,8 @@
 
 import { useRouter } from 'next/navigation';
 import { ButtonBaseProps } from './types';
+import join from '@/ts/utils/classNameJoin';
+import styles from './Button.module.css';
 
 export default function ButtonBase({
   children,
@@ -9,6 +11,7 @@ export default function ButtonBase({
   isAnchor = false,
   onClick,
   href,
+  target,
   ...props
 }: ButtonBaseProps) {
   const Element = isAnchor ? 'a' : 'button';
@@ -17,16 +20,21 @@ export default function ButtonBase({
   const onAnchorClick = (e: React.MouseEvent) => {
     e.preventDefault();
     if (href) {
-      router.push(href);
+      if (target === '_blank') {
+        window.open(href, '_blank');
+      } else {
+        router.push(href);
+      }
     }
   };
 
   return (
     <Element
       {...props}
-      className={className}
+      className={join([styles.button, className])}
       href={href}
       onClick={isAnchor ? onAnchorClick : onClick}
+      target={target}
     >
       {children}
     </Element>

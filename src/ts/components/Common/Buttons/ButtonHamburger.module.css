@@ -1,10 +1,6 @@
 @reference '../../../../styles/main.css';
 
 @layer base {
-  .button {
-    @apply px-1 py-2;
-  }
-
   .lines {
     @apply relative w-7 h-5;
   }

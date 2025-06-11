@@ -1,18 +1,16 @@
-import { ButtonTransparentProps } from './types';
+import { ButtonIconProps } from './types';
 import join from '@/ts/utils/classNameJoin';
-import ButtonTransparent from './ButtonTransparent';
+import ButtonIcon from './ButtonIcon';
+import styles from './Button.module.css';
 
 export default function ButtonBackground({
   className,
   ...props
-}: ButtonTransparentProps) {
+}: ButtonIconProps) {
   return (
-    <ButtonTransparent
+    <ButtonIcon
       {...props}
-      className={join([
-        'bg-background text-foreground border border-gray-200 no-underline dark:border-gray-800',
-        className,
-      ])}
+      className={join([className, styles['-background']])}
     />
   );
 }

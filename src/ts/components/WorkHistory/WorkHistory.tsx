@@ -1,8 +1,9 @@
+import { Fragment } from 'react';
 import { workHistory } from '@/data/work';
-import ContentBlock from '../Common/ContentImageBlock/ContentBlock';
+import ContentBlock from '../Common/ContentBlock/ContentBlock';
 import ContentImageBlock from '../Common/ContentImageBlock/ContentImageBlock';
 import join from '@/ts/utils/classNameJoin';
-import { Fragment } from 'react';
+import Divider from '../Common/Divider/Divider';
 
 export default function WorkHistory() {
   return (
@@ -24,7 +25,7 @@ export default function WorkHistory() {
             }}
             imageContent={
               <div className="order-1 mt-4">
-                <h2 className="sr-only">{work.heading}</h2>
+                <h3 className="sr-only">{work.heading}</h3>
                 <p className="mb-1">{work.workTitle}</p>
                 <p className="text-sm">
                   {work.startDate} - {work.endDate}
@@ -34,12 +35,15 @@ export default function WorkHistory() {
           >
             <ul className="list-disc pl-4 lg:pl-8">
               {work.highlights.map((highlight) => (
-                <li key={highlight}>{highlight}</li>
+                <li
+                  key={highlight}
+                  dangerouslySetInnerHTML={{ __html: highlight }}
+                />
               ))}
             </ul>
           </ContentImageBlock>
 
-          <hr className="border-gray-200 dark:border-gray-800 my-4 lg:my-8 last:hidden" />
+          <Divider className="last:hidden" />
         </Fragment>
       ))}
     </ContentBlock>
