@@ -23,7 +23,7 @@ export default function ExpandCollapse({
       <ButtonBackground
         aria-expanded={isExpanded}
         aria-controls={!unmountOnExit ? id : undefined}
-        icon={<CssIconPlusMinus size="sm" />}
+        icon={<CssIconPlusMinus isMinus={isExpanded} size="sm" />}
         hideIconAnimation
         onClick={() => setIsExpanded(!isExpanded)}
       >

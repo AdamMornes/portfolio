@@ -10,11 +10,17 @@
     }
 
     &:before {
-      @apply w-0.5 h-full;
+      @apply w-0.5 h-full transition-transform duration-300;
     }
 
     &:after {
       @apply w-full h-0.5;
+    }
+
+    &.-minus {
+      &:before {
+        @apply rotate-90;
+      }
     }
 
     &.-sm {
