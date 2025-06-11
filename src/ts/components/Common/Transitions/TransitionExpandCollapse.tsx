@@ -2,7 +2,7 @@ import { PropsWithChildren, useRef } from 'react';
 import type { TransitionProps } from './types';
 import TransitionBase from './TransitionBase';
 
-export default function TransitionFade(
+export default function TransitionExpandCollapse(
   props: PropsWithChildren<TransitionProps>,
 ) {
   const transitionNodeRef = useRef<HTMLDivElement>(null);

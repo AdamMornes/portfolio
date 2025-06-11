@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import ButtonBackground from '../Common/Buttons/ButtonBackground';
 import Divider from '../Common/Divider/Divider';
-import TransitionExpand from '../Common/Transitions/TransitionExpand';
+import TransitionExpandCollapse from '../Common/Transitions/TransitionExpandCollapse';
 import { resume } from '@/data/work';
 
 export default function Resume() {
@@ -21,7 +21,7 @@ export default function Resume() {
         {resume.cta}
       </ButtonBackground>
 
-      <TransitionExpand
+      <TransitionExpandCollapse
         className="w-full"
         visible={isResumeVisible}
         unmountOnExit={false}
@@ -31,7 +31,7 @@ export default function Resume() {
           src="/resume-adam-mornes.pdf"
           title="Resume"
         />
-      </TransitionExpand>
+      </TransitionExpandCollapse>
 
       <Divider />
     </div>
