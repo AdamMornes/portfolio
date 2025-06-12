@@ -1,6 +1,8 @@
 'use client';
 
+import { useState } from 'react';
 import { useForm } from 'react-hook-form';
+import { useRouter } from 'next/navigation';
 import ButtonInfo from '../Common/Buttons/ButtonInfo';
 import FormInput from '../Common/Forms/FormInput';
 import { contactForm } from '@/data/contact';
@@ -12,24 +14,28 @@ type ContactFormData = {
 };
 
 export default function ContactForm() {
+  const router = useRouter();
   const {
     register,
     formState: { errors },
     handleSubmit,
   } = useForm<ContactFormData>();
+  const [isServerError, setIsServerError] = useState(false);
 
-  const onSubmit = (data: ContactFormData) => {
-    fetch('/api/email', {
-      method: 'POST',
-      body: JSON.stringify(data),
-    })
-      .then((res) => res.json())
-      .then((response) => {
-        alert(response.message);
-      })
-      .catch((err) => {
-        alert(err);
+  const onSubmit = async (data: ContactFormData) => {
+    try {
+      const response = await fetch('/api/email', {
+        method: 'POST',
+        body: JSON.stringify(data),
       });
+      if (response.ok) {
+        router.push(`/contact/confirmation?name=${data.name}`);
+      } else {
+        setIsServerError(true);
+      }
+    } catch {
+      setIsServerError(true);
+    }
   };
 
   return (
@@ -66,6 +72,12 @@ export default function ContactForm() {
           {contactForm.submit.label}
         </ButtonInfo>
       </div>
+
+      {isServerError && (
+        <p className="text-danger-foreground mt-4" role="alert">
+          There was an issue submitting your message. Please try again later.
+        </p>
+      )}
     </form>
   );
 }
