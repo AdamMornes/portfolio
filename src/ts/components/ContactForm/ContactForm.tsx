@@ -3,7 +3,6 @@
 import { useForm } from 'react-hook-form';
 import ButtonInfo from '../Common/Buttons/ButtonInfo';
 import FormInput from '../Common/Forms/FormInput';
-import { socialLinks } from '@/data/shared';
 import { contactForm } from '@/data/contact';
 
 type ContactFormData = {
@@ -18,10 +17,19 @@ export default function ContactForm() {
     formState: { errors },
     handleSubmit,
   } = useForm<ContactFormData>();
+
   const onSubmit = (data: ContactFormData) => {
-    const anchor = document.createElement('a');
-    anchor.href = `mailto:${socialLinks.email.href}?subject=Contact Submission from ${data.name}: ${data.email}&body=${data.message}`;
-    anchor.click();
+    fetch('/api/email', {
+      method: 'POST',
+      body: JSON.stringify(data),
+    })
+      .then((res) => res.json())
+      .then((response) => {
+        alert(response.message);
+      })
+      .catch((err) => {
+        alert(err);
+      });
   };
 
   return (
