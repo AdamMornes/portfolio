@@ -11,7 +11,7 @@ export default function CssIconPlusMinus({
   size = 'md',
 }: CssIconPlusMinusProps) {
   return (
-    <div
+    <span
       aria-hidden="true"
       className={join([
         styles.icon,

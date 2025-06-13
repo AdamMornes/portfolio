@@ -23,7 +23,6 @@ export default function ButtonIcon({
               ? 'transition-transform duration-300 group-focus:translate-x-1 group-hover:translate-x-1'
               : '',
           ])}
-          aria-hidden="true"
         >
           {icon}
         </span>

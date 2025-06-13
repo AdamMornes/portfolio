@@ -6,6 +6,7 @@ import { useRouter } from 'next/navigation';
 import ButtonInfo from '../Common/Buttons/ButtonInfo';
 import FormInput from '../Common/Forms/FormInput';
 import { contactForm } from '@/data/contact';
+import LoadingSpinner from '../Common/LoadingSpinner/LoadingSpinner';
 
 type ContactFormData = {
   name: string;
@@ -21,8 +22,10 @@ export default function ContactForm() {
     handleSubmit,
   } = useForm<ContactFormData>();
   const [isServerError, setIsServerError] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const onSubmit = async (data: ContactFormData) => {
+    setIsLoading(true);
     try {
       const response = await fetch('/api/email', {
         method: 'POST',
@@ -36,6 +39,7 @@ export default function ContactForm() {
     } catch {
       setIsServerError(true);
     }
+    setIsLoading(false);
   };
 
   return (
@@ -68,9 +72,13 @@ export default function ContactForm() {
             required: contactForm.message.errorRequired,
           })}
         />
-        <ButtonInfo type="submit" hideIcon>
-          {contactForm.submit.label}
-        </ButtonInfo>
+        <div className="flex items-center justify-between">
+          <ButtonInfo type="submit" hideIcon>
+            {contactForm.submit.label}
+          </ButtonInfo>
+
+          <LoadingSpinner loading={isLoading} />
+        </div>
       </div>
 
       {isServerError && (
