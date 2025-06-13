@@ -1,10 +1,12 @@
 'use client';
 
+import { useState } from 'react';
 import { useForm } from 'react-hook-form';
+import { useRouter } from 'next/navigation';
 import ButtonInfo from '../Common/Buttons/ButtonInfo';
 import FormInput from '../Common/Forms/FormInput';
-import { socialLinks } from '@/data/shared';
 import { contactForm } from '@/data/contact';
+import LoadingSpinner from '../Common/LoadingSpinner/LoadingSpinner';
 
 type ContactFormData = {
   name: string;
@@ -13,15 +15,31 @@ type ContactFormData = {
 };
 
 export default function ContactForm() {
+  const router = useRouter();
   const {
     register,
     formState: { errors },
     handleSubmit,
   } = useForm<ContactFormData>();
-  const onSubmit = (data: ContactFormData) => {
-    const anchor = document.createElement('a');
-    anchor.href = `mailto:${socialLinks.email.href}?subject=Contact Submission from ${data.name}: ${data.email}&body=${data.message}`;
-    anchor.click();
+  const [isServerError, setIsServerError] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+
+  const onSubmit = async (data: ContactFormData) => {
+    setIsLoading(true);
+    try {
+      const response = await fetch('/api/email', {
+        method: 'POST',
+        body: JSON.stringify(data),
+      });
+      if (response.ok) {
+        router.push(`/contact/confirmation?name=${data.name}`);
+      } else {
+        setIsServerError(true);
+      }
+    } catch {
+      setIsServerError(true);
+    }
+    setIsLoading(false);
   };
 
   return (
@@ -54,10 +72,23 @@ export default function ContactForm() {
             required: contactForm.message.errorRequired,
           })}
         />
-        <ButtonInfo type="submit" hideIcon>
-          {contactForm.submit.label}
-        </ButtonInfo>
+        <div className="flex items-center justify-between">
+          <ButtonInfo type="submit" hideIcon>
+            {contactForm.submit.label}
+          </ButtonInfo>
+
+          <LoadingSpinner
+            loading={isLoading}
+            srLabel={contactForm.loadingMessage}
+          />
+        </div>
       </div>
+
+      {isServerError && (
+        <p className="text-danger-foreground mt-4" role="alert">
+          {contactForm.serverError}
+        </p>
+      )}
     </form>
   );
 }
