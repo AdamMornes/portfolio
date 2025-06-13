@@ -1,5 +1,6 @@
 'use client';
 
+import { contactConfirmation } from '@/data/contact';
 import { useSearchParams } from 'next/navigation';
 
 export default function ContactFormConfirmation() {
@@ -8,11 +9,12 @@ export default function ContactFormConfirmation() {
 
   return (
     <div>
-      <p className="text-2xl mb-4">Thank you for reaching out, {name}!</p>
-      <p>
-        I look forward to reading what you have to say and I&apos;ll get back to
-        you as soon as possible.
+      <p className="text-2xl mb-4">
+        {name
+          ? contactConfirmation.heading.replace('{name}', name)
+          : contactConfirmation.headingFallback}
       </p>
+      <p>{contactConfirmation.message}</p>
     </div>
   );
 }

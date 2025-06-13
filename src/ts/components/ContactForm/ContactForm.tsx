@@ -77,13 +77,16 @@ export default function ContactForm() {
             {contactForm.submit.label}
           </ButtonInfo>
 
-          <LoadingSpinner loading={isLoading} />
+          <LoadingSpinner
+            loading={isLoading}
+            srLabel={contactForm.loadingMessage}
+          />
         </div>
       </div>
 
       {isServerError && (
         <p className="text-danger-foreground mt-4" role="alert">
-          There was an issue submitting your message. Please try again later.
+          {contactForm.serverError}
         </p>
       )}
     </form>
