@@ -1,10 +1,10 @@
 import About from '@/ts/components/About/About';
 import Journey from '@/ts/components/Journey/Journey';
 import Hobbies from '@/ts/components/Hobbies/Hobbies';
-import SectionHeader from '@/ts/components/Common/SectionHeader/SectionHeader';
 import type { Metadata } from 'next';
 import { siteName } from '@/data/shared';
 import { meta } from '@/data/about';
+import ContentCodeBlock from '@/ts/components/Common/ContentCodeBlock/ContentCodeBlock';
 
 export const metadata: Metadata = {
   title: `${meta.title} | ${siteName}`,
@@ -13,11 +13,10 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <>
-      <SectionHeader rootElement="h1">{meta.title}</SectionHeader>
+    <ContentCodeBlock heading={meta.title} headingEl="h1">
       <About rootEl="section" />
       <Journey rootEl="section" />
       <Hobbies rootEl="section" />
-    </>
+    </ContentCodeBlock>
   );
 }

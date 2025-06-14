@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
-import SectionHeader from '@/ts/components/Common/SectionHeader/SectionHeader';
 import { meta } from '@/data/contact';
 import { siteName } from '@/data/shared';
 import ContactFormConfirmation from '@/ts/components/ContactForm/ContactFormConfirmation';
+import ContentCodeBlock from '@/ts/components/Common/ContentCodeBlock/ContentCodeBlock';
 
 export const metadata: Metadata = {
   title: `${meta.title} | ${siteName}`,
@@ -11,9 +11,8 @@ export const metadata: Metadata = {
 
 export default function ContactConfirmationPage() {
   return (
-    <>
-      <SectionHeader rootElement="h1">Contact Confirmation</SectionHeader>
+    <ContentCodeBlock heading={meta.title} headingEl="h1">
       <ContactFormConfirmation />
-    </>
+    </ContentCodeBlock>
   );
 }
