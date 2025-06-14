@@ -4,7 +4,7 @@ import Hobbies from '@/ts/components/Hobbies/Hobbies';
 import SectionHeader from '@/ts/components/Common/SectionHeader/SectionHeader';
 import type { Metadata } from 'next';
 import { siteName } from '@/data/shared';
-import { about, journey, hobbies, meta } from '@/data/about';
+import { meta } from '@/data/about';
 
 export const metadata: Metadata = {
   title: `${meta.title} | ${siteName}`,
@@ -15,18 +15,9 @@ export default function AboutPage() {
   return (
     <>
       <SectionHeader rootElement="h1">{meta.title}</SectionHeader>
-      <section>
-        <h2 className="sr-only">{about.heading}</h2>
-        <About />
-      </section>
-      <section>
-        <SectionHeader>{journey.heading}</SectionHeader>
-        <Journey />
-      </section>
-      <section>
-        <SectionHeader>{hobbies.heading}</SectionHeader>
-        <Hobbies />
-      </section>
+      <About headingSrOnly />
+      <Journey />
+      <Hobbies />
     </>
   );
 }
