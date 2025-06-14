@@ -15,9 +15,9 @@ export default function WorkPage() {
   return (
     <>
       <SectionHeader rootElement="h1">{meta.title}</SectionHeader>
-      <WorkHistory headingSrOnly />
-      <Resume headingEl="h3" headingSrOnly />
-      <Skills />
+      <WorkHistory rootEl="section" />
+      <Resume headingEl="h3" rootEl="section" />
+      <Skills rootEl="section" />
     </>
   );
 }

@@ -15,9 +15,9 @@ export default function AboutPage() {
   return (
     <>
       <SectionHeader rootElement="h1">{meta.title}</SectionHeader>
-      <About headingSrOnly />
-      <Journey />
-      <Hobbies />
+      <About rootEl="section" />
+      <Journey rootEl="section" />
+      <Hobbies rootEl="section" />
     </>
   );
 }

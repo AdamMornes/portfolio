@@ -3,7 +3,7 @@ import SectionHeader from '../SectionHeader/SectionHeader';
 import { ContentCodeBlockProps } from './types';
 
 export default function ContentCodeBlock({
-  rootEl = 'section',
+  rootEl = 'div',
   heading,
   headingEl = 'h2',
   headingSrOnly = false,
