@@ -1,5 +1,5 @@
 import { PropsWithChildren } from 'react';
-import SectionHeader from '../SectionHeader/SectionHeader';
+import MockElementText from '../MockElementText/MockElementText';
 import { ContentCodeBlockProps } from './types';
 
 export default function ContentCodeBlock({
@@ -9,13 +9,14 @@ export default function ContentCodeBlock({
   headingSrOnly = false,
   children,
 }: PropsWithChildren<ContentCodeBlockProps>) {
-  const Element = rootEl;
+  const HeadingElement = headingEl;
+  const RootElement = rootEl;
   return (
-    <Element>
-      <div className={headingSrOnly ? 'sr-only' : ''}>
-        <SectionHeader rootElement={headingEl}>{heading}</SectionHeader>
-      </div>
+    <RootElement>
+      <HeadingElement className={headingSrOnly ? 'sr-only' : ''}>
+        <MockElementText>{heading}</MockElementText>
+      </HeadingElement>
       {children}
-    </Element>
+    </RootElement>
   );
 }

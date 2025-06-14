@@ -1,17 +1,9 @@
 import { PropsWithChildren } from 'react';
 import CssIconAngle from '../CssIcons/CssIconAngle';
 
-type SectionHeaderProps = {
-  rootElement?: keyof HTMLElementTagNameMap;
-};
-
-export default function SectionHeader({
-  children,
-  rootElement = 'h2',
-}: PropsWithChildren<SectionHeaderProps>) {
-  const RootElement = rootElement;
+export default function MockElementText({ children }: PropsWithChildren) {
   return (
-    <RootElement className="flex items-center gap-4 py-4 mb-4">
+    <div className="flex items-center gap-4 py-4 mb-4">
       {children}
       <div className="ml-auto">
         <div className="flex items-center gap-2">
@@ -19,6 +11,6 @@ export default function SectionHeader({
           <CssIconAngle />
         </div>
       </div>
-    </RootElement>
+    </div>
   );
 }
