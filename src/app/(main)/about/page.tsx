@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <ContentCodeBlock heading={meta.title} headingEl="h1">
-      <About rootEl="section" />
+      <About rootEl="section" headingSrOnly />
       <Journey rootEl="section" />
       <Hobbies rootEl="section" />
     </ContentCodeBlock>
