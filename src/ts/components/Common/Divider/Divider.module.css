@@ -2,6 +2,6 @@
 
 @layer base {
   .divider {
-    @apply border-gray-200 dark:border-gray-800 my-4 lg:my-8;
+    @apply border-gray-200 dark:border-gray-800 my-6 lg:my-8;
   }
 }
