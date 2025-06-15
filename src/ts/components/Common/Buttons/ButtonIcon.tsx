@@ -12,13 +12,13 @@ export default function ButtonIcon({
   ...props
 }: ButtonIconProps) {
   return (
-    <ButtonBase className={join([className, 'group'])} {...props}>
+    <ButtonBase {...props} className={join([className, 'group'])}>
       {children}
 
       {!hideIcon && (
         <span
           className={join([
-            'flex-1 flex items-center ml-4',
+            'flex items-center ml-4',
             !hideIconAnimation
               ? 'transition-transform duration-300 group-focus:translate-x-1 group-hover:translate-x-1'
               : '',
