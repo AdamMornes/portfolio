@@ -43,7 +43,7 @@ export default function Projects(props: ContentCodeBlockWrapperProps) {
     <ContentCodeBlock {...props} heading="Projects">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-4">
         {projects.map((project) => (
-          <div
+          <article
             key={project.id}
             className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden transition-all duration-200 hover:-translate-y-1 hover:shadow-lg"
           >
@@ -55,6 +55,7 @@ export default function Projects(props: ContentCodeBlockWrapperProps) {
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-cover"
+                  priority={project.id === 1}
                 />
               </div>
             )}
@@ -76,7 +77,7 @@ export default function Projects(props: ContentCodeBlockWrapperProps) {
                 ))}
               </div>
             </div>
-          </div>
+          </article>
         ))}
       </div>
     </ContentCodeBlock>
