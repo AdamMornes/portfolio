@@ -1,6 +1,8 @@
 import Divider from '../Common/Divider/Divider';
 import { resume } from '@/data/work';
 import ExpandCollapse from '../Common/ExpandCollapse/ExpandCollapse';
+import ButtonBackground from '../Common/Buttons/ButtonBackground';
+import { FaDownload } from 'react-icons/fa';
 
 type ResumeProps = {
   rootEl?: 'div' | 'section';
@@ -21,6 +23,19 @@ export default function Resume({
         className="font-raleway text-2xl mb-8"
         dangerouslySetInnerHTML={{ __html: resume.heading }}
       />
+
+      <div className="mb-2">
+        <ButtonBackground
+          hideIconAnimation
+          href="/resume-adam-mornes.pdf"
+          icon={<FaDownload />}
+          isAnchor
+          target="_blank"
+          download
+        >
+          Download Resume
+        </ButtonBackground>
+      </div>
 
       <ExpandCollapse buttonLabel={resume.cta} unmountOnExit={false}>
         <iframe
