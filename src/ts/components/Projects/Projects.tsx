@@ -10,10 +10,10 @@ export default function Projects(props: ContentCodeBlockWrapperProps) {
         {projects.map((project) => (
           <article
             key={project.id}
-            className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden transition-all duration-200 hover:-translate-y-1 hover:shadow-lg"
+            className="bg-background rounded-lg border border-gray-200 shadow-md overflow-hidden transition-all duration-200 hover:-translate-y-1 hover:shadow-lg dark:border-gray-800"
           >
             {project.imageUrl && (
-              <div className="w-full h-42 overflow-hidden relative">
+              <div className="relative w-full aspect-video overflow-hidden">
                 <Image
                   src={project.imageUrl}
                   alt={project.title}
@@ -27,14 +27,15 @@ export default function Projects(props: ContentCodeBlockWrapperProps) {
               <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-100 mb-2">
                 {project.title}
               </h3>
-              <p className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
-                {project.description}
-              </p>
+              <p
+                className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed"
+                dangerouslySetInnerHTML={{ __html: project.description }}
+              />
               <div className="flex flex-wrap gap-2">
                 {project.technologies.map((tech, index) => (
                   <span
                     key={index}
-                    className="bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-sm"
+                    className="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-sm"
                   >
                     {tech}
                   </span>
