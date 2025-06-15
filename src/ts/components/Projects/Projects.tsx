@@ -1,42 +1,7 @@
 import ContentCodeBlock from '../Common/ContentCodeBlock/ContentCodeBlock';
 import { ContentCodeBlockWrapperProps } from '../Common/ContentCodeBlock/types';
 import Image from 'next/image';
-
-import sp_desktop_top from '/public/projects/splashpage/sp_desktoptop.jpg';
-import as_homescreen from '/public/projects/atomicstyles/as_homescreen.jpg';
-import si_responsive from '/public/projects/siteinfo/si_responsive.jpg';
-
-interface Project {
-  id: number;
-  title: string;
-  description: string;
-  imageUrl?: string;
-  technologies: string[];
-}
-
-const projects: Project[] = [
-  {
-    id: 1,
-    title: 'Splash Page Theme',
-    description: 'A brief description of project 1 and its key features.',
-    technologies: ['CSS', 'Sass', 'Sass Theming'],
-    imageUrl: sp_desktop_top.src,
-  },
-  {
-    id: 2,
-    title: 'Atomic Style Library',
-    description: 'A brief description of project 2 and its key features.',
-    technologies: ['CSS', 'CSS Architecture', 'Style Guide Development'],
-    imageUrl: as_homescreen.src,
-  },
-  {
-    id: 3,
-    title: 'Site Info Booklet',
-    description: 'A brief description of project 3 and its key features.',
-    technologies: ['Vue.js', 'Webpack'],
-    imageUrl: si_responsive.src,
-  },
-];
+import { projects } from '@/data/work';
 
 export default function Projects(props: ContentCodeBlockWrapperProps) {
   return (
@@ -55,7 +20,6 @@ export default function Projects(props: ContentCodeBlockWrapperProps) {
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-cover"
-                  priority={project.id === 1}
                 />
               </div>
             )}
