@@ -4,29 +4,33 @@ import sp_desktop_top from '/public/projects/splashpage/sp_desktoptop.jpg';
 import as_homescreen from '/public/projects/atomicstyles/as_homescreen.jpg';
 import si_responsive from '/public/projects/siteinfo/si_responsive.jpg';
 
-export const projects = [
-  {
-    id: 1,
-    title: 'Splash Page Theme',
-    description: 'A brief description of project 1 and its key features.',
-    technologies: ['CSS', 'Sass', 'Sass Theming'],
-    imageUrl: sp_desktop_top.src,
-  },
-  {
-    id: 2,
-    title: 'Atomic Style Library',
-    description: 'A brief description of project 2 and its key features.',
-    technologies: ['CSS', 'CSS Architecture', 'Style Guide Development'],
-    imageUrl: as_homescreen.src,
-  },
-  {
-    id: 3,
-    title: 'Site Info Booklet',
-    description: 'A brief description of project 3 and its key features.',
-    technologies: ['Vue.js', 'Webpack'],
-    imageUrl: si_responsive.src,
-  },
-];
+export const projects = {
+  heading: 'Projects',
+  tagsHeading: 'Technologies',
+  projectList: [
+    {
+      id: 1,
+      title: 'Splash Page Theme',
+      description: 'A brief description of project 1 and its key features.',
+      technologies: ['CSS', 'Sass', 'Sass Theming'],
+      imageUrl: sp_desktop_top.src,
+    },
+    {
+      id: 2,
+      title: 'Atomic Style Library',
+      description: 'A brief description of project 2 and its key features.',
+      technologies: ['CSS', 'CSS Architecture', 'Style Guide Development'],
+      imageUrl: as_homescreen.src,
+    },
+    {
+      id: 3,
+      title: 'Site Info Booklet',
+      description: 'A brief description of project 3 and its key features.',
+      technologies: ['Vue.js', 'Webpack'],
+      imageUrl: si_responsive.src,
+    },
+  ],
+};
 
 export const workHistory = {
   heading: 'Work History',

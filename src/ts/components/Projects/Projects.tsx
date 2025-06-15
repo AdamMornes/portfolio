@@ -5,9 +5,9 @@ import { projects } from '@/data/work';
 
 export default function Projects(props: ContentCodeBlockWrapperProps) {
   return (
-    <ContentCodeBlock {...props} heading="Projects">
+    <ContentCodeBlock {...props} heading={projects.heading}>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-4">
-        {projects.map((project) => (
+        {projects.projectList.map((project) => (
           <article
             key={project.id}
             className="bg-background rounded-lg border border-gray-200 shadow-md overflow-hidden transition-all duration-200 hover:-translate-y-1 hover:shadow-lg dark:border-gray-800"
@@ -27,20 +27,24 @@ export default function Projects(props: ContentCodeBlockWrapperProps) {
               <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-100 mb-2">
                 {project.title}
               </h3>
+
               <p
                 className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed"
                 dangerouslySetInnerHTML={{ __html: project.description }}
               />
-              <div className="flex flex-wrap gap-2">
+
+              <h4 className="sr-only">{projects.tagsHeading}</h4>
+
+              <ul className="flex flex-wrap gap-2">
                 {project.technologies.map((tech, index) => (
-                  <span
+                  <li
                     key={index}
                     className="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-sm"
                   >
                     {tech}
-                  </span>
+                  </li>
                 ))}
-              </div>
+              </ul>
             </div>
           </article>
         ))}
