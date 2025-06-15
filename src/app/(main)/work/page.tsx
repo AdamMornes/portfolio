@@ -4,6 +4,7 @@ import Skills from '@/ts/components/Skills/Skills';
 import { meta } from '@/data/work';
 import { siteName } from '@/data/shared';
 import ContentCodeBlock from '@/ts/components/Common/ContentCodeBlock/ContentCodeBlock';
+import Projects from '@/ts/components/Projects/Projects';
 
 export const metadata: Metadata = {
   title: `${meta.title} | ${siteName}`,
@@ -14,6 +15,7 @@ export default function WorkPage() {
   return (
     <ContentCodeBlock heading={meta.title} headingEl="h1">
       <WorkHistory rootEl="section" headingSrOnly />
+      <Projects rootEl="section" />
       <Skills rootEl="section" />
     </ContentCodeBlock>
   );
