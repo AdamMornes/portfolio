@@ -24,7 +24,7 @@ export default function Resume({
         dangerouslySetInnerHTML={{ __html: resume.heading }}
       />
 
-      <div className="mb-2">
+      <div className="mb-4">
         <ButtonBackground
           hideIconAnimation
           href="/resume-adam-mornes.pdf"
