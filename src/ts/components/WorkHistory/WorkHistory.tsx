@@ -6,6 +6,7 @@ import join from '@/ts/utils/classNameJoin';
 import Divider from '../Common/Divider/Divider';
 import ContentCodeBlock from '../Common/ContentCodeBlock/ContentCodeBlock';
 import { ContentCodeBlockWrapperProps } from '../Common/ContentCodeBlock/types';
+import Resume from '../Resume/Resume';
 
 export default function WorkHistory(props: ContentCodeBlockWrapperProps) {
   return (
@@ -50,6 +51,8 @@ export default function WorkHistory(props: ContentCodeBlockWrapperProps) {
           </Fragment>
         ))}
       </ContentBlock>
+
+      <Resume headingEl="h3" />
     </ContentCodeBlock>
   );
 }

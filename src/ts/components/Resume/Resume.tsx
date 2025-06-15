@@ -1,30 +1,36 @@
 import Divider from '../Common/Divider/Divider';
 import { resume } from '@/data/work';
 import ExpandCollapse from '../Common/ExpandCollapse/ExpandCollapse';
-import ContentCodeBlock from '../Common/ContentCodeBlock/ContentCodeBlock';
-import { ContentCodeBlockWrapperProps } from '../Common/ContentCodeBlock/types';
 
-export default function Resume(props: ContentCodeBlockWrapperProps) {
+type ResumeProps = {
+  rootEl?: 'div' | 'section';
+  headingEl?: 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+};
+
+export default function Resume({
+  rootEl = 'div',
+  headingEl = 'h2',
+}: ResumeProps) {
+  const RootElement = rootEl;
+  const HeadingElement = headingEl;
   return (
-    <ContentCodeBlock {...props} heading={resume.heading}>
-      <div className="text-center">
-        <Divider />
+    <RootElement className="text-center">
+      <Divider />
 
-        <div
-          className="font-raleway text-2xl mb-8"
-          dangerouslySetInnerHTML={{ __html: resume.description }}
+      <HeadingElement
+        className="font-raleway text-2xl mb-8"
+        dangerouslySetInnerHTML={{ __html: resume.heading }}
+      />
+
+      <ExpandCollapse buttonLabel={resume.cta} unmountOnExit={false}>
+        <iframe
+          className="w-full h-[1000px]"
+          src="/resume-adam-mornes.pdf"
+          title="Resume"
         />
+      </ExpandCollapse>
 
-        <ExpandCollapse buttonLabel={resume.cta} unmountOnExit={false}>
-          <iframe
-            className="w-full h-[1000px]"
-            src="/resume-adam-mornes.pdf"
-            title="Resume"
-          />
-        </ExpandCollapse>
-
-        <Divider />
-      </div>
-    </ContentCodeBlock>
+      <Divider />
+    </RootElement>
   );
 }
