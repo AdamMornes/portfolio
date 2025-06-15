@@ -13,15 +13,10 @@ export default function ContentCodeBlock({
   const RootElement = rootEl;
   return (
     <RootElement>
-      <HeadingElement className={headingSrOnly ? 'sr-only' : undefined}>
-        <MockElementText text={heading} />
+      <HeadingElement className={headingSrOnly ? 'sr-only' : ''}>
+        <MockElementText>{heading}</MockElementText>
       </HeadingElement>
-
-      <div className="ml-4 lg:ml-8">{children}</div>
-
-      <div aria-hidden="true">
-        <MockElementText type="close" text={heading} />
-      </div>
+      {children}
     </RootElement>
   );
 }
