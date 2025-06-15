@@ -54,9 +54,7 @@ export const meta = {
 
 export const resume = {
   cta: 'View Resume',
-  description:
-    '<p>Need more details about my work history?<br />Check out my resume!</p>',
-  heading: 'Resume',
+  heading: 'Need more details about my work history?<br />Check out my resume!',
 };
 
 export const skills = {

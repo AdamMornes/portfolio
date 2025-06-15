@@ -1,8 +1,10 @@
 import { skills } from '@/data/work';
+import ContentCodeBlock from '../Common/ContentCodeBlock/ContentCodeBlock';
+import { ContentCodeBlockWrapperProps } from '../Common/ContentCodeBlock/types';
 
-export default function Skills() {
+export default function Skills(props: ContentCodeBlockWrapperProps) {
   return (
-    <div>
+    <ContentCodeBlock {...props} heading={skills.heading}>
       {skills.skillSections.map((section) => (
         <div key={section.heading} className="mb-8">
           <h3 className="mb-4">{section.heading}</h3>
@@ -18,6 +20,6 @@ export default function Skills() {
           </ul>
         </div>
       ))}
-    </div>
+    </ContentCodeBlock>
   );
 }

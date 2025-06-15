@@ -19,7 +19,7 @@ export const about = {
 };
 
 export const hobbies = {
-  heading: 'Hobbies',
+  heading: 'My Hobbies',
   description: `
     <p>
       When I'm not crunching code, I enjoy playing all sorts of games. Whether it's a board game, a card game, or a video game, I'm always excited to play. 
@@ -30,7 +30,7 @@ export const hobbies = {
 };
 
 export const journey = {
-  heading: 'Journey',
+  heading: 'My Journey',
   sections: [
     {
       image: {

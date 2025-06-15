@@ -2,14 +2,24 @@ import Divider from '../Common/Divider/Divider';
 import { resume } from '@/data/work';
 import ExpandCollapse from '../Common/ExpandCollapse/ExpandCollapse';
 
-export default function Resume() {
+type ResumeProps = {
+  rootEl?: 'div' | 'section';
+  headingEl?: 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+};
+
+export default function Resume({
+  rootEl = 'div',
+  headingEl = 'h2',
+}: ResumeProps) {
+  const RootElement = rootEl;
+  const HeadingElement = headingEl;
   return (
-    <div className="text-center">
+    <RootElement className="text-center">
       <Divider />
 
-      <div
+      <HeadingElement
         className="font-raleway text-2xl mb-8"
-        dangerouslySetInnerHTML={{ __html: resume.description }}
+        dangerouslySetInnerHTML={{ __html: resume.heading }}
       />
 
       <ExpandCollapse buttonLabel={resume.cta} unmountOnExit={false}>
@@ -21,6 +31,6 @@ export default function Resume() {
       </ExpandCollapse>
 
       <Divider />
-    </div>
+    </RootElement>
   );
 }
