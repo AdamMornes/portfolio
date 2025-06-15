@@ -12,7 +12,7 @@ export default function ButtonIcon({
   ...props
 }: ButtonIconProps) {
   return (
-    <ButtonBase className={join([className, 'group'])} {...props}>
+    <ButtonBase {...props} className={join([className, 'group'])}>
       {children}
 
       {!hideIcon && (

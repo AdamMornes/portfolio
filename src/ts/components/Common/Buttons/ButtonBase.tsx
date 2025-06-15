@@ -8,6 +8,7 @@ import styles from './Button.module.css';
 export default function ButtonBase({
   children,
   className,
+  download,
   isAnchor = false,
   onClick,
   href,
@@ -18,6 +19,8 @@ export default function ButtonBase({
   const router = useRouter();
 
   const onAnchorClick = (e: React.MouseEvent) => {
+    if (download) return;
+
     e.preventDefault();
     if (href) {
       if (target === '_blank') {
@@ -32,6 +35,7 @@ export default function ButtonBase({
     <Element
       {...props}
       className={join([styles.button, className])}
+      download={download}
       href={href}
       onClick={isAnchor ? onAnchorClick : onClick}
       target={target}
