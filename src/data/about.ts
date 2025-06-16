@@ -1,7 +1,7 @@
 import profileImage from '/public/profile.jpg';
-import duluthLighthouse from '/public/duluth-lighthouse.jpg';
-import austinSkyline from '/public/austin-skyline.jpg';
-import flintGraffiti from '/public/flint-graffiti.jpg';
+import duluthLighthouse from '/public/history/duluth-lighthouse.jpg';
+import austinSkyline from '/public/history/austin-skyline.jpg';
+import flintGraffiti from '/public/history/flint-graffiti.jpg';
 
 export const about = {
   heading: 'About Me',

@@ -1,5 +1,5 @@
-import xcLogo from '/public/xc-logo.webp';
-import ariLogo from '/public/ari-logo.png';
+import xcLogo from '/public/workhistory/xc-logo.webp';
+import ariLogo from '/public/workhistory/ari-logo.png';
 import sp_desktop_top from '/public/projects/splashpage/sp_desktoptop.jpg';
 import as_homescreen from '/public/projects/atomicstyles/as_homescreen.jpg';
 import si_responsive from '/public/projects/siteinfo/si_responsive.jpg';
