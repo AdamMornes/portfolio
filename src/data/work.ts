@@ -1,11 +1,11 @@
 import xcLogo from '/public/workhistory/xc-logo.webp';
 import ariLogo from '/public/workhistory/ari-logo.png';
 import sp_desktop_top from '/public/projects/splashpage/sp_desktoptop.jpg';
-import as_homescreen from '/public/projects/atomicstyles/as_homescreen.jpg';
-import si_responsive from '/public/projects/siteinfo/si_responsive.jpg';
-import vjs_dropdown from '/public/projects/vanillajs-dropdown/vanillajs-dropdown-repo.jpg';
-import imdb_search_desktop from '/public/projects/imdb-search/imdb-search-desktop.jpg';
-import xc_seed_project_cli from '/public/projects/xc-seed-project-cli/xc-seed-project-cli.jpg';
+import asHomescreen from '/public/projects/atomicstyles/as_homescreen.jpg';
+import siResponsive from '/public/projects/siteinfo/si_responsive.jpg';
+import vjsDropdown from '/public/projects/vanillajs-dropdown/vanillajs-dropdown-repo.jpg';
+import imdbSearchDesktop from '/public/projects/imdb-search/imdb-search-desktop.jpg';
+import xcSeedProjectCli from '/public/projects/xc-seed-project-cli/xc-seed-project-cli.jpg';
 
 export const projects = {
   title: 'Projects',
@@ -17,7 +17,7 @@ export const projects = {
       shortDescription:
         'Dev challenge to build a site to search for movies and tv shows using the IMDB API.',
       technologies: ['HTML', 'TailwindCSS', 'Javascript', 'React', 'Webpack'],
-      imageUrl: imdb_search_desktop.src,
+      imageUrl: imdbSearchDesktop.src,
       cta: {
         text: 'View Project Source',
         href: 'https://github.com/AdamMornes/devchallenge-imdb-search',
@@ -29,7 +29,7 @@ export const projects = {
       shortDescription:
         'Command line interface to quickly and easily instantiate a front-end architecture for a new XCentium project.',
       technologies: ['Javascript', 'Webpack', 'Node.js'],
-      imageUrl: xc_seed_project_cli.src,
+      imageUrl: xcSeedProjectCli.src,
       cta: {
         text: 'View Project Source',
         href: 'https://www.npmjs.com/package/@xcentium/xc-cli',
@@ -42,7 +42,7 @@ export const projects = {
       shortDescription:
         'Fully accessible dropdown menu plugin using vanilla javascript.',
       technologies: ['Javascript', 'Webpack'],
-      imageUrl: vjs_dropdown.src,
+      imageUrl: vjsDropdown.src,
       cta: {
         text: 'View Project Source',
         href: 'https://github.com/AdamMornes/vanillajs-dropdown',
@@ -62,7 +62,7 @@ export const projects = {
       shortDescription:
         'Custom built utility CSS library built to be used to quickly and easily customize underlying themes.',
       technologies: ['CSS', 'Sass', 'Javascript', 'JQuery', 'Node.js'],
-      imageUrl: as_homescreen.src,
+      imageUrl: asHomescreen.src,
     },
     {
       slug: 'site-info-booklet',
@@ -79,7 +79,7 @@ export const projects = {
         'Node.js',
         'Webpack',
       ],
-      imageUrl: si_responsive.src,
+      imageUrl: siResponsive.src,
     },
   ],
 };
