@@ -1,13 +1,12 @@
-import type { Metadata } from 'next';
-import { meta } from '@/data/contact/meta';
+import { metadata } from '@/data/contact/metadata';
 import ContactFormConfirmation from '@/ts/components/ContactForm/ContactFormConfirmation';
 import ContentCodeBlock from '@/ts/components/Common/ContentCodeBlock/ContentCodeBlock';
 
-export const metadata: Metadata = meta;
+export { metadata };
 
 export default function ContactConfirmationPage() {
   return (
-    <ContentCodeBlock heading={meta.title} headingEl="h1">
+    <ContentCodeBlock heading={metadata.title as string} headingEl="h1">
       <ContactFormConfirmation />
     </ContentCodeBlock>
   );

@@ -1,13 +1,12 @@
-import type { Metadata } from 'next';
 import ContactForm from '@/ts/components/ContactForm/ContactForm';
-import { meta } from '@/data/contact/meta';
+import { metadata } from '@/data/contact/metadata';
 import ContentCodeBlock from '@/ts/components/Common/ContentCodeBlock/ContentCodeBlock';
 
-export const metadata: Metadata = meta;
+export { metadata };
 
 export default function ContactPage() {
   return (
-    <ContentCodeBlock heading={meta.title} headingEl="h1">
+    <ContentCodeBlock heading={metadata.title as string} headingEl="h1">
       <ContactForm />
     </ContentCodeBlock>
   );

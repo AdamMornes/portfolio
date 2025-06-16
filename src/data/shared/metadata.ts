@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { siteName } from './siteName';
 
-export const meta: Metadata = {
+export const metadata: Metadata = {
   title: {
     default: `${siteName} | Front-end Developer`,
     template: `%s | ${siteName} | Front-end Developer`,
