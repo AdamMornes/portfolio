@@ -30,7 +30,7 @@ export default function Projects(props: ContentCodeBlockWrapperProps) {
 
               <p
                 className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed"
-                dangerouslySetInnerHTML={{ __html: project.description }}
+                dangerouslySetInnerHTML={{ __html: project.shortDescription }}
               />
 
               <h4 className="sr-only">{projects.tagsHeading}</h4>

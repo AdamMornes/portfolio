@@ -11,36 +11,24 @@ export const projects = {
     {
       id: 1,
       title: 'Splash Page Theme',
-      description: 'A brief description of project 1 and its key features.',
-      technologies: [
-        'HTML',
-        'CSS',
-        'Sass',
-        'Javascript',
-        'Bootstrap',
-        'JQuery',
-      ],
+      shortDescription:
+        'Developed a responsive theme to be easily customized by internal developers.',
+      technologies: ['CSS', 'Sass', 'Javascript', 'Bootstrap', 'JQuery'],
       imageUrl: sp_desktop_top.src,
     },
     {
       id: 2,
       title: 'Atomic Style Library',
-      description: 'A brief description of project 2 and its key features.',
-      technologies: [
-        'HTML',
-        'CSS',
-        'Sass',
-        'Javascript',
-        'Bootstrap',
-        'JQuery',
-        'Node.js',
-      ],
+      shortDescription:
+        'Custom built utility CSS library built to be used to quickly and easily customize underlying themes.',
+      technologies: ['CSS', 'Sass', 'Javascript', 'JQuery', 'Node.js'],
       imageUrl: as_homescreen.src,
     },
     {
       id: 3,
       title: 'Site Info Booklet',
-      description: 'A brief description of project 3 and its key features.',
+      shortDescription:
+        'Developed an internal tool to allow users to navigate client and site resources.',
       technologies: [
         'HTML',
         'CSS',
