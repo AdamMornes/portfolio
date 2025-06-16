@@ -62,9 +62,7 @@ export const workHistory = {
       image: {
         alt: 'XCentium',
         backgroundColor: 'bg-white',
-        height: 35,
         src: xcLogo.src,
-        width: 200,
       },
     },
     {
@@ -81,9 +79,7 @@ export const workHistory = {
       image: {
         alt: 'ARI Network Services',
         backgroundColor: 'bg-white',
-        height: 35,
         src: ariLogo.src,
-        width: 200,
       },
     },
   ],

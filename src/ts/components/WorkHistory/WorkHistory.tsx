@@ -20,12 +20,12 @@ export default function WorkHistory(props: ContentCodeBlockWrapperProps) {
               image={{
                 alt: work.image.alt,
                 className: join([
-                  'rounded-md border border-gray-200 rounded-md p-4 dark:border-gray-800',
+                  'h-auto rounded-md border border-gray-200 rounded-md p-4 dark:border-gray-800',
                   work.image.backgroundColor,
                 ]),
-                height: work.image.height,
+                height: 0,
                 src: work.image.src,
-                width: work.image.width,
+                width: 200,
               }}
               imageContent={
                 <div className="order-1 mt-4">
