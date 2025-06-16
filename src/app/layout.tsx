@@ -1,11 +1,10 @@
-import type { Metadata } from 'next';
 import { Raleway, Open_Sans } from 'next/font/google';
 import Header from '@/ts/components/Header/Header';
 import Footer from '@/ts/components/Footer/Footer';
 import SkipToLink from '@/ts/components/SkipToLink/SkipToLink';
 import { mainContentId } from '@/ts/config/ids';
 import '@/styles/main.css';
-import { meta } from '@/data/shared/meta';
+import { metadata } from '@/data/shared/metadata';
 
 const raleway = Raleway({
   variable: '--font-raleway',
@@ -17,10 +16,7 @@ const openSans = Open_Sans({
   subsets: ['latin'],
 });
 
-export const metadata: Metadata = {
-  title: meta.title,
-  description: meta.description,
-};
+export { metadata };
 
 export default function RootLayout({
   children,
