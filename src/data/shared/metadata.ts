@@ -20,6 +20,10 @@ export const metadata: Metadata = {
     siteName: `${siteName} - Portfolio`,
     type: 'website',
   },
+  robots: {
+    index: true,
+    follow: true,
+  },
   keywords: [
     'adam',
     'mornes',
