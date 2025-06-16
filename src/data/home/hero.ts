@@ -1,6 +1,14 @@
 import profileImage from '/public/profile.jpg';
+import { Image } from '../types';
 
-export const hero = {
+type Hero = {
+  cta: string;
+  title: string;
+  profileImage: Image;
+  subheading: string;
+};
+
+export const hero: Hero = {
   cta: 'Learn more about me',
   title: 'Hi,<br />I&apos;m Adam Mornes',
   profileImage: {

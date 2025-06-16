@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import ButtonBackground from '../Common/Buttons/ButtonBackground';
-import { hero } from '@/data/home';
+import { hero } from '@/data/home/hero';
 
 export default function Hero() {
   return (
