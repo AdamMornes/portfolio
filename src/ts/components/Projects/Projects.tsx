@@ -2,6 +2,7 @@ import ContentCodeBlock from '../Common/ContentCodeBlock/ContentCodeBlock';
 import { ContentCodeBlockWrapperProps } from '../Common/ContentCodeBlock/types';
 import Image from 'next/image';
 import { projects } from '@/data/work';
+import ButtonBackground from '@/ts/components/Common/Buttons/ButtonBackground';
 
 export default function Projects(props: ContentCodeBlockWrapperProps) {
   return (
@@ -10,7 +11,7 @@ export default function Projects(props: ContentCodeBlockWrapperProps) {
         {projects.projectList.map((project) => (
           <article
             key={project.slug}
-            className="bg-background rounded-lg border border-gray-200 shadow-md overflow-hidden transition-all duration-200 hover:-translate-y-1 hover:shadow-lg dark:border-gray-800"
+            className="flex flex-col bg-background rounded-lg border border-gray-200 shadow-md overflow-hidden transition-all duration-200 hover:-translate-y-1 hover:shadow-lg dark:border-gray-800"
           >
             {project.imageUrl && (
               <div className="relative w-full aspect-video overflow-hidden">
@@ -23,7 +24,7 @@ export default function Projects(props: ContentCodeBlockWrapperProps) {
                 />
               </div>
             )}
-            <div className="p-6">
+            <div className="flex flex-col items-start flex-1 p-6">
               <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-100 mb-2">
                 {project.title}
               </h3>
@@ -32,9 +33,9 @@ export default function Projects(props: ContentCodeBlockWrapperProps) {
                 {project.shortDescription}
               </p>
 
-              <h4 className="sr-only">{projects.tagsHeading}</h4>
+              <h4 className="sr-only">{projects.tagsTitle}</h4>
 
-              <ul className="flex flex-wrap gap-2">
+              <ul className="mt-auto flex flex-wrap gap-2">
                 {project.technologies.map((tech, index) => (
                   <li
                     key={index}
@@ -44,6 +45,17 @@ export default function Projects(props: ContentCodeBlockWrapperProps) {
                   </li>
                 ))}
               </ul>
+
+              {project.cta && (
+                <ButtonBackground
+                  className="w-full mt-4"
+                  href={project.cta.href}
+                  isAnchor
+                  target="_blank"
+                >
+                  {project.cta.text}
+                </ButtonBackground>
+              )}
             </div>
           </article>
         ))}

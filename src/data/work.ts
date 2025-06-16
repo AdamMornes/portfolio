@@ -9,7 +9,7 @@ import xc_seed_project_cli from '/public/projects/xc-seed-project-cli/xc-seed-pr
 
 export const projects = {
   title: 'Projects',
-  tagsHeading: 'Technologies',
+  tagsTitle: 'Technologies',
   projectList: [
     {
       slug: 'imdb-search',
@@ -18,6 +18,10 @@ export const projects = {
         'Dev challenge to build a site to search for movies and tv shows using the IMDB API.',
       technologies: ['HTML', 'TailwindCSS', 'Javascript', 'React', 'Webpack'],
       imageUrl: imdb_search_desktop.src,
+      cta: {
+        text: 'View Project Source',
+        href: 'https://github.com/AdamMornes/devchallenge-imdb-search',
+      },
     },
     {
       slug: 'xc-seed-project-cli',
@@ -26,6 +30,11 @@ export const projects = {
         'Command line interface to quickly and easily instantiate a front-end architecture for a new XCentium project.',
       technologies: ['Javascript', 'Webpack', 'Node.js'],
       imageUrl: xc_seed_project_cli.src,
+      cta: {
+        text: 'View Project Source',
+        href: 'https://www.npmjs.com/package/@xcentium/xc-cli',
+        target: '_blank',
+      },
     },
     {
       slug: 'vanillajs-dropdown',
@@ -34,6 +43,10 @@ export const projects = {
         'Fully accessible dropdown menu plugin using vanilla javascript.',
       technologies: ['Javascript', 'Webpack'],
       imageUrl: vjs_dropdown.src,
+      cta: {
+        text: 'View Project Source',
+        href: 'https://github.com/AdamMornes/vanillajs-dropdown',
+      },
     },
     {
       slug: 'splash-page-theme',
