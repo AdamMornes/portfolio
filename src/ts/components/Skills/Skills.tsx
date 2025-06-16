@@ -1,4 +1,4 @@
-import { skills } from '@/data/work';
+import { skills } from '@/data/work/skills';
 import ContentCodeBlock from '../Common/ContentCodeBlock/ContentCodeBlock';
 import { ContentCodeBlockWrapperProps } from '../Common/ContentCodeBlock/types';
 

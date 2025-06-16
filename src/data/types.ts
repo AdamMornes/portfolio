@@ -10,6 +10,7 @@ export type Meta = {
 
 export type Image = {
   alt: string;
+  backgroundColor?: string; // tailwind bg color class
   credit?: string;
   src: string;
 };

@@ -1,5 +1,5 @@
 import Divider from '../Common/Divider/Divider';
-import { resume } from '@/data/work';
+import { resume } from '@/data/work/resume';
 import ExpandCollapse from '../Common/ExpandCollapse/ExpandCollapse';
 import ButtonBackground from '../Common/Buttons/ButtonBackground';
 import { FaDownload } from 'react-icons/fa';

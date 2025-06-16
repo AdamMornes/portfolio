@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import WorkHistory from '@/ts/components/WorkHistory/WorkHistory';
 import Skills from '@/ts/components/Skills/Skills';
-import { meta } from '@/data/work';
+import { meta } from '@/data/work/meta';
 import { siteName } from '@/data/shared/siteName';
 import ContentCodeBlock from '@/ts/components/Common/ContentCodeBlock/ContentCodeBlock';
 import Projects from '@/ts/components/Projects/Projects';
