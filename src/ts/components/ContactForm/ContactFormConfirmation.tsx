@@ -12,8 +12,8 @@ function ConfirmationHeading() {
   return (
     <p className="text-2xl mb-4">
       {name
-        ? contactConfirmation.heading.replace('{name}', name)
-        : contactConfirmation.headingFallback}
+        ? contactConfirmation.title.replace('{name}', name)
+        : contactConfirmation.titleFallback}
     </p>
   );
 }

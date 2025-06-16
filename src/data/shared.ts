@@ -27,7 +27,7 @@ export const skipToLink = {
 };
 
 export const socialLinks = {
-  heading: 'Social Links',
+  title: 'Social Links',
   github: {
     label: 'GitHub',
     href: 'https://github.com/AdamMornes',

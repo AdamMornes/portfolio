@@ -2,7 +2,7 @@ import profileImage from '/public/profile.jpg';
 
 export const hero = {
   cta: 'Learn more about me',
-  heading: 'Hi,<br />I&apos;m Adam Mornes',
+  title: 'Hi,<br />I&apos;m Adam Mornes',
   profileImage: {
     alt: 'Adam Mornes Profile',
     src: profileImage.src,

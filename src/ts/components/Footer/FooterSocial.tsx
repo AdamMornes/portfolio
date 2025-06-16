@@ -5,7 +5,7 @@ import { socialLinks } from '@/data/shared';
 export default function FooterSocial() {
   return (
     <div>
-      <h2 className="sr-only">{socialLinks.heading}</h2>
+      <h2 className="sr-only">{socialLinks.title}</h2>
       <ul className="flex items-center gap-4">
         <li>
           <a

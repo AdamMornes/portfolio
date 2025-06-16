@@ -4,10 +4,10 @@ import { ContentCodeBlockWrapperProps } from '../Common/ContentCodeBlock/types';
 
 export default function Skills(props: ContentCodeBlockWrapperProps) {
   return (
-    <ContentCodeBlock {...props} heading={skills.heading}>
+    <ContentCodeBlock {...props} heading={skills.title}>
       {skills.skillSections.map((section) => (
-        <div key={section.heading} className="mb-8">
-          <h3 className="mb-4">{section.heading}</h3>
+        <div key={section.title} className="mb-8">
+          <h3 className="mb-4">{section.title}</h3>
           <ul className="flex flex-wrap gap-2">
             {section.skills.map((skill) => (
               <li
