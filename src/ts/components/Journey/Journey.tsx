@@ -7,7 +7,7 @@ import { ContentCodeBlockWrapperProps } from '../Common/ContentCodeBlock/types';
 
 export default function History(props: ContentCodeBlockWrapperProps) {
   return (
-    <ContentCodeBlock {...props} heading={journey.heading}>
+    <ContentCodeBlock {...props} heading={journey.title}>
       <ContentBlock>
         {journey.sections.map((section, index) => (
           <ContentImageBlock

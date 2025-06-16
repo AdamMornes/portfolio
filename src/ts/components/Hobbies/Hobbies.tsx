@@ -5,7 +5,7 @@ import { ContentCodeBlockWrapperProps } from '../Common/ContentCodeBlock/types';
 
 export default function Hobbies(props: ContentCodeBlockWrapperProps) {
   return (
-    <ContentCodeBlock {...props} heading={hobbies.heading}>
+    <ContentCodeBlock {...props} heading={hobbies.title}>
       <ContentBlock html={hobbies.description} />
     </ContentCodeBlock>
   );

@@ -5,7 +5,7 @@ import as_homescreen from '/public/projects/atomicstyles/as_homescreen.jpg';
 import si_responsive from '/public/projects/siteinfo/si_responsive.jpg';
 
 export const projects = {
-  heading: 'Projects',
+  title: 'Projects',
   tagsHeading: 'Technologies',
   projectList: [
     {
@@ -45,7 +45,7 @@ export const projects = {
 };
 
 export const workHistory = {
-  heading: 'Work History',
+  title: 'Work History',
   jobList: [
     {
       heading: 'XCentium',
@@ -97,10 +97,10 @@ export const resume = {
 };
 
 export const skills = {
-  heading: 'Skills',
+  title: 'Skills',
   skillSections: [
     {
-      heading: 'Frontend',
+      title: 'Frontend',
       skills: [
         'HTML5',
         'JavaScript',
@@ -113,11 +113,11 @@ export const skills = {
       ],
     },
     {
-      heading: 'Backend',
+      title: 'Backend',
       skills: ['Node.js', 'ASP.NET', 'Sitecore', 'MVC Architecture'],
     },
     {
-      heading: 'Styling',
+      title: 'Styling',
       skills: ['CSS', 'Tailwind CSS', 'SASS', 'Bootstrap', 'CSS Modules'],
     },
     {

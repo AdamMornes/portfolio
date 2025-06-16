@@ -10,7 +10,7 @@ import Resume from '../Resume/Resume';
 
 export default function WorkHistory(props: ContentCodeBlockWrapperProps) {
   return (
-    <ContentCodeBlock {...props} heading={workHistory.heading}>
+    <ContentCodeBlock {...props} heading={workHistory.title}>
       <ContentBlock>
         {workHistory.jobList.map((work, index) => (
           <Fragment key={index}>

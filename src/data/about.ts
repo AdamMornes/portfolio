@@ -4,7 +4,7 @@ import austinSkyline from '/public/history/austin-skyline.jpg';
 import flintGraffiti from '/public/history/flint-graffiti.jpg';
 
 export const about = {
-  heading: 'About Me',
+  title: 'About Me',
   profileImage: {
     alt: 'Adam Mornes Profile',
     src: profileImage.src,
@@ -20,7 +20,7 @@ export const about = {
 };
 
 export const hobbies = {
-  heading: 'My Hobbies',
+  title: 'My Hobbies',
   description: `
     <p>
       When I'm not crunching code, I enjoy playing all sorts of games. Whether it's a board game, a card game, or a video game, I'm always excited to play. 
@@ -31,7 +31,7 @@ export const hobbies = {
 };
 
 export const journey = {
-  heading: 'My Journey',
+  title: 'My Journey',
   sections: [
     {
       image: {

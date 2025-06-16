@@ -18,7 +18,7 @@ export default function Hero() {
           <div className="text-foreground shrink-0">
             <h1
               className="font-raleway text-3xl mb-4"
-              dangerouslySetInnerHTML={{ __html: hero.heading }}
+              dangerouslySetInnerHTML={{ __html: hero.title }}
             />
             <p
               className="font-raleway text-3xl mb-4"

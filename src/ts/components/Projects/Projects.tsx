@@ -5,7 +5,7 @@ import { projects } from '@/data/work';
 
 export default function Projects(props: ContentCodeBlockWrapperProps) {
   return (
-    <ContentCodeBlock {...props} heading={projects.heading}>
+    <ContentCodeBlock {...props} heading={projects.title}>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-4">
         {projects.projectList.map((project) => (
           <article
@@ -28,10 +28,9 @@ export default function Projects(props: ContentCodeBlockWrapperProps) {
                 {project.title}
               </h3>
 
-              <p
-                className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed"
-                dangerouslySetInnerHTML={{ __html: project.shortDescription }}
-              />
+              <p className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
+                {project.shortDescription}
+              </p>
 
               <h4 className="sr-only">{projects.tagsHeading}</h4>
 
