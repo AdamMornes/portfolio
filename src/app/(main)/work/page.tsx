@@ -2,14 +2,10 @@ import type { Metadata } from 'next';
 import WorkHistory from '@/ts/components/WorkHistory/WorkHistory';
 import Skills from '@/ts/components/Skills/Skills';
 import { meta } from '@/data/work/meta';
-import { siteName } from '@/data/shared/siteName';
 import ContentCodeBlock from '@/ts/components/Common/ContentCodeBlock/ContentCodeBlock';
 import Projects from '@/ts/components/Projects/Projects';
 
-export const metadata: Metadata = {
-  title: `${meta.title} | ${siteName}`,
-  description: meta.description,
-};
+export const metadata: Metadata = meta;
 
 export default function WorkPage() {
   return (
