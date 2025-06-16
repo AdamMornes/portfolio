@@ -9,7 +9,7 @@ export default function Projects(props: ContentCodeBlockWrapperProps) {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-4">
         {projects.projectList.map((project) => (
           <article
-            key={project.id}
+            key={project.slug}
             className="bg-background rounded-lg border border-gray-200 shadow-md overflow-hidden transition-all duration-200 hover:-translate-y-1 hover:shadow-lg dark:border-gray-800"
           >
             {project.imageUrl && (

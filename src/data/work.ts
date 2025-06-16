@@ -3,21 +3,48 @@ import ariLogo from '/public/workhistory/ari-logo.png';
 import sp_desktop_top from '/public/projects/splashpage/sp_desktoptop.jpg';
 import as_homescreen from '/public/projects/atomicstyles/as_homescreen.jpg';
 import si_responsive from '/public/projects/siteinfo/si_responsive.jpg';
+import vjs_dropdown from '/public/projects/vanillajs-dropdown/vanillajs-dropdown-repo.jpg';
+import imdb_search_desktop from '/public/projects/imdb-search/imdb-search-desktop.jpg';
+import xc_seed_project_cli from '/public/projects/xc-seed-project-cli/xc-seed-project-cli.jpg';
 
 export const projects = {
   title: 'Projects',
   tagsHeading: 'Technologies',
   projectList: [
     {
-      id: 1,
+      slug: 'imdb-search',
+      title: 'IMDB Search',
+      shortDescription:
+        'Dev challenge to build a site to search for movies and tv shows using the IMDB API.',
+      technologies: ['HTML', 'TailwindCSS', 'Javascript', 'React', 'Webpack'],
+      imageUrl: imdb_search_desktop.src,
+    },
+    {
+      slug: 'xc-seed-project-cli',
+      title: 'XC Seed Project Cli',
+      shortDescription:
+        'Command line interface to quickly and easily instantiate a front-end architecture for a new XCentium project.',
+      technologies: ['Javascript', 'Webpack', 'Node.js'],
+      imageUrl: xc_seed_project_cli.src,
+    },
+    {
+      slug: 'vanillajs-dropdown',
+      title: 'vanillajs-dropdown',
+      shortDescription:
+        'Fully accessible dropdown menu plugin using vanilla javascript.',
+      technologies: ['Javascript', 'Webpack'],
+      imageUrl: vjs_dropdown.src,
+    },
+    {
+      slug: 'splash-page-theme',
       title: 'Splash Page Theme',
       shortDescription:
-        'Developed a responsive theme to be easily customized by internal developers.',
+        'Responsive theme to be easily customized by internal developers.',
       technologies: ['CSS', 'Sass', 'Javascript', 'Bootstrap', 'JQuery'],
       imageUrl: sp_desktop_top.src,
     },
     {
-      id: 2,
+      slug: 'atomic-style-library',
       title: 'Atomic Style Library',
       shortDescription:
         'Custom built utility CSS library built to be used to quickly and easily customize underlying themes.',
@@ -25,10 +52,10 @@ export const projects = {
       imageUrl: as_homescreen.src,
     },
     {
-      id: 3,
+      slug: 'site-info-booklet',
       title: 'Site Info Booklet',
       shortDescription:
-        'Developed an internal tool to allow users to navigate client and site resources.',
+        'Internal tool to allow users to navigate client and site resources.',
       technologies: [
         'HTML',
         'CSS',
