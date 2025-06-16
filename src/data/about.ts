@@ -43,9 +43,7 @@ export const journey = {
             <a href="https://unsplash.com/photos/snow-covered-lighthouse-ydrp-zMoMsg?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">
               Unsplash
             </a>`,
-        height: 166,
         src: duluthLighthouse.src,
-        width: 250,
       },
       description: `
             <p>
@@ -71,9 +69,7 @@ export const journey = {
             <a href="https://unsplash.com/photos/man-in-black-jacket-walking-on-bridge-near-body-of-water-during-daytime-ztVcGTSD8xw?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">
               Unsplash
             </a>`,
-        height: 200,
         src: austinSkyline.src,
-        width: 300,
       },
       description: `
           <p>
@@ -99,9 +95,7 @@ export const journey = {
           <a href="https://unsplash.com/photos/colorful-graffiti-on-the-side-of-a-building-slXpdVgW2pQ?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">
             Unsplash
           </a>`,
-        height: 199,
         src: flintGraffiti.src,
-        width: 300,
       },
       description: `
         <p>

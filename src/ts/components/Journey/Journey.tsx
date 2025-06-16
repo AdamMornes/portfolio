@@ -14,7 +14,9 @@ export default function History(props: ContentCodeBlockWrapperProps) {
             key={index}
             image={{
               ...section.image,
-              className: 'rounded-md',
+              className: 'rounded-md h-auto',
+              height: 0,
+              width: 300,
             }}
             flip={isOdd(index)}
           >

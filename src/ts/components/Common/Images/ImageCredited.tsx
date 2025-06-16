@@ -7,7 +7,7 @@ export default function ImageCredited({
   ...props
 }: PropsWithChildren<ImageProps>) {
   return (
-    <figure className="group relative inline-block">
+    <figure className="group relative block">
       <Image alt={alt} {...props} />
       <div className="group-hover:opacity-100 transition-opacity duration-300 lg:opacity-0">
         <div className="hidden absolute top-0 left-0 w-full h-full bg-black/50 lg:block" />
