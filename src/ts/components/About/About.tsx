@@ -6,7 +6,7 @@ import { ContentCodeBlockWrapperProps } from '../Common/ContentCodeBlock/types';
 
 export default function About(props: ContentCodeBlockWrapperProps) {
   return (
-    <ContentCodeBlock {...props} heading={about.heading}>
+    <ContentCodeBlock {...props} heading={about.title}>
       <ContentBlock>
         <ContentImageBlock
           classNameImageWrapper="flex justify-center"

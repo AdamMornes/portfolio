@@ -1,12 +1,12 @@
 export const contactConfirmation = {
-  heading: 'Thank you for reaching out, {name}!',
-  headingFallback: 'Thank you for reaching out!',
+  title: 'Thank you for reaching out, {name}!',
+  titleFallback: 'Thank you for reaching out!',
   message:
     'I look forward to hearing what you have to say and I will get back to you as soon as possible.',
 };
 
 export const contactForm = {
-  heading: 'Contact Form',
+  title: 'Contact Form',
   name: {
     label: 'Full Name',
     placeholder: 'Full Name',
