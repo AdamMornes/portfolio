@@ -35,8 +35,6 @@ export const metadata: Metadata = {
     'end',
     'ux',
     'ui',
-    'graphic',
-    'design',
     'web',
     'mobile',
     'development',
