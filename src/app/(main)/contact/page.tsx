@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import ContactForm from '@/ts/components/ContactForm/ContactForm';
-import { meta } from '@/data/contact';
+import { meta } from '@/data/contact/meta';
 import { siteName } from '@/data/shared/siteName';
 import ContentCodeBlock from '@/ts/components/Common/ContentCodeBlock/ContentCodeBlock';
 
