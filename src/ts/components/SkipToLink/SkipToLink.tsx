@@ -1,6 +1,6 @@
 'use client';
 
-import { skipToLink } from '@/data/shared';
+import { skipToLink } from '@/data/shared/skipToLink';
 import { mainContentId } from '@/ts/config/ids';
 
 export default function SkipToLink() {

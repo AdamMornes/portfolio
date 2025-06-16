@@ -1,4 +1,4 @@
-import { journey } from '@/data/about';
+import { journey } from '@/data/about/journey';
 import isOdd from '@/ts/utils/isOdd';
 import ContentImageBlock from '../Common/ContentImageBlock/ContentImageBlock';
 import ContentBlock from '../Common/ContentBlock/ContentBlock';

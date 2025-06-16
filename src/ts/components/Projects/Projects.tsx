@@ -1,7 +1,7 @@
 import ContentCodeBlock from '../Common/ContentCodeBlock/ContentCodeBlock';
 import { ContentCodeBlockWrapperProps } from '../Common/ContentCodeBlock/types';
 import Image from 'next/image';
-import { projects } from '@/data/work';
+import { projects } from '@/data/work/projects';
 import ButtonBackground from '@/ts/components/Common/Buttons/ButtonBackground';
 
 export default function Projects(props: ContentCodeBlockWrapperProps) {

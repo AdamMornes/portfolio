@@ -5,7 +5,7 @@ import { useForm } from 'react-hook-form';
 import { useRouter } from 'next/navigation';
 import ButtonInfo from '../Common/Buttons/ButtonInfo';
 import FormInput from '../Common/Forms/FormInput';
-import { contactForm } from '@/data/contact';
+import { contactForm } from '@/data/contact/form';
 import LoadingSpinner from '../Common/LoadingSpinner/LoadingSpinner';
 
 type ContactFormData = {

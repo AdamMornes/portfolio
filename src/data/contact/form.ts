@@ -1,11 +1,29 @@
-export const contactConfirmation = {
-  title: 'Thank you for reaching out, {name}!',
-  titleFallback: 'Thank you for reaching out!',
-  message:
-    'I look forward to hearing what you have to say and I will get back to you as soon as possible.',
+type ContactForm = {
+  title: string;
+  name: {
+    label: string;
+    placeholder: string;
+    errorRequired: string;
+  };
+  email: {
+    label: string;
+    placeholder: string;
+    errorRequired: string;
+    errorPatterm: string;
+  };
+  loadingMessage: string;
+  message: {
+    label: string;
+    placeholder: string;
+    errorRequired: string;
+  };
+  serverError: string;
+  submit: {
+    label: string;
+  };
 };
 
-export const contactForm = {
+export const contactForm: ContactForm = {
   title: 'Contact Form',
   name: {
     label: 'Full Name',
@@ -29,9 +47,4 @@ export const contactForm = {
   submit: {
     label: 'Submit',
   },
-};
-
-export const meta = {
-  title: 'Contact',
-  description: 'Contact Adam Mornes, a web developer based in Flint, MI.',
 };

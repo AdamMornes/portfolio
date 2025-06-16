@@ -1,6 +1,6 @@
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
-import { socialLinks } from '@/data/shared';
+import { socialLinks } from '@/data/shared/socialLinks';
 
 export default function FooterSocial() {
   return (

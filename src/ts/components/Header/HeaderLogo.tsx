@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { siteName } from '@/data/shared';
+import { siteName } from '@/data/shared/siteName';
 
 export default function HeaderLogo() {
   return (

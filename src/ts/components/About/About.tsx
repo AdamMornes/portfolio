@@ -1,4 +1,4 @@
-import { about } from '@/data/about';
+import { about } from '@/data/about/about';
 import ContentImageBlock from '../Common/ContentImageBlock/ContentImageBlock';
 import ContentBlock from '../Common/ContentBlock/ContentBlock';
 import ContentCodeBlock from '../Common/ContentCodeBlock/ContentCodeBlock';

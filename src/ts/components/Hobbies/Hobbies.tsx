@@ -1,4 +1,4 @@
-import { hobbies } from '@/data/about';
+import { hobbies } from '@/data/about/hobbies';
 import ContentBlock from '../Common/ContentBlock/ContentBlock';
 import ContentCodeBlock from '../Common/ContentCodeBlock/ContentCodeBlock';
 import { ContentCodeBlockWrapperProps } from '../Common/ContentCodeBlock/types';

@@ -1,6 +1,6 @@
 'use client';
 
-import { contactConfirmation } from '@/data/contact';
+import { contactConfirmation } from '@/data/contact/confirmation';
 import { useSearchParams } from 'next/navigation';
 import { Suspense } from 'react';
 import LoadingSpinner from '../Common/LoadingSpinner/LoadingSpinner';

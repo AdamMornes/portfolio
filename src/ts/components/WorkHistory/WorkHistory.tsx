@@ -1,5 +1,5 @@
 import { Fragment } from 'react';
-import { workHistory } from '@/data/work';
+import { workHistory } from '@/data/work/workHistory';
 import ContentBlock from '../Common/ContentBlock/ContentBlock';
 import ContentImageBlock from '../Common/ContentImageBlock/ContentImageBlock';
 import join from '@/ts/utils/classNameJoin';
