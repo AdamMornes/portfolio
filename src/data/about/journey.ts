@@ -1,36 +1,19 @@
-import profileImage from '/public/profile.jpg';
 import duluthLighthouse from '/public/history/duluth-lighthouse.jpg';
 import austinSkyline from '/public/history/austin-skyline.jpg';
 import flintGraffiti from '/public/history/flint-graffiti.jpg';
+import { Image } from '../types';
 
-export const about = {
-  title: 'About Me',
-  profileImage: {
-    alt: 'Adam Mornes Profile',
-    src: profileImage.src,
-  },
-  description: `
-    <p>Hello, I'm Adam Mornes. I'm a Web Developer located in Flint, MI.</p>
-
-    <p>I have a passion for creating outstanding responsive web sites - while keeping in mind intelligent, intuitive user interface. 
-    To do so, I work to keep up with the best and newest development trends; as well as implementing those them on every project I take on.</p>
-
-    <p>There is no better feeling than creating an easy to use, beautiful website that clients can be proud of.</p>
-  `,
+type JourneySection = {
+  image: Image;
+  description: string;
 };
 
-export const hobbies = {
-  title: 'My Hobbies',
-  description: `
-    <p>
-      When I'm not crunching code, I enjoy playing all sorts of games. Whether it's a board game, a card game, or a video game, I'm always excited to play. 
-      Yes. this does include the nerdy games, like Magic: the Gathering, and Dungeons and Dragons.
-    </p>
-    <p>I also enjoy playing music. I play several instruments, but I'd say my main instrument is the guitar. After work hours, I take part in a few local ensembles, including a jazz combo band, concert band, and guitar ensemble.</p>
-  `,
+type Journey = {
+  title: string;
+  sections: JourneySection[];
 };
 
-export const journey = {
+export const journey: Journey = {
   title: 'My Journey',
   sections: [
     {
@@ -116,10 +99,4 @@ export const journey = {
       `,
     },
   ],
-};
-
-export const meta = {
-  title: 'About',
-  description:
-    'Learn more about Adam Mornes, a web developer based in Flint, MI.',
 };
