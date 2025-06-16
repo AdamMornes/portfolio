@@ -8,7 +8,7 @@ import useOutsideClick from '@/ts/hooks/useOutsideClick';
 import TransitionFade from '../Common/Transitions/TransitionFade';
 import TransitionRightSlideIn from '../Common/Transitions/TransitionRightSlideIn';
 import join from '@/ts/utils/classNameJoin';
-import { navigation } from '@/data/shared';
+import { navigation } from '@/data/shared/navigation';
 
 type HeaderNavProps = {
   isMinimized: boolean;

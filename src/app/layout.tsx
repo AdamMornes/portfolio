@@ -5,7 +5,7 @@ import Footer from '@/ts/components/Footer/Footer';
 import SkipToLink from '@/ts/components/SkipToLink/SkipToLink';
 import { mainContentId } from '@/ts/config/ids';
 import '@/styles/main.css';
-import { meta } from '@/data/shared';
+import { meta } from '@/data/shared/meta';
 
 const raleway = Raleway({
   variable: '--font-raleway',
