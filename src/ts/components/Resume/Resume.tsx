@@ -21,26 +21,26 @@ export default function Resume({
 
       <HeadingElement
         className="font-raleway text-2xl mb-8"
-        dangerouslySetInnerHTML={{ __html: resume.heading }}
+        dangerouslySetInnerHTML={{ __html: resume.title }}
       />
 
       <div className="mb-4">
         <ButtonBackground
           hideIconAnimation
-          href="/resume-adam-mornes.pdf"
+          href={resume.pdf.path}
           icon={<FaDownload />}
           isAnchor
           target="_blank"
           download
         >
-          Download Resume
+          {resume.downloadCta}
         </ButtonBackground>
       </div>
 
-      <ExpandCollapse buttonLabel={resume.cta} unmountOnExit={false}>
+      <ExpandCollapse buttonLabel={resume.viewCta} unmountOnExit={false}>
         <iframe
           className="w-full h-[1000px]"
-          src="/resume-adam-mornes.pdf"
+          src={resume.pdf.path}
           title="Resume"
         />
       </ExpandCollapse>
