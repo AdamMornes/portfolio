@@ -12,19 +12,19 @@ export const metadata: Metadata = {
   authors: [
     {
       name: 'Adam Mornes',
-      url: process.env.NEXT_PUBLIC_BASE_URL,
+      url: process.env.BASE_URL,
     },
   ],
   creator: 'Adam Mornes',
   publisher: 'Adam Mornes',
-  metadataBase: process.env.NEXT_PUBLIC_BASE_URL
-    ? new URL(process.env.NEXT_PUBLIC_BASE_URL as string)
+  metadataBase: process.env.BASE_URL
+    ? new URL(process.env.BASE_URL as string)
     : undefined,
   openGraph: {
     title: `${siteName} | Front-end Developer`,
     description:
       'Portfolio of Adam Mornes. Showcasing his work and experience as a front-end developer.',
-    url: process.env.NEXT_PUBLIC_BASE_URL,
+    url: process.env.BASE_URL,
     siteName: `${siteName} - Portfolio`,
     type: 'website',
   },
