@@ -9,14 +9,22 @@ export const metadata: Metadata = {
   description:
     'Portfolio of Adam Mornes. Showcasing his work and experience as a front-end developer.',
   applicationName: `${siteName} - Portfolio`,
-  authors: [{ name: 'Adam Mornes', url: 'https://adammornes.com' }],
+  authors: [
+    {
+      name: 'Adam Mornes',
+      url: process.env.BASE_URL,
+    },
+  ],
   creator: 'Adam Mornes',
   publisher: 'Adam Mornes',
+  metadataBase: process.env.BASE_URL
+    ? new URL(process.env.BASE_URL as string)
+    : undefined,
   openGraph: {
     title: `${siteName} | Front-end Developer`,
     description:
       'Portfolio of Adam Mornes. Showcasing his work and experience as a front-end developer.',
-    url: 'https://adammornes.com',
+    url: process.env.BASE_URL,
     siteName: `${siteName} - Portfolio`,
     type: 'website',
   },
